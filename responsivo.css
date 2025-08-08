@@ -1,0 +1,818 @@
+@media only  screen   and  (min-width:1275px) and (max-width:1572px) { 
+
+   
+    body{ 
+
+       max-width:100%;
+      
+    
+    }
+
+
+
+    
+
+    
+
+.dados{ 
+
+flex: 15%;
+
+margin-left: 1%;
+
+position: relative;
+ 
+ 
+}
+
+   
+form{ 
+
+    max-width:100%;
+      
+
+}
+   
+
+  
+table{ 
+
+    max-width:100%;
+    
+      
+
+}  
+  
+ 
+ 
+
+
+.kentro{ 
+
+ 
+  
+      margin: 0px; 
+  max-width:100%;
+  margin-left: 20%;
+  margin-right: 25%;
+   position: relative;
+   
+  
+ 
+ 
+
+}
+
+
+
+.centro{ 
+        
+           
+          
+         
+         
+          margin-right: 1%;
+          flex:40%;
+          position: relative;  
+       }
+.Centro{ 
+        
+          position: relative;
+          flex:50%;
+          margin-right: 5%;
+          margin-left: 15%;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+
+
+        } 
+
+
+.Pub{ 
+    
+      display: none;
+    
+     
+
+
+}
+
+
+.menu-i{ 
+            
+    display: none;
+     
+       
+  
+  
+  }
+
+
+  .menu-t{ 
+    
+    text-align: center;
+     
+       
+  
+  
+  }
+    
+    .lista{ 
+        position: relative;
+     flex: 25%;
+     margin-left: 1%;
+     overflow-x: hidden;
+      
+        }
+  
+        .pub{ 
+          flex: 80%;
+          margin-left: 5%;
+          margin-right: 5%;
+              position: relative;
+              height: 200px;
+            
+        
+        }
+  .dropdown1{ 
+            
+    display:none;
+     
+       
+  
+  
+  }
+
+  
+  .dropdown-content1{ 
+              
+        display: none;
+        }
+
+
+   
+
+}
+@media only  screen   and  (min-width:1572px) and (max-width:1885px) { 
+
+
+  .dropdown{ 
+            
+        display:none;
+         
+           
+      
+      
+      }
+
+    .dados{ 
+
+        flex: 15%;
+        margin-left: 2%;
+        
+        position: relative;
+         
+        }
+        
+            
+    .lista{ 
+        position: relative;
+    flex: 23%;
+    overflow-x: hidden;
+      
+        }
+           
+        form{ 
+        
+            max-width:100%;
+              
+        
+        }
+           
+        .centro{ 
+        
+           
+          
+         
+         
+          margin-right: 1%;
+          flex:45%;
+          position: relative;  
+          max-height: 100%;
+         
+         
+        
+        }
+        
+
+
+        .kentro{ 
+        
+           
+          
+         
+          margin: 0px; 
+          max-width:100%;
+          position: relative; 
+           max-height: 100%;
+         
+         
+        
+        }
+
+        
+
+        
+        
+        
+        .pub{ 
+             
+             flex: 90%;
+             margin-left: 5%;
+             margin-right: 5%;
+              position: relative;
+              height: 200px;
+            
+           
+        
+        }
+
+        .Pub{ 
+            
+            position: relative;
+         left: 1%;
+            max-width: 100%;
+           
+        
+        }
+
+
+          
+table{ 
+
+    max-width:100%;
+ 
+      
+
+}
+
+ 
+ .dropdown1{           
+    display:none;
+  }
+
+  .dropdown-content1{ 
+              
+        display: none;
+        }
+         .Centro{ 
+        
+          display: none;
+
+        }
+
+
+  
+}
+
+@media only  screen   and   (min-width:1280px)and (max-width:1385px) { 
+
+ .dropdown1{ 
+            
+    display:block;
+  }
+  
+ input{ 
+ 
+    max-width:100%;
+    margin: 0%;
+  }
+      
+table{ 
+
+    max-width:100%;
+
+}
+
+    .dados{ 
+       
+      flex: 5%;
+       margin-left: 2%;
+       position: relative;
+      
+
+        }
+        
+        
+           
+        form{ 
+        
+            max-width:100%;
+            
+        }
+           
+        .centro{ 
+        
+         
+         margin-right: 1%;
+         flex:50%;
+         position: relative;
+                 
+        }
+  
+        .kentro{ 
+
+          max-width:100%;
+          margin-right: 0%;
+          margin-left: 0%;
+          position: relative;
+                 
+        }
+
+
+        .Centro{ 
+        
+          position: relative;
+          flex:80%;
+          margin-right: 5%;
+          margin-left: 15%;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+
+
+        }
+
+        
+ 
+    
+        
+        .pub{ 
+           flex: 100%;
+              position: relative;
+              height: 200px;
+            
+        }
+
+        
+        .Pub-3{ 
+            
+          display: none;
+
+        }
+
+        .menu-i{ 
+
+            display: none;
+             
+          }
+
+
+          .menu-t{ 
+
+            text-align: center;
+            
+          }
+          .pub2{ 
+            
+            max-width: 100%;
+            position: relative;
+
+        }
+        
+
+
+.ecy{ 
+    
+    flex: 60%;
+    margin-left: 10%;
+    margin-right: 15%;
+    
+}        
+
+.calculos{ 
+
+    flex:0 0 40%;
+    max-width: 40%;
+    margin-left: 5%;
+    margin-right:5%;
+
+}
+
+.secção-4{ 
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* mantém alinhado à esquerda */
+  
+}
+
+ .dropdown-content1{ 
+              
+             max-width: 90%;
+             margin-left: 5%;
+             margin-right: 5%;
+             position: relative;
+             margin-top: 0%;
+        
+        }
+    
+    .lista{ 
+        
+     display: none;
+      
+        }
+
+}
+
+
+
+
+@media only  screen   and   (max-width:651px) { 
+
+ .img {
+min-width: 100%;
+
+position: relative;
+margin-left: 0px;
+right: 40px;
+  }
+     
+.centro-item{ 
+
+    max-width:100%;
+    margin: 0%;
+
+}
+
+
+.calculos{ 
+
+    flex:100%;
+    margin-left: 0;
+    margin-right:0 ;
+
+}
+
+     
+img{ 
+
+    max-width:100%;
+
+ }
+
+input{    
+
+    max-width:100%;
+     margin: 0%;
+ }
+ table{ 
+
+   max-width:100%;
+     left: 0%;
+   position: relative;
+  
+ }
+
+     
+
+    .dados{ 
+       display: none;
+      
+        }
+        
+    .ecy{ 
+    
+    flex: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  
+}
+        form{ 
+        
+            max-width:100%;
+            overflow-x: hidden;
+
+        }
+           
+        .centro{ 
+
+      margin-left: 0;
+      position: relative;
+      flex:100%;
+      margin-right: 0;
+
+        }
+
+.dropbtd{ 
+   position: relative;
+   max-width:100%;   
+   margin-left: 5%;
+   margin-right: 5%;
+     
+        }
+
+  .cookie-consent {
+
+    max-width: 100%;
+    left: 0px;
+    margin-right: 10px;
+    position: fixed;
+
+    }
+
+
+ .kentro{  
+          position: relative;
+          max-width:100%;
+       
+        }
+
+        .lista{ 
+            display: none;
+        }
+        
+         .Centro{
+
+         margin-left: 0%; 
+         max-width:100%;
+         position: relative;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+        
+         
+         
+        
+        }
+        
+        
+        .Pub-3{ 
+            
+             display: none;
+        }
+
+        .dropdown-content1{ 
+              
+             flex: 90%;
+            margin-left: 5%;
+             margin-right: 5%;
+             position: relative;
+        
+        }
+
+        .pub{ 
+             
+              position: relative;
+              height: 200px;
+            
+        }
+        .pub2{ 
+            
+         max-width: 100%;
+        position: relative;
+     
+     }
+
+        .menu-i{ 
+            
+            display: none;
+             
+          }
+
+
+          .menu-t{ 
+            
+            text-align: center;
+
+          }
+
+          
+          .menu-pai{ 
+            
+            max-width: 100%;
+          }
+
+          
+          .rodape{ 
+            
+            max-width: 100%;
+            text-align: center;    
+          }
+
+                
+.Centri{ 
+
+         flex: 90%;
+         margin-left: 5%;
+         margin-right:5%;
+         position:relative;
+        }
+
+        .Centru { 
+
+         flex:90%;
+         margin-left: 5%;
+         margin-right:5%;
+         position: relative;
+        }
+
+  .secção-2 {
+    flex-direction: column; 
+    align-items: stretch;
+  }
+
+}
+
+@media only  screen   and  (min-width:1885px) { 
+
+    .dropdown1{ 
+            
+        display:none;
+      }
+
+      .dropdown{ 
+            
+        display:none;
+      }
+      .dropdown-content1{ 
+              
+        display: none;
+        }
+         .Centro{ 
+        
+          display: none;
+
+        }
+.lista{ 
+        
+          overflow-x: hidden;
+
+        }
+
+
+
+}
+
+
+@media only  screen   and   (min-width:652px) and   (max-width:1279px) { 
+
+.secção-3{ 
+  position: relative;
+  height:auto;
+  margin-top:30px;
+}
+
+   .dropdown-content1{ 
+              
+             flex: 90%;
+             margin-left: 5%;
+             margin-right: 5%;
+             position: relative;
+             align-items: center;
+             justify-content: center;
+             text-align: center;
+        
+        }
+
+.calculos{ 
+position: relative;
+    flex:0 0 46%;
+    max-width: 46%;
+    margin-left: 2%;
+    margin-right:2%;
+}
+  
+
+.secção-4{ 
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* mantém alinhado à esquerda */
+    
+   
+}
+
+.ecy{ 
+    
+    flex: 90%;
+    margin-left: 5%;
+    margin-right: 5%;      
+
+}        
+
+
+.Centro{ 
+        
+        margin-left: 5%;
+         margin-right: 25%; 
+         position: relative;
+         align-items: center;
+         text-align: center;
+         justify-content: center;
+         overflow: auto;
+        
+        }  
+
+.Centri, .Centru{ 
+         flex: 80%;
+         margin-left:10%;
+         margin-right:10% ;
+         position: relative;
+        }
+
+
+
+  .secção-2 {
+    align-items: stretch;
+    max-width: 100%;
+    position: relative;
+    flex-direction: column;
+    margin-top: 20px;
+    display: flex;
+    height: auto; 
+      }
+
+
+        .centro{ 
+        margin-right: 0;
+        margin-left: 0; 
+         flex:90%;
+            position: relative;
+            
+         margin-left:3%;
+        margin-right: 2%;
+         flex:45%;
+         position: relative;
+        }
+
+        .pub{ 
+            
+           flex: 100%;
+              position: relative;
+              height: 200px;
+            
+
+        }
+
+        .Pub-3{ 
+            
+          display: none;
+        }
+          .menu-i{ 
+               display: none;
+          }
+
+
+
+.dropbtd{   
+          position: relative;
+          max-width:100%;
+          margin-left: 6%;
+      
+        }
+
+
+
+
+    .dados{ 
+        
+      flex: 10%;
+      
+       position: relative;
+      
+      
+       
+        }
+
+        
+          .rodape{ 
+            max-width: 100%;
+            text-align: center;
+          }
+
+          
+    .lista{ 
+        
+     display: none;
+      
+        }
+       
+        
+
+}
+
+
+@media only  screen   and     (max-width:930px) { 
+
+
+    .dados{ 
+        
+     display: none;
+      
+        }
+       
+
+
+  }

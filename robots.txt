@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:Termos.html
+Disallow:Politica.html
+Allow: /
+
+Sitemap: https://orca.it.ao/sitemap.xml

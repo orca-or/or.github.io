@@ -1,0 +1,3178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author"   content="Karlos kiala ">
+    <meta name="keywords" content="quantidade de bloco por metros quadrado,quantidade de tinta por metros quadro,
+    peças de azulejos por metros quadrado,quantidade de cimento">
+    <meta name="description" content="Calculadora de obras-online" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"   href="estilo.css">
+    <link rel="stylesheet" href="responsivo.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+    
+    <script 
+  src="https://www.paypal.com/sdk/js?client-id=BAA1saJDk1CtrGbcjrQB_f519rDFjJBQBwhVFM-RRszto5xSmC9shHAVgEuceenTowrDu7tPg_GovOFkws&components=hosted-buttons&disable-funding=venmo&currency=USD">
+</script>
+
+    <link rel="icon" type="image/png" href="img/orça.png"> 
+    <title> Orça   </title>
+</head>
+
+<body>
+
+    <nav  class="menu-pai">
+        
+
+
+        <li class="dropdown" id="dro">
+            <a class="dropbtn" href="#"  style="padding: 0px;" onclick="toggleMenu(event)" title="menu"><img src="img/menu.png" alt="abrir menu"></a>
+    
+            <div class="dropdown-content" id="filho">
+                <h2 style="margin-left: 30px;">Menu</h2>
+                <a href="index.html" class="content">Início</a>
+             <a href="Calculadora.html?f=calculo_da_area_alvenaria" class="content" >Calculadora </a> 
+             <a href="Dicas.html" class="content" >Dicas de orçamento</a>
+             
+                <a href="#" class="content" id="toggle" onclick="selecionarItem()">Consulta </a> 
+
+                
+                
+                <h2 style="margin-left: 30px;">Fórmulas</h2>
+    
+                <a href="Calculadora.html?f=calculo_da_area_da_alvenaria" class="content" onclick="selecionarItem(); ">Área da Alvenaria</a>
+                <a href="Calculadora.html?f=calculo_da_quantidade_de_blocos" class="content" onclick="selecionarItem(); ">Quantidade de blocos</a>
+                <a href="Calculadora.html?f=calculo_do_volume_de_assentamento" class="content" onclick="selecionarItem(); ">Volume de assentamento </a>
+                <a href="Calculadora.html?f=calculo_da_area_do_chapisco_e_reboco" class="content" onclick="selecionarItem(); ">Área do chapisco e reboco </a>
+                <a href="Calculadora.html?f=calculo_do_volume_para_o_chapisco" class="content" onclick="selecionarItem(); ">Volume para chapisco </a>
+                <a href="Calculadora.html?f=calculo_do_volume_para_o_reboco" class="content" onclick="selecionarItem(); ">Volume para reboco </a>
+                <a href="Calculadora.html?f=calculo_do_volume_total_de_argamassa" class="content" onclick="selecionarItem(); ">Volume total de argamassa</a>
+                <a href="Calculadora.html?f=calculo_da_area_por_perimetro" class="content" onclick="selecionarItem(); ">Área por perímetro</a>
+                <a href="Calculadora.html?f=calculo_do_perimetro" class="content" onclick="selecionarItem();">Perímetros</a>
+                <a href="Calculadora.html?f=calculo_da_area_dos_vaos" class="content" onclick="selecionarItem(); ">Área dos vãos</a>
+                <a href="Calculadora.html?f=calculo_do_volume_de_betão" class="content" onclick="selecionarItem(); ">Volume de betão </a> 
+                <a href="Calculadora.html?f=calculo_da_quantidade_de_cimento" class="content" onclick="selecionarItem(); ">Quantidade de Cimento </a> 
+                <a href="Calculadora.html?f=calculo_da_quantidade_de_areia" class="content" onclick="selecionarItem(); ">Quantidade de Areia</a> 
+                <a href="Calculadora.html?f=calculo_da_quantidade_de_brita" class="content" onclick="selecionarItem(); ">Quantidade de Brita</a> 
+                <a href="Calculadora.html?f=calculo_da_quantidade_de_tinta" class="content" onclick="selecionarItem(); ">Quantidade de Tinta</a>
+                <a href="Calculadora.html?f=calculo_da_quantidade_de_azulejos" class="content" onclick="selecionarItem(); ">Quantidade de azulejos </a> 
+                 <a href="Calculadora.html?f=calculo_da_area_e_quantidade_para_o_piso" class="content" onclick="selecionarItem(); ">Área e quantidade de peças para o piso </a>
+                <a href="Calculadora.html?f=calculo_da_area_da_cobertura" class="content" onclick="selecionarItem(); ">Área da Cobertura </a> 
+                <a href="Calculadora.html?f=calculo_da_quantidade_para_a_cobertura" class="content" onclick="selecionarItem(); ">Quantidade para cobertura</a>
+
+                  <a href="Calculadora.html?f=calculo_do_custo_do_material" class="content" onclick="selecionarItem(); ">Custo do material</a>   
+                <a href="Calculadora.html?f=calculo_da_mão_de_obra" class="content" onclick="selecionarItem(); ">Mão de obra</a> 
+                <a href="Calculadora.html?f=calculo_do_preço_composto" class="content" onclick="selecionarItem(); ">Peço composto</a> 
+                <a href="Calculadora.html?f=planilha_orçamental" class="content" onclick="selecionarItem();">Planilha</a> 
+              
+                           </div>
+        </li>
+
+        <li class="dropdown1">
+
+            
+            <a class="dropbtn" href="#" id="toggleMenu" style="padding: 4px;">Dados</a>
+
+
+<div  style="width: 290px;float: left;
+box-shadow:0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);margin-right:
+ 5px;overflow-y: scroll;overflow-x: hidden;height: 
+ 600px;margin-left: 2px;margin-top:
+  30px;z-index: 1;"  class="dropdown-contente" id="filho2">
+
+
+  <h3 style="text-align: left;margin-top: 5px;margin-left: 5px;float: left;width: 80px;">Resultados</h3>
+
+  <button style="text-align: left;margin-top: 5px;margin-left: 65px;float: left;width: 90px; background-color:
+  black;color: white;box-shadow:0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  ;
+  " onclick="apagar()" id="Re" >
+  <a  style="color: white;text-decoration: none;" 
+   href="Calculadora.html?f=calculo_da_area_da_alvenaria">Recomeçar</a></button>
+
+
+
+  <ul id="lista-resultados-mobile" style="font-size: 20px;margin-top: 60px;margin-left: 0px;">
+
+
+  </ul>
+
+
+</div>
+    </li>
+    
+
+    <div  class="menu-t"> 
+         <h1  style="padding: 1px;margin-top: 15px;"><img src="img/orça-calculadora-online-1.png"
+             alt="calculadora de obras-online"></h1> 
+         
+         </div>
+
+         <div   class="menu-i"> 
+        <a href="index.html" class="ele-2">Início</a>
+        <a href="Calculadora.html?f=calculo_da_area_da_alvenaria" class="ele-2">Calculadora</a>
+
+        <a href="Dicas.html" class="ele-2">Dicas de orçamento</a>
+        
+
+        
+    
+
+
+    
+        <a href="#" class="ele-2" id="togle"  >Consulta 
+
+
+<div  style="float: left ;width: 850px;
+       height: 800px;margin-right: 10px;
+       box-shadow:0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);text-align: 
+       center ;margin-left: 10px;justify-content: center;overflow-y:auto ;
+       margin-top: 50px;overflow-x: hidden;margin-bottom: 50px;" 
+        class="dropdow-contente" id="filho4">
+
+                 
+
+
+
+  <h2 style="font-size: 20px;text-align: center;margin-top: 20px;width: 
+    830px;margin-left: 10px;margin-right: 10px;">
+    TABELA DE COEFICIENTES</h2>
+
+
+
+    <div  style="float: left ;width: 830px;
+       ;margin-right: 10px;
+       ;text-align: 
+       center ;margin-left: 10px;justify-content: center;overflow:auto ;margin-top: 20px;" 
+        >
+
+                 <h2 style="margin-left: 15px;">Coeficiente de telhas</h2>
+
+                 
+
+
+<table width="60%" border="2" style="margin-top: 30px;margin-left: 
+15%;margin-bottom: 5%;font-size: 20px;overflow-x: scroll;" >
+    
+    
+    <tr >
+    <th>Item</th>
+    <th>Tipo de telhas</th>
+    <th>Unidade</th>
+    <th>Coeficientes por peças</th>
+    </tr>
+
+    <tr>
+
+        <td> 1</td>
+        <td>Romana</td>
+        <td>m <sup>2</sup></td>
+        <td>16</td>
+    </tr>
+
+    <tr>
+
+        <td> 2</td>
+        <td>Italiana</td>
+        <td>m <sup>2</sup></td>
+        <td>14</td>
+    </tr>
+
+    <tr>
+
+        <td> 3</td>
+        <td>Colonial pequena</td>
+        <td>m <sup>2</sup></td>
+        <td>24</td>
+    </tr>
+
+    <tr>
+
+        <td> 4</td>
+        <td>Colonial grande</td>
+        <td>m <sup>2</sup></td>
+        <td>16</td>
+    </tr>
+
+    
+    <tr>
+
+        <td> 5</td>
+        <td>Francesa</td>
+        <td>m <sup>2</sup></td>
+        <td>16</td>
+    </tr>
+
+    
+    <tr>
+
+        <td> 6</td>
+        <td>Portuguesa</td>
+        <td>m <sup>2</sup></td>
+        <td>17</td>
+    </tr>
+    
+    <tr>
+
+        <td> 7</td>
+        <td>Americana</td>
+        <td>m <sup>2</sup></td>
+        <td>12.5</td>
+    </tr>
+
+
+
+    </table>
+ 
+</div>
+
+
+
+
+    
+    <div  style="float: left ;width: 830px;
+       margin-right: 10px;
+       text-align: 
+       center ;margin-left: 10px;justify-content: center;overflow-y:auto ;margin-top: 30px;" 
+        >
+
+                 <h2 style="margin-left: 15px;">Coeficientes de materiais por metro quadrado   </h2>
+     
+
+<table width="60%" border="2" style="margin-top: 30px;margin-left: 3%
+ ;margin-bottom: 5%;font-size: 20px;" >
+<tr >
+<th>Item</th>
+<th>Tipos de argamassa</th>
+<th>Unidade</th>
+<th>Traço</th>
+<th>Cimento</th>
+<th>Areia</th>
+<th>Brita</th>
+<th>Densidade</th>
+<th>Observação</th>
+</tr>
+
+
+<tr>
+
+<td>1</td>
+<td>Assentamento de alvenaria comum</td>
+<td>Kg/m <sup>3</sup></td>
+<td>1:2:8</td>
+<td> 170</td>
+<td> 1.25</td>
+<td> ---</td>
+<td> ---</td>
+<td> traço fraco e economico</td>
+
+
+</tr>
+
+
+<tr>
+
+<td>2</td>
+<td>Assentamento de alvenaria estrutural</td>
+<td>m <sup>3</sup>/m <sup>3</sup></td>
+<td>1:1:6</td>
+<td>200 </td>
+<td>1.1 </td>
+<td> ---</td>
+<td> ---</td>
+<td>Traço mais rico e forte</td>
+</tr>
+
+
+<tr>
+
+<td>3</td>
+<td>Reboco interno</td>
+<td>m <sup>3</sup>/m <sup>3</sup></td>
+<td>1:2:9</td>
+<td>160</td>
+<td>1.3</td>
+<td> ---</td>
+<td> ---</td>
+<td>Superficíe lisa</td>
+
+</tr>
+
+
+<tr>
+
+    <td>4</td>
+    <td>Reboco externo</td>
+    <td>m<sup>3</sup></td>
+    <td>1:2:8</td>
+    <td>170</td>
+    <td>1.25</td>
+    <td> ---</td>
+<td> ---</td>
+    <td>Mais resistente a intempéries </td>
+    </tr>
+    
+    <td>5</td>
+    <td>Chapisco</td>
+    <td>m<sup>3</sup></td>
+    <td>1:3</td>
+    <td>350 </td>
+    <td>1.1</td>
+    <td> ---</td>
+<td> ---</td>
+    <td> projecção para aderência</td>
+    </tr>
+    
+    <td>6</td>
+    <td>Emboço (base pra reboco)</td>
+    <td>m<sup>3</sup></td>
+    <td>1:2:8</td>
+    <td>170</td>
+    <td>1.25</td>
+    <td> ---</td>
+    <td> ---</td>
+    <td> ---</td>
+
+    </tr>
+ 
+    <tr>
+    <td>7</td>
+    <td>Argamassa para o contrapiso</td>
+    <td>kg/m <sup>3</sup></td>
+    <td>1:4</td>
+    <td>350 a 400 kg</td>
+    <td>1 m<sup>3</sup></td>
+    <td> ---</td>
+    <td> ---</td>
+    <td> ---</td>
+
+    </tr>   
+
+
+
+<th colspan="9">  Traços do volume de betão</th>
+    
+<tr>
+    <td>8</td>
+    <td>Concreto magro</td>
+    <td>kg/m<sup>3</sup></td>
+    <td>1:3:6</td>
+    <td> 250  </td>
+    <td>0.5</td>
+    <td> 0.8</td>
+    <td> ---</td>
+    
+<td> ---</td>
+
+
+    </tr>
+<tr>
+    <td>9</td>
+    <td>Concreto estrutural</td>
+    <td>m<sup>3</sup></td>
+    <td>1:2:3</td>
+    <td>350 </td>
+    <td>0.55 </td>
+    <td> 0.8</td>
+    <td> ---</td>
+    
+<td> ---</td>
+    </tr>
+    <tr>
+    <td>10</td>
+    <td>Concreto para contrapiso
+
+    </td>
+    <td>m<sup>3</sup></td>
+    <td>1:3:4</td>
+    <td>300 </td>
+    <td>0.6</td>
+    <td>0.8</td>
+    <td></td>
+<td> ---</td>
+    </tr>
+
+    
+    <th colspan="9">  Densidade dos materiais</th>
+    
+<tr>
+    <td>9</td>
+    <td>Brita</td>
+    <td>t/m<sup>3</sup></td>
+    <td>---</td>
+    <td> --- </td>
+    <td>---</td>
+    <td> ---</td>
+    <td> 1,4 a 1,6</td>
+    
+<td> ---</td>
+
+
+    </tr>
+<tr>
+    <td>10</td>
+    <td>Areia seca</td>
+    <td>t/m<sup>3</sup></td>
+    <td>---</td>
+    <td>---</td>
+    <td>--- </td>
+    <td> --</td>
+    <td>1,6</td>
+    
+<td> ---</td>
+    </tr>
+    <tr>
+    <td>10</td>
+    <td>Areia úmida </td>
+    <td>t/m<sup>3</sup></td>
+    <td>---</td>
+    <td>---</td>
+    <td>---</td>
+    <td>---</td>
+    <td>1,8</td>
+<td> ---</td>
+    </tr>
+
+ <tr>
+    <td>10</td>
+    <td>Areia compactada </td>
+    <td>t/m<sup>3</sup></td>
+    <td>---</td>
+    <td>---</td>
+    <td>---</td>
+    <td>---</td>
+    <td>1,9</td>
+<td> ---</td>
+    </tr>
+</table>
+
+
+
+
+
+    </div>
+
+
+
+    <div  style="float: left ;width: 830px;
+       margin-right: 10px;
+       text-align: 
+       center ;margin-left: 10px;justify-content: center;overflow-y:auto ;margin-top: 30px;" 
+        >
+
+                 <h2 style="margin-left: 15px;">Inclinação da cobertura,Graus e factores</h2>
+    
+    
+<h2></h2>
+
+
+<table width="60%" border="2" style="height:2%;margin-left: 20%;font-size: 20px;margin-bottom: 5%;">
+
+
+
+<tr>
+<th>Inclinação</th>
+<th>Graus</th>
+<th>Factor</th>
+</tr>
+
+
+<tr>
+
+<td>0%</td>
+<td>0</td>
+<td>1.000</td>
+</tr>
+
+<tr>
+
+<td>5%</td>
+<td>2.86</td>
+<td>1.000</td>
+</tr>
+
+<tr>
+
+<td>10%</td>
+<td>5.71</td>
+<td>1.005</td>
+</tr>
+
+<tr>
+
+<td>15%</td>
+<td>8.53</td>
+<td>1.011</td>
+</tr>
+
+<tr>
+
+<td>20%</td>
+<td>10.31</td>
+<td>1.020</td>
+</tr>
+
+<tr>
+
+<td>25%</td>
+<td>14.04</td>
+<td>1.011</td>
+</tr>
+<tr>
+
+<td>30%</td>
+<td>16.70</td>
+<td>1.044</td>
+</tr>
+
+<tr>
+
+<td>35%</td>
+<td>19.29</td>
+<td>1.059</td>
+</tr>
+
+<tr>
+
+<td>40%</td>
+<td>22.80</td>
+<td>1.077</td>
+</tr>
+
+<tr>
+
+<td>45%</td>
+<td>24.23</td>
+<td>1.097</td>
+</tr>
+
+<tr>
+
+<td>50%</td>
+<td>26.55</td>
+<td>1.118</td>
+</tr>
+
+<tr>
+
+<td>55%</td>
+<td>28.81</td>
+<td>1.141</td>
+</tr>
+
+<tr>
+
+<td>60%</td>
+<td>30.96</td>
+<td>1.166</td>
+</tr>
+<tr>
+
+<td>65%</td>
+<td>33.02</td>
+<td>1.193</td>
+</tr>
+
+<tr>
+
+<td>70%</td>
+<td>34.99</td>
+<td>1.221</td>
+</tr>
+
+<tr>
+
+<td>75%</td>
+<td>36.87</td>
+<td>1.250</td>
+</tr>
+
+<tr>
+
+<td>80%</td>
+<td>38.66</td>
+<td>1.281</td>
+</tr>
+
+<tr>
+
+<td>85%</td>
+<td>40.36</td>
+<td>1.312</td>
+</tr>
+
+<tr>
+
+<td>90%</td>
+<td>41.99</td>
+<td>1.345</td>
+</tr>
+
+<tr>
+
+<td>95%</td>
+<td>43.53</td>
+<td>1.379</td>
+</tr>
+
+<tr>
+
+<td>100%</td>
+<td>45.00</td>
+<td>1.414</td>
+</tr>
+</table>
+
+    </div>
+
+
+
+
+    <div  style="float: left ;width: 830px;
+       ;margin-right: 10px;
+       ;text-align: 
+       center ;margin-left: 10px;justify-content: center;overflow:auto ;margin-top: 20px;" 
+        >
+
+                 <h2 style="margin-left: 10px;"> Consumo 
+                    por metros quadrado do cimento cola</h2>
+
+                 
+
+
+<table width="60%" border="2" style="margin-top: 30px;margin-left: 
+20%;margin-bottom: 5%;font-size: 20px;overflow-x: scroll;" >
+    
+    
+    <tr >
+    <th>Item</th>
+    <th>Tipos de  argamassa</th>
+    <th>Unidade</th>
+    <th>Aplicações</th>
+    <th>Consumo</th>
+    </tr>
+
+    <tr>
+
+        <td> 1</td>
+        <td>AC-I</td>
+        <td>kg/m <sup>2</sup></td>
+        <td>Ambientes internos </td>
+        <td> 4 á 6 </td>
+    </tr>
+
+    <tr>
+
+        <td> 2</td>
+        <td>AC-II</td>
+        <td>kg/m <sup>2</sup></td>
+        <td>Áreas úmidas e fachadas internas </td>
+        <td> 5 á 7 </td>
+        
+    </tr>
+
+    <tr>
+
+        <td> 3</td>
+        <td>AC-III</td>
+        <td>kg/m <sup>2</sup></td>
+        <td>Fachadas externas e porcelanatos  </td>
+        <td> 7 á 9 </td>
+    </tr>
+
+    <tr>
+
+
+    </table>
+ 
+</div>
+
+
+    <div  style="float: left ;width: 830px;
+       ;margin-right: 10px;margin-bottom: 100px;
+       text-align: 
+       center ;margin-left: 10px;justify-content: center;overflow-y:auto ;margin-top: 30px;" 
+        >
+
+                 <h2 style="margin-left: 15px;">Rendimento por demão de cada tinta</h2>
+
+
+    <table width="60%" border="2" style="margin-top: 30px;margin-left: 
+    18%;margin-bottom: 5%;font-size: 20px;" >
+       
+        
+        <tr >
+        <th>Item</th>
+        <th>Tipo de tinta</th>
+        <th>Unidade</th>
+        <th>Rendimento por demão</th>
+        </tr>
+    
+        <tr>
+    
+            <td> 1</td>
+            <td>Tinta acrílica</td>
+            <td>L/m <sup>2</sup></td>
+            <td>10 a 12</td>
+        </tr>
+    
+        <tr>
+    
+            <td> 2</td>
+            <td>Tinta PVA (Interno)</td>
+            <td>L/m<sup>2</sup></td>
+            <td>10 à 12</td>
+        </tr>
+    
+        <tr>
+    
+            <td> 3</td>
+            <td>Tinta Sintética</td>
+            <td>L/m<sup>2</sup></td>
+            <td>8 à 10</td>
+        </tr>
+    
+        <tr>
+    
+            <td> 4</td>
+            <td>Tinta Epóxi</td>
+            <td>L/m <sup>2</sup></td>
+            <td>6 à 8</td>
+        </tr>
+
+        <tr>
+    
+            <td> 5</td>
+            <td>Tinta Esmalte</td>
+            <td>L/m <sup>2</sup></td>
+            <td>10 à 12</td>
+        </tr>
+
+        <tr>
+    
+            <td> 6</td>
+            <td>Tinta látex</td>
+            <td>L/m <sup>2</sup></td>
+            <td>8 à 10</td>
+        </tr>
+
+        <tr>
+    
+            <td> 7</td>
+            <td>Tinta verniz</td>
+            <td>L/m <sup>2</sup></td>
+            <td>12 à 15</td>
+        </tr>
+
+    
+        </table>
+        
+
+    </div>
+
+
+
+    </div>
+
+
+
+
+        </a> 
+        
+    </div>
+       
+    </nav>
+
+    <section class="secção-1">
+
+
+        <div class="pub2">
+        
+            <h2 style="text-align: center;width: 100%;padding: 60px 10px;">Publicidade</h2>
+        </div>
+        
+
+    </section>
+
+    
+<div style="margin-top: 30px;text-align: center;width: 90%;margin-right: 5%;margin-left: 5%;">
+   <strong> 🔒 Baseado em fórmulas reais de orçamento de obra </strong><br><br>
+ <p style="text-align: justify;">
+
+ <strong>Aviso:</strong> Os resultados apresentados por esta calculadora são apenas
+   estimativas baseadas nos dados fornecidos pelo usuário.Caso não fores um profissional,consulte sempre um, para
+  verificar os resultados após efectuar o cálculo para evitar erros
+</p>
+</div>
+
+    <header>
+
+
+        
+<div class="dropdown-content1" id="filho3">
+
+    <div  class="Centro" 
+        >
+<h2 class="centro-h2" >
+    TABELA DE COEFICIENTES </h2>
+
+                 <h2 style="margin-left: 15px;">Coeficientes de materiais por metros quadrado   </h2>
+     
+
+<table border="2" width="100%" class="Centro-2" >
+<tr >
+<th>Item</th>
+<th>Tipos de argamassa</th>
+<th>Unidade</th>
+<th>Traço</th>
+<th>Cimento</th>
+<th>Areia</th>
+<th>Brita</th>
+<th>Densidade</th>
+<th>Observação</th>
+</tr>
+
+
+<tr>
+
+<td>1</td>
+<td>Assentamento de alvenaria comum</td>
+<td>Kg/m <sup>3</sup></td>
+<td>1:2:8</td>
+<td> 170</td>
+<td> 1.25</td>
+<td> ---</td>
+<td> ---</td>
+<td> traço fraco e economico</td>
+
+
+</tr>
+
+
+<tr>
+
+<td>2</td>
+<td>Assentamento de alvenaria estrutural</td>
+<td>m <sup>3</sup>/m <sup>3</sup></td>
+<td>1:1:6</td>
+<td>200 </td>
+<td>1.1 </td>
+<td> ---</td>
+<td> ---</td>
+<td>Traço mais rico e forte</td>
+</tr>
+
+
+<tr>
+
+<td>3</td>
+<td>Reboco interno</td>
+<td>m <sup>3</sup>/m <sup>3</sup></td>
+<td>1:2:9</td>
+<td>160</td>
+<td>1.3</td>
+<td> ---</td>
+<td> ---</td>
+<td>Superficíe lisa</td>
+
+</tr>
+
+
+<tr>
+
+    <td>4</td>
+    <td>Reboco externo</td>
+    <td>m<sup>3</sup></td>
+    <td>1:2:8</td>
+    <td>170</td>
+    <td>1.25</td>
+    <td> ---</td>
+<td> ---</td>
+    <td>Mais resistente a intempéries </td>
+    </tr>
+   <tr> 
+    <td>5</td>
+    <td>Chapisco</td>
+    <td>m<sup>3</sup></td>
+    <td>1:3</td>
+    <td>350 </td>
+    <td>1.1</td>
+    <td> ---</td>
+<td> ---</td>
+    <td> projecção para aderência</td>
+    </tr>
+    
+    <tr>
+    <td>6</td>
+    <td>Emboço (base pra reboco)</td>
+    <td>m<sup>3</sup></td>
+    <td>1:2:8</td>
+    <td>170</td>
+    <td>1.25</td>
+    <td> ---</td>
+    <td> ---</td>
+    <td> ---</td>
+
+    </tr>
+    
+
+    <tr>
+    <td>7</td>
+    <td>Argamassa para o contrapiso</td>
+    <td>kg/m <sup>3</sup></td>
+    <td>1:4</td>
+    <td>350 a 400 kg</td>
+    <td>1 m<sup>3</sup></td>
+    <td> ---</td>
+    <td> ---</td>
+    <td> ---</td>
+
+    </tr>
+
+<th colspan="9">  Traços do volume de betão</th>
+    
+<tr>
+    <td>8</td>
+    <td>Concreto magro</td>
+    <td>kg/m<sup>3</sup></td>
+    <td>1:3:6</td>
+    <td> 250  </td>
+    <td>0.5</td>
+    <td> 0.8</td>
+    <td> ---</td>
+    
+<td> ---</td>
+
+
+    </tr>
+<tr>
+    <td>9</td>
+    <td>Concreto estrutural</td>
+    <td>m<sup>3</sup></td>
+    <td>1:2:3</td>
+    <td>350 </td>
+    <td>0.55 </td>
+    <td> 0.8</td>
+    <td> ---</td>
+    
+<td> ---</td>
+    </tr>
+    <tr>
+    <td>10</td>
+    <td>Concreto para contrapiso
+
+    </td>
+    <td>m<sup>3</sup></td>
+    <td>1:3:4</td>
+    <td>300 </td>
+    <td>0.6</td>
+    <td>0.8</td>
+    <td></td>
+<td> ---</td>
+    </tr>
+
+    <th colspan="9">  Densidade dos materiais</th>
+    
+<tr>
+    <td>9</td>
+    <td>Brita</td>
+    <td>t/m<sup>3</sup></td>
+    <td>---</td>
+    <td> --- </td>
+    <td>---</td>
+    <td> ---</td>
+    <td> 1,4 a 1,6</td>
+    
+<td> ---</td>
+
+
+    </tr>
+<tr>
+    <td>10</td>
+    <td>Areia seca</td>
+    <td>t/m<sup>3</sup></td>
+    <td>---</td>
+    <td>---</td>
+    <td>--- </td>
+    <td> --</td>
+    <td>1,6</td>
+    
+<td> ---</td>
+    </tr>
+    <tr>
+    <td>10</td>
+    <td>Areia úmida </td>
+    <td>t/m<sup>3</sup></td>
+    <td>---</td>
+    <td>---</td>
+    <td>---</td>
+    <td>---</td>
+    <td>1,8</td>
+<td> ---</td>
+    </tr>
+
+ <tr>
+    <td>10</td>
+    <td>Areia compactada </td>
+    <td>t/m<sup>3</sup></td>
+    <td>---</td>
+    <td>---</td>
+    <td>---</td>
+    <td>---</td>
+    <td>1,9</td>
+<td> ---</td>
+    </tr>
+
+</table>
+
+    </div>
+
+    
+    <div class="Centro" >
+
+                 <h2 style="margin-left: 15px;"> Consumo 
+                    por metros quadrado do cimento cola</h2>
+
+                 
+
+
+<table   border="2" width="100%" class="Centro-10" >
+    
+    
+    <tr >
+    <th>Item</th>
+    <th>Tipos de argamassa</th>
+    <th>Unidade</th>
+    <th>Aplicações</th>
+    <th>Consumo</th>
+    </tr>
+
+    <tr>
+
+        <td> 1</td>
+        <td>AC-I</td>
+        <td>kg/m <sup>2</sup></td>
+        <td>Ambientes internos </td>
+        <td> 4 á 6 </td>
+    </tr>
+
+    <tr>
+
+        <td> 2</td>
+        <td>AC-II</td>
+        <td>kg/m <sup>2</sup></td>
+        <td>Áreas úmidas e fachadas internas </td>
+        <td> 5 á 7 </td>
+        
+    </tr>
+
+    <tr>
+
+        <td> 3</td>
+        <td>AC-III</td>
+        <td>kg/m <sup>2</sup></td>
+        <td>Fachadas externas e porcelanatos  </td>
+        <td> 7 á 9 </td>
+    </tr>
+
+    <tr>
+
+
+    </table>
+ 
+</div>
+
+    <div  class="Centro">
+
+                 <h2>Coeficiente de telhas</h2>
+
+                 
+
+
+<table  border="2" width="100%" class="Centro-1" >
+    
+    
+    <tr >
+    <th>Item</th>
+    <th>Tipo de telhas</th>
+    <th>Unidade</th>
+    <th>Coeficientes por peças</th>
+    </tr>
+
+    <tr>
+
+        <td> 1</td>
+        <td>Romana</td>
+        <td>m <sup>2</sup></td>
+        <td>16</td>
+    </tr>
+
+    <tr>
+
+        <td> 2</td>
+        <td>Italiana</td>
+        <td>m <sup>2</sup></td>
+        <td>14</td>
+    </tr>
+
+    <tr>
+
+        <td> 3</td>
+        <td>Colonial pequena</td>
+        <td>m <sup>2</sup></td>
+        <td>24</td>
+    </tr>
+
+    <tr>
+
+        <td> 4</td>
+        <td>Colonial grande</td>
+        <td>m <sup>2</sup></td>
+        <td>16</td>
+    </tr>
+
+    
+    <tr>
+
+        <td> 5</td>
+        <td>Francesa</td>
+        <td>m <sup>2</sup></td>
+        <td>16</td>
+    </tr>
+
+    
+    <tr>
+
+        <td> 6</td>
+        <td>Portuguesa</td>
+        <td>m <sup>2</sup></td>
+        <td>17</td>
+    </tr>
+    
+    <tr>
+
+        <td> 7</td>
+        <td>Americana</td>
+        <td>m <sup>2</sup></td>
+        <td>12.5</td>
+    </tr>
+
+
+
+    </table>
+ 
+</div>
+
+    <div  class="Centro">
+
+                 <h2 style="margin-left: 15px;">Inclinação da cobertura,Graus e factores</h2>
+    
+    
+
+
+
+<table  border="2" Width="100%" class="Centro-3">
+
+
+
+<tr>
+<th>Inclinação</th>
+<th>Graus</th>
+<th>Factor</th>
+</tr>
+
+
+<tr>
+
+<td>0%</td>
+<td>0</td>
+<td>1.000</td>
+</tr>
+
+<tr>
+
+<td>5%</td>
+<td>2.86</td>
+<td>1.000</td>
+</tr>
+
+<tr>
+
+<td>10%</td>
+<td>5.71</td>
+<td>1.005</td>
+</tr>
+
+<tr>
+
+<td>15%</td>
+<td>8.53</td>
+<td>1.011</td>
+</tr>
+
+<tr>
+
+<td>20%</td>
+<td>10.31</td>
+<td>1.020</td>
+</tr>
+
+<tr>
+
+<td>25%</td>
+<td>14.04</td>
+<td>1.011</td>
+</tr>
+<tr>
+
+<td>30%</td>
+<td>16.70</td>
+<td>1.044</td>
+</tr>
+
+<tr>
+
+<td>35%</td>
+<td>19.29</td>
+<td>1.059</td>
+</tr>
+
+<tr>
+
+<td>40%</td>
+<td>22.80</td>
+<td>1.077</td>
+</tr>
+
+<tr>
+
+<td>45%</td>
+<td>24.23</td>
+<td>1.097</td>
+</tr>
+
+<tr>
+
+<td>50%</td>
+<td>26.55</td>
+<td>1.118</td>
+</tr>
+
+<tr>
+
+<td>55%</td>
+<td>28.81</td>
+<td>1.141</td>
+</tr>
+
+<tr>
+
+<td>60%</td>
+<td>30.96</td>
+<td>1.166</td>
+</tr>
+<tr>
+
+<td>65%</td>
+<td>33.02</td>
+<td>1.193</td>
+</tr>
+
+<tr>
+
+<td>70%</td>
+<td>34.99</td>
+<td>1.221</td>
+</tr>
+
+<tr>
+
+<td>75%</td>
+<td>36.87</td>
+<td>1.250</td>
+</tr>
+
+<tr>
+
+<td>80%</td>
+<td>38.66</td>
+<td>1.281</td>
+</tr>
+
+<tr>
+
+<td>85%</td>
+<td>40.36</td>
+<td>1.312</td>
+</tr>
+
+<tr>
+
+<td>90%</td>
+<td>41.99</td>
+<td>1.345</td>
+</tr>
+
+<tr>
+
+<td>95%</td>
+<td>43.53</td>
+<td>1.379</td>
+</tr>
+
+<tr>
+
+<td>100%</td>
+<td>45.00</td>
+<td>1.414</td>
+</tr>
+</table>
+
+    </div>
+   
+
+
+
+ <div class="Centro">
+
+                 <h2 style="margin-left: 15px;">Rendimento por demão de cada tinta</h2>
+
+
+    <table  border="2" width="100%" class="Centro-4" >
+       
+        
+        <tr >
+        <th>Item</th>
+        <th>Tipo de tinta</th>
+        <th>Unidade</th>
+        <th>Rendimento por demão</th>
+        </tr>
+    
+        <tr>
+    
+            <td> 1</td>
+            <td>Tinta acrílica</td>
+            <td>L/m <sup>2</sup></td>
+            <td>10 a 12</td>
+        </tr>
+    
+        <tr>
+    
+            <td> 2</td>
+            <td>Tinta PVA (Interno)</td>
+            <td>L/m <sup>2</sup></td>
+            <td>10 à 12</td>
+        </tr>
+    
+        <tr>
+    
+            <td> 3</td>
+            <td>Tinta Sintética</td>
+            <td>L/m <sup>2</sup></td>
+            <td>8 à 10</td>
+        </tr>
+    
+        <tr>
+    
+            <td> 4</td>
+            <td>Tinta Epóxi</td>
+            <td>L/m <sup>2</sup></td>
+            <td>6 à 8</td>
+        </tr>
+
+        <tr>
+    
+            <td> 5</td>
+            <td>Tinta Esmalte</td>
+            <td>L/m <sup>2</sup></td>
+            <td>10 à 12</td>
+        </tr>
+
+        <tr>
+    
+            <td> 6</td>
+            <td>Tinta látex</td>
+            <td>L/m <sup>2</sup></td>
+            <td>8 à 10</td>
+        </tr>
+
+        <tr>
+    
+            <td> 7</td>
+            <td>Tinta verniz</td>
+            <td>L/m <sup>2</sup></td>
+            <td>12 à 15</td>
+        </tr>
+
+    
+        </table>
+        
+
+    </div>
+
+
+
+
+
+
+    </div>
+
+
+        <div  class="lista">
+            <h2 class="formulas" >Fórmulas</h2>
+        <ul class="" >
+
+            <li  id="16">
+                <a href="Calculadora.html?f=calculo_da_area_da_alvenaria" class="ele">
+<abbr title="Fórmula para calcular a área da alvenária.
+Elementos da fórmula:
+A.al:área da alvenária;
+C:comprimento da parede:
+H:altura da parede.
+">Área da Alvenaria</abbr>
+
+            </a></li>
+            <li  id="1"><a href="Calculadora.html?f=calculo_da_quantidade_de_blocos" class="ele"> 
+                <abbr title="
+                Fórmula para determinar a quantidade de blocos necessário para a obra.
+
+                Elementos da fórmula:
+                A.al:área da alvenária;
+                B1:comprimento do bloco;
+                Eh:junta horizontal do bloco;
+                B2:Altura do bloco.
+                " style="text-decoration: none;"> Quantidade de blocos </abbr></a></li>
+
+            <li  id="2"><a href="Calculadora.html?f=calculo_do_volume_de_assentamento"class="ele">
+                
+                
+            <abbr title="Fórmula para calcular a quantidade de argamassa(massa)
+            necessária para assentamento dos blocos.
+
+            Elementos da fórmula:
+
+            A.al:área da alvenária;
+            Nb:número de blocos;
+            B1:comprimento do bloco;
+            B2:altura do bloco;
+            B3:Largura do bloco.
+              " >        Volume de argamassa para o assentamento  </abbr>
+            
+            
+            </a></li>
+            
+            
+            
+            <li  id="3"><a href="Calculadora.html?f=calculo_da_area_do_chapisco_e_reboco "class="ele">
+                
+                
+              <abbr title="Fórmula para calcular a área necessária 
+              a ser reboca ou chapiscada.
+
+              Elementos da fórmula:
+
+              A.al:área da alvenária.
+              ">  Área do chapisco e reboco  </abbr>
+            
+            
+            
+            </a></li>
+            
+            <li  id="4"><a href="Calculadora.html?f=calculo_do_volume_para_o_chapisco"class="ele">
+                
+             <abbr title="Está fórmula ajuda a saber a quantidade 
+             de argamassa(massa)necessária para chapiscar uma parede.
+
+             Elementos da fórmula:
+             Ac:área do chapisco;
+             Ec:espessura do chapisco; 
+             
+             ">
+
+
+               Volume de argamassa para chapisco  </abbr>
+            
+            
+            </a></li>
+            
+            <li  id="18"><a href="Calculadora.html?f=calculo_do_volume_para_o_reboco "class="ele">
+                
+             <abbr title="esta fórmula permite determinar o volume de argamassa(massa)precisa 
+             para o reboco de uma parede.
+
+             Elementos:
+
+             Ar:área do reboco;
+             Er:espessura do reboco.
+             
+             ">   Volume de argamassa para reboco </abbr>
+            
+            
+            
+            </a></li>
+           
+            <li  id="5"><a href="Calculadora.html?f=calculo_do_volume_total_de_argamassa "class="ele">
+                
+            <abbr 
+            
+            title="
+            com está fórmula,calcula-se o conjunto de toda argamassa que 
+            será necessária a obra.isto incluí:o volume de armgamassa 
+            para o chapisco,reboco e do assentamento.
+
+            Elementos da fórmula
+            v.ass:volume de assentamento dos blocos;
+            V.c: volume de argamassa para o chapisco;
+            V.r: volume de argamassa para o Reboco
+
+            ">    Volume total de argamassa
+ </abbr>           
+            
+            </a></li>
+           
+            <li  id="6"><a href="Calculadora.html?f=calculo_da_area_por_perimetro"class="ele">
+                
+                <abbr title="é área da alvenária,achada atraves dos perimetros(comprimento) de uma
+                residência a sua altura e os vaos 
+                
+                Elementos:
+
+                P:perimetros;
+                H:altura;
+                Av:área dos vãos.
+                
+                ">Área por perímetro</abbr>
+            
+            </a></li>
+            <li  id="7"><a href="Calculadora.html?f=calculo_do_perimetro"class="ele">
+                
+                <abbr title="é o comprimento de uma parede
+                
+                
+                ">  Perímetros</abbr>
+            
+            
+            
+            </a></li>
+            <li  id="8"><a href="Calculadora.html?f=calculo_da_area_dos_vaos"class="ele">
+                
+                <abbr title="é todo o espaço vago contidas em paredes.tais como;janelas e portas
+                
+                Elementos da fórmula:
+                H:altura da porta;
+                L:largura da porta.
+                ">Área dos vãos
+            </abbr>
+            
+            </a></li>
+            <li  id="9"><a href="Calculadora.html?f=calculo_do_volume_de_betão"class="ele">
+            
+            
+                <abbr title="
+                quantidade de betão necessária para encher uma viga,sapata ou pilar.
+               Elementos da fórmula:
+               C:comprimentos da viga,sapata ou pilar;
+               L:largura da viga,sapata ou pilar;
+               H:altura da viga,sapata ou pilar.
+                
+                ">Volume de betão</abbr>
+            
+            </a> </li>
+            <li  id="10"><a href="Calculadora.html?f=calculo_da_quantidade_de_cimento"class="ele">
+                
+               <abbr title=" Quantidade de cimento necessária para construção de uma parede ou residência.
+
+               Elementos da fórmula:
+               Coe:coeficiente de cimento po metros quadros:
+               V.ass:volume de argamassa.
+               ">
+ Quantidade de Cimento 
+            
+
+               </abbr>
+            
+            </a> </li>
+            <li  id="11"><a href="Calculadora.html?f=calculo_da_quantidade_de_areia"class="ele">
+                <abbr title="Quantidade de areia necessário para a obra ou construção.
+
+                Elementos da fórmula:
+
+                Coe:coeficiente de areia por metros quadro;
+                V.ass: volume de argamassa.
+                
+                
+                ">
+                Quantidade de Areia  </abbr>
+            
+            
+            </a> </li>
+            <li  id="17"><a href="Calculadora.html?f=calculo_da_quantidade_de_brita"class="ele">
+                <abbr title="Quantidade de brita necessária.
+
+                Elementos da fórmula:
+
+                Coe:coeficiente de brita por metros quadrados;
+                V.ass: volume de argamassa.
+                
+
+
+                ">
+
+                    
+                Quantidade de Brita
+                </abbr>
+            
+            </a> </li>
+            <li  id="12"><a href="Calculadora.html?f=calculo_da_quantidade_de_tinta"class="ele">
+                <abbr title="Quantidade de tinta necessária para pintar uma parede ou residência.
+
+                Elementos da fórmula:
+
+                A.p:área da pintura;
+                N.d:número de demão;
+                R.d: coeficente do rendimento por demão de cada tinta.
+                
+                
+                ">
+
+
+                Quantidade de Tinta
+
+                </abbr>
+            
+            </a> </li>
+            <li  id="13"><a href="Calculadora.html?f=calculo_da_quantidade_de_azulejos"class="ele">
+                <abbr title=" quantidade de peças de aazulejos para mosoicar um espaço ou residência.
+
+                Elementos da fórmula:
+
+                A.al:área da alvenária(área a se mosaicada) a ser mosaicada;
+                A.az:are da peça do azulejo(mosaique).
+                
+                
+                ">
+
+
+                Quantidade de azulejos
+
+                </abbr>
+            
+            
+            </a> </li>
+
+ <li  id=""><a href="Calculadora.html?f=calculo_da_area_e_quantidade_para_o_piso"class="ele">
+                
+
+
+            Área e quantidade de peças para o piso
+
+                </abbr>
+            
+            
+            </a> </li>
+           
+
+
+            <li  id="14"><a href="Calculadora.html?f=calculo_da_area_da_cobertura"class="ele">
+                <abbr title=" espaço a ser coberto numa residência.
+                
+                elementos da fórmula:
+
+                C:comprimento da cobertura;
+                L:largura da cobertura;
+                Fator de inclinação:é o coeficiete percentual de cada inclinação da cobertura.
+
+                consulte a tabela de coeficiente para saber mais.
+
+                Area real: é dimensão certa da área da cobertura,consirando todos os fatores ,como a icnlinação.
+                ">   
+
+                Área da Cobertura 
+
+                </abbr>
+            
+            </a> </li>
+            <li  id="15"><a href="Calculadora.html?f=calculo_da_quantidade_para_a_cobertura"class="ele"> 
+                
+                <abbr title="é a número de telhas ou chapas que será preciso para cobrir a área da cobertura.
+                Elementos da cobertura
+                A.c:área da cobertura;
+                Coe:coeficiente de telhas ou chapas por metros quadrados
+                Obs: consulte a tabela de coeficiente para saberes mais.
+
+                ">
+
+                    Quantidade para cobertura 
+                </abbr>  
+            
+            </a> </li>
+            <li><a href="Calculadora.html?f=calculo_do_custo_do_material" class="ele">
+                
+            <abbr title="">
+
+    Custo do material
+  
+
+            </abbr>          
+            </a> </li>
+            <li><a href="Calculadora.html?f=calculo_da_mão_de_obra" class="ele"> 
+                <abbr title="">
+
+                    
+                Mão de obras
+                </abbr>
+            
+            
+            </a> </li>
+            <li><a href="Calculadora.html?f=calculo_do_preço_composto" class="ele"> 
+                
+                <abbr title="">
+                    Preço composto
+                </abbr>
+
+            </a> </li>
+            <li><a href="Calculadora.html?f=planilha_orçamental" class="ele">
+                
+            <abbr title="">
+
+                
+                Planilha Orçamental
+            </abbr>
+            
+            </a> </li>
+            
+        </ul>
+        
+        </div>
+
+<div id="resultados-gerais"   class="dados" >
+
+
+  <h3 class="dados-1" >Resultados</h3>
+
+  <button class="botão-dados"  onclick="apagar()" id="Re" >
+  <a  style="color: white;text-decoration: none;" 
+   href="Calculadora.html?f=calculo_da_area_da_alvenaria">Recomeçar</a></button>
+
+
+
+  <ul id="lista-resultados-desktop" >
+
+
+  </ul>
+
+
+</div>
+
+
+<div id="centro" class="centro">  
+       
+      
+
+       
+       
+    
+    </div>
+
+
+
+ 
+
+
+<div   class="pub "> 
+<h2>Publicidade</h2>  
+
+</div>
+    </header>
+
+    <section style="display: none;">
+
+
+
+
+<div id="nb" class="centro-item">
+   <h2 >Número de blocos</h2>
+<form action=""   >  
+<label for="area">Aal</label>
+<input type="text" name="" placeholder="área da alvenária" id="area"><br><br>
+<label for="comprimento">B1</label>
+<input type="text" name="" id="comprimento">
+<label for="espessura">EV</label>
+<input type="text" name="" id="espessura"><br><br>
+<label for="largura">B2</label>
+<input type="text" name="" id="largura">
+<label for="altura">EH</label>
+<input type="text" name="" id="altura"><br><br>
+</form>
+
+ 
+<button type="button" onclick="blocos()"  class="centro-item-botão" >
+
+
+= 
+</button>
+    
+
+
+</div>
+
+
+
+<div class="centro-item" id="per">  
+
+<h2>Cálculo da percentagem de perda</h2>
+<form action="" >  
+<label for="pe">percentagem</label>
+<input type="text" name="" id="perc">
+<label for="h">nb</label>
+<input type="text" name="" id="perc1">
+<label for="vao">nb</label>
+<input type="text" name="" id="perc2"><br><br>
+</form>
+<button type="button" onclick="percentagem()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+
+<div class="centro-item" id="per1">  
+
+<h2>Cálculo da percentagem de perda</h2>
+<form action="" >  
+<label for="pe">percentagem</label>
+<input type="text" name="" id="perc3">
+<label for="h">Qci</label>
+<input type="text" name="" id="perc4">
+<label for="vao">Qci</label>
+<input type="text" name="" id="perc5"><br><br>
+</form>
+<button type="button" onclick="percentagem1()" class="centro-item-botão"  >=</button>
+</div>
+
+
+<div class="centro-item" id="per2">  
+
+<h2>Cálculo da percentagem de perda</h2>
+<form action="" >  
+<label for="pe">percentagem</label>
+<input type="text" name="" id="perc6">
+<label for="h">Q.t</label>
+<input type="text" name="" id="perc7">
+<label for="vao">Q.t</label>
+<input type="text" name="" id="perc8"><br><br>
+</form>
+<button type="button" onclick="percentagem2()"  class="centro-item-botão"  >=</button>
+</div>
+
+<div class="centro-item" id="per3">  
+
+<h2>Cálculo da percentagem de perda</h2>
+<form action="" >  
+<label for="pe">percentagem</label>
+<input type="text" name="" id="perc9">
+<label for="h">Q.az</label>
+<input type="text" name="" id="perc10">
+<label for="vao">Q.az</label>
+<input type="text" name="" id="perc11"><br><br>
+</form>
+<button type="button" onclick="percentagem3()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+
+
+
+
+<div class="centro-item" id="volume"> 
+<h2 >Volume de assentamento</h2>
+<form action="" >  
+<label for="area2">Aal</label>
+<input type="text" name="" id="area2"><br><br>
+<label for="numero">Nb</label>
+<input type="text" name="" id="numero">
+<label for="b1">B1</label>
+<input type="text" name="" id="b1"><br><br>
+<label for="b2">B2</label>
+<input type="text" name="" id="b2">
+<label for="b3">B3</label>
+<input type="text" name="" id="b3"><br><br>   
+</form>
+
+<button type="button" onclick="assentamento()"  class="centro-item-botão"  >
+ = 
+
+</button>
+
+</div>
+
+
+<div class="centro-item" id="chapisco">  
+
+<h2 >Área de chapisco e Reboco</h2>
+
+<form action="" >  
+<label for="area3">Aal</label>
+<input type="text" name="" id="area3"><br><br>
+
+</form>
+
+<button type="button" onclick="chapisco()"  style="background-color: black;color:
+white;font-weight: bold;text-align: center; width: 40px;height: 40px;margin-left: 20px;"  >
+=</button>
+
+
+</div>
+
+
+
+<div style="display: none;width: 500px;border: 1px solid black;
+left: 25%;top: 25%;align-content: center;text-align: center;align-items: center;" id="vcr"> 
+
+<h2>Volume de argamassa para chapisco </h2>
+<form action="" >  
+<label for="acr">A.c</label>
+<input type="text" name="" id="acr">
+<label for="ecr">E.c</label>
+<input type="text" name="" id="ecr"><br><br>   
+</form>
+<button type="button" onclick="reboco()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+
+<div class="centro-item" id="vr"> 
+
+<h2>Volume de argamassa para reboco</h2>
+<form action="" >  
+<label for="ar">A.r</label>
+<input type="text" name="" id="ar">
+<label for="er">E.r</label>
+<input type="text" name="" id="er"><br><br>   
+</form>
+<button type="button" onclick="reboco1()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+<div class="centro-item" id="vta">   
+
+<h2>Volume total de argamassa</h2>
+<form action=""  >  
+<label for="ass">V.ass</label>
+<input type="text" name="" id="ass">
+<label for="chap">V.c</label>
+<input type="text" name="" id="chap">
+<label for="reb">V.r</label>
+<input type="text" name="" id="reb"><br><br>   
+</form>
+<button type="button" onclick="volumetotal()"  class="centro-item-botão"  >=</button>
+ </div>
+
+<div class="centro-item" id="ap">  
+
+<h2>Área por perímetro</h2>
+<form action="" >  
+<label for="pe">P</label>
+<input type="text" name="" id="pe">
+<label for="h">H</label>
+<input type="text" name="" id="h">
+<label for="vao">Av</label>
+<input type="text" name="" id="vao"><br><br>
+</form>
+<button type="button" onclick="area()"  class="centro-item-botão" >=</button>
+</div>
+
+<div class="centro-item" id="sm">  
+
+<h2 >Soma dos perímetros</h2>
+<input type="text"  id="lk5"  placeholder="p1+p2+p3+p4+p5..."> <br><br>
+<label for="lk5">
+<button type="button" onclick="perimetro()"  class="centro-item-botão"  >=</button></label>
+</div>
+
+<div class="centro-item" id="av">  
+
+<h2 >Área dos vãos</h2>
+<input type="text"  id="lk4"   placeholder="(l*h)+(l2*h2)+(l3*h3)..."> <br><br>
+<label for="lk4"><button type="button" onclick="vao()"  class="centro-item-botão"  >=</button></label>
+</div>
+
+<div class="centro-item" id="vsv">  
+
+<h2 >Volume de betão para sapatas,vigas e pilares </h2>
+<form action="" >  
+<label for="c">C</label>
+<input type="text" name="" id="c">
+<label for="l">L</label>
+<input type="text" name="" id="l">
+<label for="a">H </label>
+<input type="text" name="" id="a"><br><br>
+</form>
+<button type="button" onclick="betao()"  class="centro-item-botão"  >=</button>
+</div>
+
+<div class="centro-item" id="cm">  
+
+<h2 >Quantidade de Cimento por kilo</h2>
+<form action="">  
+<label for="qc1">Coe</label>
+<input type="text" name="" id="qc1">
+</form>
+<button type="button" onclick="cimento()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+<div class="centro-item" id="cm2">  
+
+<h2 >Quantidade de Cimento para o assentamento </h2>
+<form action="">  
+<label for="qc1">Coe</label>
+<input type="text" name="" id="ass1">
+<label for="qc2">V.ass</label>
+<input type="text" name="" id="ass2"><br><br>
+</form>
+<button type="button" onclick="cimento3()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+<div class="centro-item" id="assentamento-areia">  
+
+<h2 >Quantidade de areia para o assentamento  </h2>
+<form action="">  
+<label for="qc1">Coe</label>
+<input type="text" name="" id="ass3">
+<label for="qc2">V.ass</label>
+<input type="text" name="" id="ass4"><br><br>
+</form>
+<button type="button" onclick="areia2()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+
+<div class="centro-item" id="chapisco-cimento">  
+
+<h2 >Quantidade de Cimento para o chapisco </h2>
+<form action="">  
+<label for="qc1">Coe</label>
+<input type="text" name="" id="cha1">
+<label for="qc2">V.ass</label>
+<input type="text" name="" id="cha2"><br><br>
+</form>
+<button type="button" onclick="cimento4()"  class="centro-item-botão"  >=</button>
+</div>
+
+<div class="centro-item" id="chapisco-areia">  
+
+<h2 >Quantidade de areia para  chapisco </h2>
+<form action="">  
+<label for="qc1">Coe</label>
+<input type="text" name="" id="cha3">
+<label for="qc2">V.ass</label>
+<input type="text" name="" id="cha4"><br><br>
+</form>
+<button type="button" onclick="areia4()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+<div class="centro-item" id="reboco-cimento">  
+
+<h2 >Quantidade de cimento para reboco </h2>
+<form action="">  
+<label for="qc1">Coe</label>
+<input type="text" name="" id="reboco-1">
+<label for="qc2">V.ass</label>
+<input type="text" name="" id="reboco-2"><br><br>
+</form>
+<button type="button" onclick="cimento5()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+<div class="centro-item" id="reboco-areia">  
+
+<h2 >Quantidade de areia para  reboco </h2>
+<form action="">  
+<label for="">Coe</label>
+<input type="text" name="" id="reboco-3">
+<label for="">V.ass</label>
+<input type="text" name="" id="reboco-4"><br><br>
+</form>
+<button type="button" onclick="areia5()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+<div class="centro-item" id="betão-cimento">
+
+<h2 >Quantidade de cimento para o betão </h2>
+<form action="">  
+<label for="">Coe</label>
+<input type="text" name="" id="betão-1">
+<label for="">V.ass</label>
+<input type="text" name="" id="betão-2"><br><br>
+</form>
+<button type="button" onclick="cimento6()"  class="centro-item-botão"  >=</button>
+</div>
+
+<div class="centro-item" id="betão-areia">
+
+<h2 >Quantidade de areia para o betão </h2>
+<form action="">  
+<label for="">Coe</label>
+<input type="text" name="" id="betão-3">
+<label for="">V.ass</label>
+<input type="text" name="" id="betão-4"><br><br>
+</form>
+<button type="button" onclick="areia6()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+
+
+
+
+<div class="centro-item" id="cm1">  
+
+<h2 >Quantidade de Cimento por sacos</h2>
+<form action="" >  
+<label for="qc3">Qci</label>
+<input type="text" name="" id="qc3">
+<label for="qc4">Q.Kg/s</label>
+<input type="text" name="" id="qc4"><br><br>
+</form>
+<button type="button" onclick="cimento1()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+
+
+<div class="centro-item" id="qar">  
+
+<h2 >Quantidade de Areia</h2>
+<form action=""  >  
+<label for="car1">Coe</label>
+<input type="text" name="" id="car1"><br><br>
+</form>
+<button type="button" onclick="areia()" class="centro-item-botão" >=</button>
+</div>
+
+<div class="centro-item" id="qar1">  
+
+<h2 >Quantidade de Areia por peso</h2>
+<form action="" >  
+<label for="avr3"></label>
+<input type="text" name="" id="avr3" placeholder="V.a">
+<label for="adr4"></label>
+<input type="text" name="" id="adr4" placeholder="D"><br><br>
+</form>
+<button type="button" onclick="areiapeso()" class="centro-item-botão" >=</button>
+</div>
+
+
+
+
+<div class="centro-item" id="bt01">  
+
+<h2 >Quantidade de brita por peso</h2>
+<form action="" >  
+<label for="qbt3"></label>
+<input type="text" name="" id="qbt3" placeholder="V.b">
+<label for="qbt4"></label>
+<input type="text" name="" id="qbt4" placeholder="D"><br><br>
+</form>
+<button type="button" onclick="britapeso()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+<div class="centro-item" id="Bt">  
+
+<h2>Quantidade de Brita</h2>
+<form action=""  >  
+<label for="qbt1">Coe</label>
+<input type="text" name="" id="qbt1">
+<label for="qbt2">V.ass</label>
+<input type="text" name="" id="qbt2"><br><br>
+
+</form>
+<button type="button" onclick="brita()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+<div class="centro-item" id="area0">  
+
+<h2 >Área da Alvenária</h2>
+<form action=""  >  
+<label for="area01"><abbr title="comprimento da parede">C</abbr></label>
+<input type="text" name="" id="area01">
+<label for="area02"><abbr title="altura da parede">H</abbr></label>
+<input type="text" name="" id="area02"><br><br>
+
+</form>
+<button type="button" onclick="alvenaria()"  class="centro-item-botão" >
+
+= 
+</button>
+</div>
+
+
+
+
+
+<div class="centro-item" id="pct">  
+
+<h2 >Preço composto</h2>
+
+<table width="50%" border="2" style="margin-left: 30%;">
+
+<tr>
+   <th> Mt</th>
+   <th>Mo</th>
+</tr>
+
+<tr>
+<td id="mtt">00</td>
+<td id="mot">00</td>
+
+
+</tr>
+</table><br><br>
+
+<button type="button" onclick="somapc()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+   
+<div id="bc"class="centro-item">
+
+<h2 >Área da Cobertura</h2> 
+
+<table width="90%" border="2" class="Centro-5">
+
+  <th colspan="7">  Área Rectangular</th>
+
+  <tr>   
+      <th>Area</th>
+      <th>Comprimento</th>
+      <th>Largura</th>
+      <th>Resultado</th>
+      <th>Factor da Inclinação</th>
+      <th>Area real</th>
+    
+  </tr>
+  
+  
+  <tr>
+
+   <td button >A1</td>
+   <td > <input type="text" id="ac1" style="width: 100%;height: 100%;"placeholder="insira"></td>
+   <td ><input type="text"  id="al1" style="width: 100%;height: 100%;"placeholder="insira"></td>
+   <td id="r1" onclick="rectangular()">=</td>
+   <td ><input type="text" id="in1"style="width: 100%;height: 100%;"placeholder="insira"></td>
+   <td id="ar1" onclick="real()">=</td>
+   
+  
+
+
+</tr>
+  
+
+  <tr>
+
+      <td >A2</td>
+      <td><input type="text" id="ac2"style="width: 100%;height: 100%;" placeholder="insira"></td>
+      <td><input type="text" id="al2"style="width: 100%;height: 100%;"placeholder="insira"></td>
+      <td id="r2"onclick="rectangular2()">=</td>
+      <td><input type="text" id="in2"style="width: 100%;height: 100%;"placeholder="insira"></td>
+      <td id="ar2" onclick="real2()">=</td>
+     
+
+
+  </tr>
+  <tr>
+
+      <td >A3</td>
+      <td><input type="text" id="ac3"style="width: 100%;height: 100%;" placeholder="insira"></td>
+      <td><input type="text" id="al3"style="width: 100%;height: 100%;"placeholder="insira"></td>
+      <td id="r3" onclick="rectangular3()">=</td>
+      <td><input type="text" id="in3"style="width: 100%;height: 100%;"placeholder="insira" ></td>
+      <td id="ar3" onclick="real3()">=</td>
+     
+
+
+  </tr>
+  <tr>
+
+      <td >A4</td>
+      <td><input type="text" id="ac4"style="width: 100%;height: 100%;"placeholder="insira"></td>
+      <td><input type="text" id="al4"style="width: 100%;height: 100%;"placeholder="insira" ></td>
+      <td id="r4"onclick="rectangular4()">=</td>
+      <td><input type="text" id="in4"style="width: 100%;height: 100%;" placeholder="insira"></td>
+      <td id="ar4" onclick="real4()">=</td>
+      
+
+
+  </tr>
+  <tr>
+
+      <td >A5</td>
+      <td><input type="text" id="ac5"style="width: 100%;height: 100%;" placeholder="insira"></td>
+      <td><input type="text" id="al5"style="width: 100%;height: 100%;"placeholder="insira" ></td>
+      <td id="r5" onclick="rectangular5()">=</td>
+      <td><input type="text" id="in5"style="width: 100%;height: 100%;"placeholder="insira" ></td>
+      <td id="ar5" onclick="real5()"> =</td>
+     
+
+
+  </tr>
+
+  <tr>
+<th colspan="6">  Area triangular</th>
+
+<tr >   
+<th>Area</th>
+<th>Altura</th>
+<th>Base</th>
+<th>Resultado</th>
+<th>Factor da Inclinação</th>
+<th>Area real</th>
+</tr>
+
+
+      </tr>
+
+      <tr>
+
+       <td >A1</td>
+       <td><input type="text" id="at1"style="width: 100%;height: 100%;" placeholder="insira"></td>
+       <td><input type="text" id="bt1"style="width: 100%;height: 100%;"placeholder="insira" ></td>
+       <td id="r6" onclick="triangular()">=</td>
+       <td><input type="text" id="in6"style="width: 100%;height: 100%;" placeholder="insira"></td>
+       <td id="ar6" onclick="real6()">=</td>
+     
+
+
+   </tr>
+
+
+      <tr>
+
+          <td >A2</td>
+          <td><input type="text" id="at2"style="width: 100%;height: 100%;" placeholder="insira"></td>
+          <td><input type="text" id="bt2"style="width: 100%;height: 100%;" placeholder="insira"></td>
+          <td id="r7" onclick="triangular2()">=</td>
+          <td><input type="text" id="in7"style="width: 100%;height: 100%;" placeholder="insira"></td>
+          <td id="ar7" onclick="real7()">=</td>
+        
+
+
+      </tr>
+      
+       <tr>
+
+          <td >A3</td>
+          <td><input type="text" id="at3"style="width: 100%;height: 100%;"placeholder="insira" ></td>
+          <td><input type="text" id="bt3"style="width: 100%;height: 100%;" placeholder="insira"></td>
+          <td id="r8"  onclick="triangular3()">=</td>
+          <td><input type="text" id="in8"style="width: 100%;height: 100%;"placeholder="insira" ></td>
+          <td id="ar8" onclick="real8()">=</td>
+        
+
+
+      </tr>
+      <tr>
+
+          <td >A4</td>
+          <td><input type="text" id="at4"style="width: 100%;height: 100%;"placeholder="insira" ></td>
+          <td><input type="text" id="bt4"style="width: 100%;height: 100%;" placeholder="insira"></td>
+          <td id="r9" onclick="triangular4()">=</td>
+          <td><input type="text" id="in9"style="width: 100%;height: 100%;" placeholder="insira" ></td>
+          <td id="ar9" onclick="real9()">=</td>
+         
+
+
+      </tr>
+      
+      <tr>
+
+          <td >A5</td>
+          <td><input type="text" id="at5"style="width: 100%;height: 100%;" placeholder="insira"></td>
+          <td><input type="text" id="bt5"style="width: 100%;height: 100%;" placeholder="insira"></td>
+          <td id="r10" onclick="triangular5()">=</td>
+          <td><input type="text" id="in10"style="width: 100%;height: 100%;" placeholder="insira"></td>
+          <td id="ar10" onclick="real10()">=</td>
+         
+
+
+      </tr>
+      
+      
+
+
+
+   <tr>
+       <td>  Somatorio total  </td>
+       <td rowspan="2" colspan="7" ><input type="text"  id="lk2"  style="width: 100%;height: 100%;"placeholder="insira">  </td>
+      
+       
+
+
+   </tr>
+   <tr>
+       
+       <td > <Button type="button" onclick="soma2()" style="border: 1px solid black;
+           width: 100%;height:100%;float: left;margin-left: 1px;margin-top: 1px;
+           background-color: black;color: white;font-weight: bold;text-align: center;">=</Button> </td>
+
+   </tr>
+  
+</table>
+
+</div>
+
+
+
+
+<div class="centro-item" id="ld">  
+
+<h2 >Quantidade de azulejos por peças</h2>
+<form action="" >  
+<label for="ld1">Aalv</label>
+<input type="text" name="" id="ld1">
+<label for="ld2">A.az</label>
+<input type="text" name="" id="ld2"><br><br>
+</form>
+<button type="button" onclick="azulejos()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+<div class="centro-item" id="ld01">  
+
+<h2 >Quantidade de azulejos por caixa</h2>
+<form action="" >  
+<label for="ld3">Qp</label>
+<input type="text" name="" id="ld3">
+<label for="ld4">Qac</label>
+<input type="text" name="" id="ld4"><br><br>
+</form>
+<button type="button" onclick="azulejos1()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+
+<div class="centro-item" id="">  
+
+<h2 >Cálculo da área do piso</h2>
+<form action="" >  
+<label for=""></label>
+<input type="text" name="" id="piso1"><br><br>
+</form>
+<button type="button" onclick="piso()"  class="centro-item-botão"  >=</button>
+
+</div>
+
+
+<div class="centro-item" id="Piso6">  
+
+<h2 >Cálculo da argamassa para  o contrapiso</h2>
+<form action="" >  
+<label for="ld1"></label>
+<input type="text" name="" id="piso13" placeholder="A.piso">
+<label for="ld2"></label>
+<input type="text" name="" id="piso14" placeholder="E"><br><br>
+</form>
+<button type="button" onclick="piso5()"  class="centro-item-botão"  >=</button>
+</div>
+
+<div class="centro-item" id="Piso7">  
+
+<h2 >Cálculo da quantidade de cimento para  o contrapiso</h2>
+<form action="" >  
+<label for="V.piso"></label>
+<input type="text" name="" id="piso15" placeholder="V.cp">
+<label for="Coe"></label>
+<input type="text" name="" id="piso16" placeholder="Coe"><br><br>
+</form>
+<button type="button" onclick="piso6()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+<div class="centro-item" id="Piso8">  
+
+<h2 >Cálculo da quantidade de areia para  o contrapiso</h2>
+<form action="" >  
+<label for="V.piso"></label>
+<input type="text" name="" id="piso17" placeholder="V.cp">
+<label for="Coe"></label>
+<input type="text" name="" id="piso18" placeholder="Coe"><br><br>
+</form>
+<button type="button" onclick="piso7()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+<div class="centro-item" id="piso">  
+
+<h2 >Cálculo da quantidade de peças para o piso </h2>
+<form action="" >  
+<label for=""></label>
+<input type="text" name="" id="piso3" placeholder="A.piso">
+<label for=""></label>
+<input type="text" name="" id="piso4" placeholder="A.peça"><br><br>
+</form>
+<button type="button" onclick="piso2()"  class="centro-item-botão"  >=</button>
+</div>
+
+<div class="centro-item" id="Piso3">  
+<h2 >Cálculo da quantidade de peças para o piso por caixa</h2>
+<form action="" >  
+<label for=""></label>
+<input type="text" name="" id="piso9" placeholder="Q.peças">
+<label for=""></label>
+<input type="text" name="" id="piso10" placeholder="Q.caixa"><br><br>
+</form>
+<button type="button" onclick="piso3()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+<div class="centro-item" id="Piso4">  
+<h2 >Cálculo da quantidade de cimento colante para os peças</h2>
+<form action="" >  
+<label for=""></label>
+<input type="text" name="" id="piso11" placeholder="A.piso">
+<label for=""></label>
+<input type="text" name="" id="piso12" placeholder="Coe"><br><br>
+</form>
+<button type="button" onclick="piso4()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+<div class="centro-item" id="Piso5">
+  <h2>Calculo de Rejunte para junta das peças</h2>
+<form action="" > 
+  <label></label>
+  <input type="number" id="L" placeholder="L">
+
+  <label></label>
+  <input type="number" id="A" placeholder="C"> <br><br>
+
+  <label></label>
+  <input type="number" id="E" placeholder="E.j">
+
+  <label></label>
+  <input type="number" id="D" placeholder="A.piso">
+</form> <br><br>
+<button type="button" onclick="calcularRejunte()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+  <div class="resultado" id="resultado"></div>
+
+
+
+<div class="centro-item" id="Piso2">  
+
+<h2>Cálculo da percentagem de perda</h2>
+<form action="" >  
+<label for="">percentagem</label>
+<input type="text" name="" id="piso7" placeholder="percentagem">
+<label for="">Q.p</label>
+<input type="text" name="" id="piso5"placeholder="Q.peças">
+<label for="">Q.p</label>
+<input type="text" name="" id="piso6"placeholder="Q.peças"><br><br>
+</form>
+<button type="button" onclick="percentagem5()"  class="centro-item-botão"  >=</button>
+</div>
+
+
+
+
+<div class="centro-item" id="qpc">  
+
+<h2 >Quantidade de peças para cobertura</h2>
+<form action=""  >  
+<label for="qpc1">A.c</label>
+<input type="text" name="" id="qpc1">
+<label for="qpc2">Coe</label>
+<input type="text" name="" id="qpc2"><br><br>
+</form>
+<button type="button" onclick="cobertura()"  class="centro-item-botão" >=</button>
+</div>
+   
+<div id="mo" class="centro-item"  >
+<h2 style="text-align: center;">Calculo da Mão de Obra</h2> 
+<table width="50%" border="2" class="Centro-6" >
+
+  
+
+  <tr>   
+      <th>Técnicos</th>
+      <th>Coeficiente</th>
+      <th>A.alvenaria</th>
+      <th>Quantidade</th>
+      <th>P.Unitário</th>
+      <th>Custo/Técnico</th>
+      <th>Número de Técnicos</th>
+      <th>Composto</th>
+      <th>Custo Total</th>
+  </tr>
+  
+  
+  <tr>
+
+      <td>Pedreiro</td>
+      <td><input type="text"  id="cp1"  style="width: 100%;height: 100%;text-align: center;" placeholder="insira"> </td>
+      <td><input type="text"  id="ap1"  style="width: 100%;height: 100%;" placeholder="insira"> </td>
+      <td id="qp1" onclick="qtm()">=</td>
+      <td><input type="text"  id="pup1"  style="width: 100%;height: 100%;" placeholder="insira"> </td>
+      <td id="ct1" onclick="ct()">=</td>
+      <td><input type="text"  id="nt1"  style="width: 100%;height: 100%;" placeholder="insira"> </td>
+      <td id="cnt1" onclick="cnt()">=</td>
+      <td rowspan="6" id="kl3"></td>
+
+
+  </tr>
+
+  <tr>
+
+      <td>Ajudante pedreiro</td>
+      <td><input type="text"  id="cp2"  style="width: 100%;height: 100%;text-align: center;"placeholder="insira"></td>
+      <td><input type="text"  id="ap2"  style="width: 100%;height: 100%;text-align: center;"placeholder="insira"></td>
+      <td id="qp2" onclick="qtm2()">=</td>
+      <td><input type="text"  id="pup2"  style="width: 100%;height: 100%;text-align: center;"placeholder="insira"></td>
+      <td id="ct2" onclick="ct2()">=</td>
+      <td><input type="text"  id="nt2"  style="width: 100%;height: 100%;text-align: center;"placeholder="insira"></td>
+      <td id="cnt2" onclick="cnt2()">=</td>
+
+
+  </tr>
+  <tr>
+
+      <td>Carpinteiro</td>
+      <td><input type="text"  id="cc1"  style="width: 100%;height: 100%;text-align: center;"placeholder="insira"></td>
+      <td><input type="text"  id="ca1"  style="width: 100%;height: 100%;text-align: center;"placeholder="insira"></td>
+      <td id="cq1" onclick="qtm3()">=</td>
+      <td><input type="text"  id="puc1"placeholder="insira"  style="width: 100%;height: 100%;text-align: center;"></td>
+      <td id="ct3" onclick="ct3()">=</td>
+      <td><input type="text"  id="nt3"placeholder="insira"  style="width: 100%;height: 100%;text-align: center;"></td>
+      <td id="cnt3" onclick="cnt3()">=</td>
+
+
+  </tr>
+  <tr>
+
+      <td>Ajudante Carpinteiro</td>
+      <td ><input type="text"  id="cc2" placeholder="insira" style="width: 100%;height: 100%;text-align: center;"></td>
+      <td><input type="text"  id="ca2" placeholder="insira" style="width: 100%;height: 100%;text-align: center;"></td>
+      <td id="cq2" onclick="qtm4()">=</td>
+      <td><input type="text"  id="puc2"placeholder="insira"  style="width: 100%;height: 100%;text-align: center;"></td>
+      <td id="ct4" onclick="ct4()" >=</td>
+      <td><input type="text"  id="nt4" placeholder="insira"  style="width: 100%;height: 100%;text-align: center;"></td>
+      <td  id="cnt4" onclick="cnt4()">=</td>
+
+
+  </tr>
+  <tr>
+
+      <td>Ferreiro</td>
+      <td><input type="text"  id="cf1" placeholder="insira"  style="width: 100%;height: 100%;text-align: center;"></td>
+      <td><input type="text"  id="af1"placeholder="insira"  style="width: 100%;height: 100%;text-align: center;"></td>
+      <td id="qf1" onclick="qtm5()">=</td>
+      <td><input type="text"  id="puf1"placeholder="insira"  style="width: 100%;height: 100%;text-align: center;"></td>
+      <td id="ct5" onclick="ct5()">=</td>
+      <td><input type="text"  id="nt5"placeholder="insira"  style="width: 100%;height: 100%;text-align: center;"></td>
+      <td id="cnt5" onclick="cnt5()">=</td>
+
+
+  </tr>
+
+  <tr>
+
+      <td>Ajudante Ferreiro</td>
+      <td><input type="text"  id="cf2" placeholder="insira" style="width: 100%;height: 100%;text-align: center;"></td>
+      <td><input type="text"  id="af2" placeholder="insira" style="width: 100%;height: 100%;text-align: center;"></td>
+      <td id="qf2" onclick="qtm6()">=</td>
+      <td><input type="text"  id="puf2" placeholder="insira" style="width:100%;height: 100%;text-align: center;"></td>
+      <td id="ct6" onclick="ct6()">=</td>
+      <td><input type="text"  id="nt6" placeholder="insira" style="width: 100%;height: 100%;text-align: center;"></td>
+      <td id="cnt6" onclick="cnt6()">=</td>
+
+
+  </tr>
+
+
+   <tr>
+       
+       <td  >  
+           Somátorio total
+       </td>
+       <td rowspan="2" colspan="9">
+       <input type="text"  id="lk3"  style="width: 100%;height: 100%;text-align: center;" placeholder="insira"> 
+    </td>
+       
+   </tr>   
+
+   <tr>
+<td > 
+<Button type="button" onclick="soma3()"  style="border: 1px solid black;
+width: 100%;height:100%;float: left;margin-left: 1px;margin-top: 1px;
+background-color: black;color: white;font-weight: bold;text-align: center;">=</Button> 
+</td>
+   </tr>
+</table>
+</div>
+<div> 
+
+
+
+
+<div class="centro-item" id="tab">
+
+<h2>Determinação de custos de Materiais</h2>
+
+<table width="95%" border="2" class="Centro-7"  >
+
+
+<tr   >
+    
+   <th > Item</th>
+   <th id="ml">Insumo</th>
+   <th  id="ml2" >Unidade</th>
+   <th id="ml3" >Quantidade</th>
+   <th id="ml4" >Preço unitario</th>
+   <th id="ml5" > composto</th>
+   <th  >Custo total</th>
+   
+
+
+</tr>
+
+<tr >
+<td >1</td>
+<td id="insu">Blocos</td>
+<td id="un0">m  <sup>2</sup></td>
+<td ><input type="text" style="width: 100%;height: 100%;" id="q1" placeholder="insira"></td>
+<td ><input type="text" style="width: 100%;height: 100%;" id="pc" placeholder="insira"></td>
+<td  id="cp" onclick="composto()" placeholder="clique">=</td>
+<td rowspan="11" id="vto"></td>
+
+
+</tr>
+
+
+   <tr >
+       <td>2</td>
+       <td>Volume de betão</td>
+       <td>m <sup>3</sup></td>
+       <td ><input type="text" style="width: 100%;height: 100%;" id="q3"  placeholder="insira"></td>
+       <td><input type="text" style="width: 100%;height: 100%;" id="pc3"  placeholder="insira"></td>
+       <td id="cp3" onclick="composto3()">=</td>
+     
+       
+       </tr>
+       
+       <tr >
+           <td>3</td>
+           <td>Cimento</td>
+           <td>kg</td>
+           <td ><input type="text" style="width: 100%;height: 100%;"  id="q4"  placeholder="insira"></td>
+           <td><input type="text" style="width: 100%;height: 100%;" id="pc4"  placeholder="insira"></td>
+           <td id="cp4" onclick="composto4()">=</td>
+           
+           </tr>
+
+           <tr >
+               <td>4</td>
+               <td>Areia</td>
+               <td>m <sup>3</sup></td>
+               <td><input type="text" style="width: 100%;height: 100%;" id="q5"  placeholder="insira" ></td>
+               <td><input type="text" style="width: 100%;height: 100%;" id="pc5"  placeholder="insira"></td>
+               <td id="cp5" onclick="composto5()">=</td>
+               
+               </tr>
+
+               <tr >
+                   <td>5</td>
+                   <td>Brita</td>
+                   <td>m <sup>3</sup></td>
+                   <td><input type="text" style="width: 100%;height: 100%;" id="q9"  placeholder="insira" ></td>
+                   <td><input type="text" style="width: 100%;height: 100%;" id="pc9"  placeholder="insira"></td>
+                   <td id="cp9" onclick="composto9()">=</td>
+                   
+                   </tr>
+               
+               <tr >
+                   <td>6</td>
+                   <td>Tinta</td>
+                   <td>m <sup>2</sup></td>
+                   <td ><input type="text" style="width: 100%;height: 100%;"  id="q6" placeholder="insira"></td>
+                   <td><input type="text" style="width: 100%;height: 100%;" id="pc6"  placeholder="insira"></td>
+                   <td id="cp6" onclick="composto6()">=</td>
+                   
+                   </tr> 
+                   
+                   <tr >
+                       <td>7</td>
+                       <td>Azulejos</td>
+                       <td>m <sup>2</sup></td>
+                       <td><input type="text" style="width: 100%;height: 100%;" id="q7"  placeholder="insira" ></td>
+                       <td><input type="text" style="width: 100%;height: 100%;" id="pc7"  placeholder="insira"></td>
+                       <td id="cp7" onclick="composto7()">=</td>
+                       
+                       </tr> <tr >
+                           <td>8</td>
+                           <td>Cobertura</td>
+                           <td>m <sup>2</sup></td>
+                           <td><input type="text" style="width: 100%;height: 100%;" id="q8" placeholder="insira" ></td>
+                           <td><input type="text" style="width: 100%;height: 100%;" id="pc8"  placeholder="insira"></td>
+                           <td id="cp8" onclick="composto8()">=</td>
+                           
+                               <tr>
+
+                             <tr >
+                           <td>9</td>
+                           <td>Mosaico</td>
+                           <td>m <sup>2</sup></td>
+                           <td><input type="text" style="width: 100%;height: 100%;" id="q10" placeholder="insira" ></td>
+                           <td><input type="text" style="width: 100%;height: 100%;" id="pc10"  placeholder="insira"></td>
+                           <td id="cp10" onclick="composto10()">=</td>
+                           
+                               <tr>
+<tr >
+                           <td>8</td>
+                           <td>Cimento cola</td>
+                           <td>m <sup>2</sup></td>
+                           <td><input type="text" style="width: 100%;height: 100%;" id="q11" placeholder="insira" ></td>
+                           <td><input type="text" style="width: 100%;height: 100%;" id="pc11"  placeholder="insira"></td>
+                           <td id="cp11" onclick="composto11()">=</td>
+                           
+                               <tr>
+   
+       <td > Somátorio total</td>
+       <td  rowspan="2" colspan="5"><input type="text" name="" id="lk"style="width: 100%;height: 100%;" placeholder="insira"></td>
+       
+       
+   </tr>
+
+   <tr>
+       <td ><button type="button" onclick="soma()"  style="border: 1px solid black;
+           width: 100%;height:100%;float: left;margin-left: 1px;margin-top: 1px;
+           background-color: black;color: white;font-weight: bold;text-align: center;">=</button>
+           </td>
+   </tr>
+</table>
+
+</div>
+
+
+</div>
+
+
+
+<div id="planilha" class="centro-item" >
+
+<div class="Centro-8"> 
+   <h2  id="pot">Planilha Orçamental</h2> </div>
+   
+<table width="95%" border="2" class="Centro-9"  id="tama">
+
+
+<tr   id="">
+    
+   <th > Item</th>
+   <th id="">Insumo</th>
+   <th  id="" >Unidade</th>
+   
+   <th id="" >Quantidade</th>
+   <th id="" >Preço unitario</th>
+   <th id="" > composto</th>
+   <th id="" > Total</th>
+ 
+
+
+</tr>
+
+<tr >
+<td >1</td>
+<td >Blocos</td>
+<td >m <sup>2</sup></td>
+
+<td id="pl3">--</td>
+<td  id="pl4">--</td>
+<td  id="pl5">--</td>
+<td  id="kl" rowspan="15">--</td>
+
+
+</tr>
+
+   <tr >
+       <td>2</td>
+       <td>Volume de betão</td>
+       <td>m <sup>3</sup></td>
+       <td id="pl9">--</td>
+       <td id="pl10">--</td>
+       <td id="pl11">--</td>
+       
+       
+       </tr>
+       
+       <tr >
+           <td>3</td>
+           <td>Cimento</td>
+           <td>kg</td>
+           <td id="pl12">--</td>
+           <td id="pl13">--</td>
+           <td id="pl14">--</td>
+           
+           </tr>
+
+           <tr >
+               <td>4</td>
+               <td>Areia</td>
+               <td>m  <sup>3</sup></td>
+               <td id="pl15">--</td>
+               <td id="pl16">--</td>
+               <td id="pl17">--</td>
+               
+               </tr> 
+               
+               <tr >
+                   <td>5</td>
+                   <td>Brita</td>
+                   <td>m  <sup>3</sup></td>
+                   <td id="pl45">--</td>
+                   <td id="pl46">--</td>
+                   <td id="pl47">--</td>
+                   
+                   </tr>
+               
+               
+               <tr >
+                   <td>6</td>
+                   <td>Tinta</td>
+                   <td>m <sup>2</sup></td>
+                   <td id="pl18">--</td>
+                   <td id="pl19">--</td>
+                   <td id="pl20">--</td>
+
+                   
+                   
+                   </tr> 
+                   <tr >
+                       <td>7</td>
+                       <td>Azulejos</td>
+                       <td>m <sup>2</sup></td>
+                       <td id="pl21">--</td>
+                       <td id="pl22">--</td>
+                       <td id="pl23">--</td>
+                       
+                       </tr> 
+                       
+                       <tr >
+                           <td>8</td>
+                           <td>Cobertura</td>
+                           <td>m <sup>2</sup></td>
+                           <td id="pl24">--</td>
+                           <td id="pl25">--</td>
+                           <td id="pl26">--</td>
+                           
+                           </tr> 
+                           <tr >
+                           <td>9</td>
+                           <td>Mosaico</td>
+                           <td>m <sup>2</sup></td>
+                           <td id="pl48">--</td>
+                           <td id="pl49">--</td>
+                           <td id="pl50">--</td>
+                           
+                           </tr>
+
+                           <tr >
+                           <td>10</td>
+                           <td>Cimento cola</td>
+                           <td>m <sup>2</sup></td>
+                           <td id="pl51">--</td>
+                           <td id="pl52">--</td>
+                           <td id="pl53">--</td>
+                           
+                           </tr>
+                           
+                           
+                           
+                           <tr >
+                               <td>11</td>
+                               <td>Pedreiros</td>
+                               <td>h</td>
+                               <td id="pl27">--</td>
+                               <td id="pl28">--</td>
+                               <td id="pl29">--</td>
+                               
+                               </tr> 
+                               <tr >
+                                   <td>12</td>
+                                   <td>Ajudante do pedreiro</td>
+                                   <td>h</td>
+                                   <td id="pl30">--</td>
+                                   <td id="pl31">--</td>
+                                   <td id="pl32">--</td>
+                                   
+                                   </tr>
+
+                                   <tr >
+                                       <td>13</td>
+                                       <td>Carpinteiro</td>
+                                       <td>h</td>
+                                       <td id="pl33">--</td>
+                                       <td id="pl34">--</td>
+                                       <td id="pl35">--</td>
+                                       
+                                       </tr>
+                                       <tr >
+                                           <td>14</td>
+                                           <td>Ajudante do Carpinteiro</td>
+                                           <td>h</td>
+                                           <td id="pl36"></td>
+                                           <td id="pl37"></td>
+                                           <td id="pl38"></td>
+                                           
+                                           </tr><tr >
+                                               <td>15</td>
+                                               <td>Ferreiro</td>
+                                               <td>h</td>
+                                               <td id="pl39">--</td>
+                                               <td id="pl40">--</td>
+                                               <td id="pl41" >--</td>
+                                               
+                                               </tr>
+                                               <tr >
+                                                   <td>16</td>
+                                                   <td>Ajudantes do ferreiro</td>
+                                                   <td>h</td>
+                                                   <td id="pl42">--</td>
+                                                   <td id="pl43">--</td>
+                                                   <td id="pl44">--</td>
+                                                   
+                                                   </tr>
+                                   
+
+           
+
+</table>
+
+
+        <button type="button" id="pdf" onclick="gerarPDF()"
+       class="pdf">Baixar </button>
+
+
+
+    
+
+
+</div>
+
+</section>
+
+
+
+<section id="secao-descricao" class="secção-2"  >
+
+<div   id="desc-geral"  class="Centri"> 
+    
+</div>
+
+
+    
+    
+ <div    class="Centru">
+    <h2>Sobre a  orça</h2>
+   <p> É uma plataforma de orçamento de obra online.Que possiblita estimar a quantidade de material da
+     obra e o custo financeiro da mesma de forma simples e prática,com um convertor de suporte para os cálculos.
+     Uma ferramenta útil,para quem planeja construír, baseada em fórmulas reais de orçamento de obra.</p>
+
+     <h2>Como funciona</h2>
+     <p>Concebida com o intuíto de fácilitar o processo de cálculo de orçamento de obra,
+        e auxiliar até os não profissionais na área ,ela é 100% autómatica.
+        Onde o usuário tudo que terá de fazer,será introduzir os dados de 
+        acordo com os elementos da fórmula  e clicar em igual,
+        que a operação é feita e o resultado apresentado na secção resultado. </p>
+  </div>
+
+  
+  
+
+</section>
+    
+<section class="secção-3" >
+
+<p style="text-align: center;font-size: 25px;margin-top: 10px;"><strong>Precisa ajustar as unidades?</strong> Use
+     o conversor abaixo para transformar rapidamente as dimensões
+     entre metros, centímetros e milímetros antes de calcular.</p>
+
+<h2 style="width: 100%;text-align: center;">Convertor de unidades</h2>
+
+
+<div class="secção-elemento-1">     
+ 
+  <label for="moeda-destino" style="font-size: 14px;font-style: normal;">  Unidade de destino:</label>
+  <select id="formus" onchange="opção()">
+    <option value="">-- Escolha uma  --</option>     
+    <option value="centimetros">Centimetros para metros</option>
+    <option value="Centimetros">Metros para centimetros</option>
+    <option value="Milimetros">Centimetros para milimetros  </option>
+    <option value="milimetros">Milimetros para centimetros  </option>
+    <option value="metros">Milimetros para metros </option>
+    <option value="Metros">Metros para milimetros  </option>
+  </select>
+
+   </div>
+
+  <div id="resul" class="secção-elemento-2"></div>
+
+ 
+</section>
+
+
+
+<div id="cookieConsent" class="cookie-consent">
+    <p>Este site utiliza cookies para melhorar sua experiência. Ao continuar a navegar, você concorda com o uso de cookies.</p>
+    
+    <div class="cookie-links">
+        <a href="Termos.html" >Termos de Uso</a>  
+        <a href="Politica.html" >Política de Privacidade</a>  
+    </div>
+
+    <div class="cookie-buttons">
+        <button id="acceptCookies" class="cookie-btn">Aceitar</button>
+        <button id="declineCookies" class="cookie-btn">Recusar</button>
+    </div>
+</div>
+
+        <footer>
+   
+   <div class="rodape-1" >         
+   <p class="rodape-2" > &copy    
+      <script>document.write(new Date().getFullYear());</script>  - Todos direitos reservado a  
+     <a class="rodape-3" href="index.html" >  Orça</a> 
+      </p> 
+
+     
+    </div>
+     
+    <div class="rodape-4" >   
+     <a class="rodape-5" href="Termos.html" > 
+       Termos de uso</a>  
+       <a class="rodape-6" href="Politica.html"  > 
+         Política de privacidade</a>  
+  
+        
+    
+   
+</div>
+    
+      
+    </footer> 
+
+   
+</body>
+
+
+
+<script src="script.js">
+
+
+</script>
