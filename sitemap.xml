@@ -7,11 +7,9 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://orca.it.ao/levantamento.html</loc>
+    <loc>https://orca.it.ao/Calculadora.html</loc>
   </url>
-  <url>
-    <loc>https://orca.it.ao/plantas.html</loc>
-  </url>
+
   <url>
     <loc>https://orca.it.ao/Dicas.html</loc>
   </url>
@@ -22,3 +20,4 @@
     <loc>https://orca.it.ao/Termos.html</loc>
   </url>
 </urlset>
+
