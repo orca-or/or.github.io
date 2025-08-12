@@ -117,7 +117,8 @@ padding: 20px  16px;
         width: 85%;
         list-style-type: none;
         margin-left: 1px;
-      
+      text-decoration: none;
+
     }
 
     ul{ 
@@ -125,7 +126,8 @@ padding: 20px  16px;
         height:auto;
         margin-left: 5px;
         margin-top: 5px;
-       
+       text-decoration: none;
+
         
         
     }
@@ -1176,6 +1178,7 @@ a{
 
        
     } 
+
 
 
 
