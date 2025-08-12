@@ -1083,7 +1083,7 @@ text-align: justify;
 
 }
 .artigo-pub {
-   width: 300px;
+   flex: 20%;
    border: 1px solid red;
    text-align: center;
    margin-bottom: 50px;
@@ -1092,6 +1092,13 @@ text-align: justify;
   margin-left: 25%;
    margin-right: 25%;
 }
+
+
+.artigo-pub img {
+  width: 100%;  /* ocupa toda a largura da div */
+  height: auto; /* mantém proporção */
+  display: block;
+
 
     .img {
       max-width: 100%;
@@ -1162,6 +1169,7 @@ text-decoration: none;
 
 
 }
+
 
 
 
