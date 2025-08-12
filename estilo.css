@@ -1096,11 +1096,6 @@ text-align: justify;
 }
 
 
-.artigo-pub img {
-  width: 100%;  /* ocupa toda a largura da div */
-  height: auto; /* mantém proporção */
-  display: block;
-
 
     .img {
       max-width: 100%;
@@ -1178,6 +1173,7 @@ a{
 
        
     } 
+
 
 
 
