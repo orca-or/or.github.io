@@ -1098,7 +1098,7 @@ text-align: justify;
   width: 100%;  /* ocupa toda a largura da div */
   height: auto; /* mantém proporção */
   
-
+   }
     .img {
       max-width: 100%;
       height: auto;
@@ -1175,6 +1175,7 @@ a{
 
        
     } 
+
 
 
 
