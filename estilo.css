@@ -1083,12 +1083,15 @@ text-align: justify;
 
 }
 .artigo-pub {
-   width: 300px;
+   width: 400px;
    border: 1px solid red;
    text-align: center;
    margin-bottom: 50px;
    margin-top:50px ;
-   height: 250px;
+   height: 300px;
+align-items: center;
+   justify-content: center;
+   align-items: center;
 
   margin-left: 25%;
    margin-right: 25%;
@@ -1163,6 +1166,7 @@ text-decoration: none;
 
 
 }
+
 
 
 
