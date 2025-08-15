@@ -2173,7 +2173,13 @@ const descricoes = {
         <li>3.Na secção resultados aparecerá o resultado da operação feita.</li>
         </ul>
 
+ 
+  
+<h3>Confira o tutorial  prático</h3>
 
+
+ <video 
+ src="https://www.youtube.com/watch?v=Q5TmqwOASVA"  controls></video>
     `,
       },
  calculo_da_quantidade_de_blocos: {
@@ -2228,6 +2234,15 @@ const descricoes = {
 
         
    <strong>OBS:  </strong>Considere sempre uma perda de 5%
+
+     
+<h3>Confira o tutorial  prático</h3>
+
+
+ <video 
+ src="https://www.youtube.com/watch?v=vuDtEofdmok"  controls></video>
+
+
     `,
     
   },
@@ -4404,4 +4419,5 @@ function cal21() {
   
 
 }
+
 
