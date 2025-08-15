@@ -617,13 +617,14 @@ float: left;
 .Pub-3 {
 
         float: left;
-        flex: 10%;
+       width:160px;
         height: 700px;
         margin-left: 5%;
         align-items: center;
         align-content: center;
         text-align: center;
         margin-top: 50px;
+        border: 1px solid red;
    }     
 .centro-item {
 
@@ -1175,6 +1176,7 @@ a{
 
        
     } 
+
 
 
 
