@@ -598,7 +598,7 @@ return;
     
     document.getElementById("10").style.fontWeight="bold"
     
-     salvarResultado( 'Quantidade de cimento para o betão', calcul ,"m3");
+     salvarResultado( 'Quantidade de cimento para o betão', calcul ,"kg");
 
 document.getElementById(`centro`).innerHTML= document.getElementById("betão-areia").innerHTML
    
@@ -2304,7 +2304,7 @@ const descricoes = {
  
     <p>É o calculo do volume de argamassa necessário para chapisco.</p>
     <h3>Elementos da fórmula</h3>
-     <strong>Para o volme de chapisco</strong> <br>
+     <strong>Para o volume de chapisco</strong> <br>
     <ul>
     <li>A.c: Área de chapisco</li>
     <li>E.c: Espessura do chapisco</li> <br>
@@ -4404,3 +4404,4 @@ function cal21() {
   
 
 }
+
