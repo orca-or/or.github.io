@@ -127,13 +127,8 @@ table{
         }
   
         .pub{ 
-          flex: 80%;
-          margin-left: 5%;
-          margin-right: 5%;
-              position: relative;
-              height: 200px;
-            
-        
+       
+        display: none;
         }
   .dropdown1{ 
             
@@ -228,13 +223,8 @@ table{
         
         .pub{ 
              
-             flex: 90%;
-             margin-left: 5%;
-             margin-right: 5%;
-              position: relative;
-              height: 200px;
-            
            
+           display: none;
         
         }
 
@@ -349,10 +339,7 @@ table{
     
         
         .pub{ 
-           flex: 100%;
-              position: relative;
-              height: 200px;
-            
+         display: none;
         }
 
         
@@ -564,8 +551,7 @@ input{
 
         .pub{ 
              
-              position: relative;
-              height: 200px;
+          display: none;   
             
         }
         .pub2{ 
@@ -749,10 +735,7 @@ position: relative;
 
         .pub{ 
             
-           flex: 100%;
-              position: relative;
-              height: 200px;
-            
+           display: none;
 
         }
 
@@ -816,3 +799,4 @@ position: relative;
 
 
   }
+
