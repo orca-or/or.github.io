@@ -2176,10 +2176,10 @@ const descricoes = {
  
   
 <h3>Confira o tutorial  prático</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Q5TmqwOASVA?si=lvzPc7LEWIYZtiRI" title="YouTube video player" 
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
- <video 
- src=" https://www.youtube.com/watch?v=RZvX-C-q9Qo&list=RDRZvX-C-q9Qo&start_radio=1"  controls></video>
     `,
       },
  calculo_da_quantidade_de_blocos: {
@@ -2238,9 +2238,8 @@ const descricoes = {
      
 <h3>Confira o tutorial  prático</h3>
 
-
- <video 
- src="https://www.youtube.com/watch?v=vuDtEofdmok"  controls></video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vuDtEofdmok?si=RMccae7PZfaf4jLL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
     `,
@@ -4419,6 +4418,7 @@ function cal21() {
   
 
 }
+
 
 
 
