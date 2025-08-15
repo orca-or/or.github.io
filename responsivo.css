@@ -432,8 +432,18 @@ right: 40px;
     margin: 0%;
 
 }
+     
+    iframe{ 
+    
+      
+     max-width:100%;
+
+    position: relative;
+ 
+        }
 
 
+   
 .calculos{ 
 
     flex:100%;
@@ -799,5 +809,6 @@ position: relative;
 
 
   }
+
 
 
