@@ -2175,7 +2175,7 @@ const descricoes = {
 
  
   
-<h3>Confira o tutorial  prático</h3>
+<h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Q5TmqwOASVA?si=lvzPc7LEWIYZtiRI" title="YouTube video player" 
 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
 gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -2236,7 +2236,7 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
    <strong>OBS:  </strong>Considere sempre uma perda de 5%
 
      
-<h3>Confira o tutorial  prático</h3>
+<h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vuDtEofdmok?si=RMccae7PZfaf4jLL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
 clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -2283,7 +2283,7 @@ clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" refe
         <li>3.Na secção resultados aparecerá o resultado da operação feita.</li>
         </ul>
 
-<h3>Confira o tutorial  prático</h3>
+<h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/L3UNGyuclPY?si=hjAq6gdxVC1Xpnd_" title="YouTube video player" 
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
         gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -2312,7 +2312,7 @@ clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" refe
         <li>3.Na secção resultados aparecerá o resultado da operação feita.</li>
         </ul>
 
-<h3>Confira o tutorial  prático</h3>
+<h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FdKTZeqJ4_Y?si=HHWieu9zohKA7hDy"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
 gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -2356,7 +2356,7 @@ Converte sempre em metros antes de calcular <br><br>
         <li>3.Na secção resultados aparecerá o resultado da operação feita.</li>
         </ul>
         
-<h3>Confira o tutorial  prático</h3>
+<h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/AeWEnpPJ8Yg?si=uTwc7VF0sYt09MEA" title="YouTube video player" frameborder="0" allow="accelerometer;
     autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     `
@@ -2395,7 +2395,7 @@ Converte sempre em metros antes de calcular <br><br>
         <li>2.Clique em igual que a operação será feita; </li>
         <li>3.Na secção resultados aparecerá o resultado da operação feita.</li>
         </ul>
-<h3>Confira o tutorial  prático</h3>
+<h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/0ASMKUvyaOc?si=hnKueo9XrFGUYwmq"
     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
     gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -4490,6 +4490,7 @@ function cal21() {
   
 
 }
+
 
 
 
