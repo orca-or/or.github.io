@@ -4069,6 +4069,29 @@ function convertor6() {
     
     }
 
+function convertor7() {
+    
+    var lor7 =document.getElementById("val7").value;
+    // 2) Cálculos de conversão e custo
+    var con = lor7 / 1000;
+    
+    document.getElementById("val7").value=con;
+  
+    
+    }
+
+    
+function convertor8() {
+    
+    var lor8 =document.getElementById("val8").value;
+    // 2) Cálculos de conversão e custo
+    var con = lor8 * 1000;
+    
+    document.getElementById("val8").value=con;
+  
+    
+    }
+
 function opção() {
   const selecao = document.getElementById("formus").value;
   const resultado = document.getElementById("resul");
@@ -4157,6 +4180,38 @@ function opção() {
             
           
             <button  onclick="convertor3()"   style="background-color:
+             black;color: white;margin-left:40px">Converter</button>
+        </div>
+
+    `;
+  } 
+
+    
+else if (selecao === "kilo") {
+    formula = `
+    <div id="conversor" style="float: left;margin-top: 20px;width:100%">
+            
+            <label for="valor-converter" style="font-size: 14px;">Valor:</label>
+            <input type="number" id="val7" placeholder="Digite o valor"><sup>t</sup><br> <br>
+            
+            
+          
+            <button  onclick="convertor7()"   style="background-color:
+             black;color: white;margin-left:40px">Converter</button>
+        </div>
+
+    `;
+  } 
+else if (selecao === "toneladas") {
+    formula = `
+    <div id="conversor" style="float: left;margin-top: 20px;width:100%">
+            
+            <label for="valor-converter" style="font-size: 14px;">Valor:</label>
+            <input type="number" id="val8" placeholder="Digite o valor"><sup>kg</sup><br> <br>
+            
+            
+          
+            <button  onclick="convertor8()"   style="background-color:
              black;color: white;margin-left:40px">Converter</button>
         </div>
 
@@ -4435,6 +4490,7 @@ function cal21() {
   
 
 }
+
 
 
 
