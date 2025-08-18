@@ -1595,7 +1595,7 @@ function cobertura() {
 window.location.href = "Calculadora.html?f=calculo_do_custo_do_material";
 
 
-     salvarResultado( 'Quantitativo para cobertura', qc ,"m2");
+     salvarResultado( 'Quantitativo para cobertura', qc ,"Un");
 }
 
 
@@ -3182,7 +3182,7 @@ height: 50%;font-size: 18px;"  >
       <td id="ct1" onclick="ct()">=</td>
       <td><input type="text"  id="nt1"  style="width: 100%;height: 100%;" placeholder="insira"> </td>
       <td id="cnt1" onclick="cnt()">=</td>
-      <td rowspan="6" id="kl5"></td>
+      <td rowspan="6" id="kl3"></td>
 
 
   </tr>
@@ -4435,6 +4435,7 @@ function cal21() {
   
 
 }
+
 
 
 
