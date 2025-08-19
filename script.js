@@ -2421,6 +2421,11 @@ Converte sempre em metros antes de calcular <br><br>
         <li>2.Clique em igual que a operação será feita; </li>
         <li>3.Na secção resultados aparecerá o resultado da operação feita.</li>
         </ul>
+<h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FKYFLO9fHFM?si=dlQ9_5AmLXxAXiln&amp;start=2" title="YouTube 
+video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
     
     `
   },
@@ -2441,6 +2446,10 @@ Converte sempre em metros antes de calcular <br><br>
         <li>2.Clique em igual que a operação será feita; </li>
         <li>3.Na secção resultados aparecerá o resultado da operação feita.</li>
         </ul>
+<h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/lPD3gNMiC_o?si=Lk8UNNSXuK6NvvEf" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+        encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 `
   },
@@ -2464,6 +2473,11 @@ Converte sempre em metros antes de calcular <br><br>
 
         </ul>
 
+        <h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7R79u1zYeBE?si=ttQvkKLIsA384rIX&amp;start=111" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 `
   },
   calculo_da_area_dos_vaos: {
@@ -2486,8 +2500,10 @@ Converte sempre em metros antes de calcular <br><br>
         <li>3.Clique em igual que a operação será feita; </li>
         <li>4.Na secção resultados aparecerá o resultado da operação feita.</li>
         </ul>
-
-
+<h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g7a8_MxWsYw?si=9FWJVUV4RuMDtlyY" title="YouTube video player"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     `
   },
   calculo_do_volume_de_betão: {
@@ -2527,6 +2543,11 @@ Converte sempre em metros antes de calcular <br><br>
         <li>3.Na secção resultados aparecerá o resultado da operação feita.</li>
         </ul>
 
+<h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RvzBHuaT4Co?si=XTZpodcrWUjE2CO_&amp;start=2" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 `
   },
  calculo_da_quantidade_de_cimento: {
@@ -2567,6 +2588,11 @@ Exemplo: Qci-1+Qci-2+...
         
     <strong>OBS:  </strong>Considere sempre uma perda de 5% 
 
+<h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oBpudEJ0zQ4?si=ClUqtz3WiaABcQA8&amp;start=1" title="YouTube video 
+player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 `
   },
   calculo_da_quantidade_de_areia: {
@@ -2601,6 +2627,10 @@ Exemplo: Q.a-1+Q.a-2+...
         <li>3.Na secção resultados aparecerá o resultado da operação feita.</li>
         </ul>
 
+        <h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uT86mLTvVig?si=PGgBNgtpZRmLcxfY&amp;start=2" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 `
   },
   calculo_da_quantidade_de_brita: {
@@ -2634,6 +2664,10 @@ Exemplo: Q.a-1+Q.a-2+...
         <li>3.Na secção resultados aparecerá o resultado da operação feita.</li>
         </ul>
 
+<h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JBGxfE8TdtA?si=SiMqeLKZZgekIDdk&amp;start=41" title="YouTube video player" 
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 `
   },
   calculo_da_quantidade_de_tinta: {
@@ -2666,6 +2700,10 @@ Exemplo: Q.a-1+Q.a-2+...
         
     <strong>OBS:  </strong>Considere sempre uma perda de 10%
 
+    <h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TNxtDHZxUOs?si=VpL4bvBIiqm4kAq_&amp;start=2" title="YouTube 
+video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 `
   },
   calculo_da_quantidade_de_azulejos: {
@@ -2768,9 +2806,15 @@ calculo_da_area_e_quantidade_para_o_piso: {
         <li>2.clique em igual que a operação será feita; </li>
         <li>3.Na secção resultados aparecerá o resultado da operação feita.</li>
         </ul>
-
+   <strong>OBS:  </strong>Considere sempre uma perda de 10%
         
-    <strong>OBS:  </strong>Considere sempre uma perda de 10%
+<h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DUWRyL_wAMU?si=NbP7BG59anQH9Ygt&amp;start=592" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+ 
 `
   },
   
@@ -4490,6 +4534,7 @@ function cal21() {
   
 
 }
+
 
 
 
