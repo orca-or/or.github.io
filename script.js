@@ -2727,10 +2727,6 @@ encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="stric
         
     <strong>OBS:  </strong>Considere sempre uma perda de 10%
 
-<h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/HJb9gPGg1g4?si=icdmN_KfVAXWMWQF"
-    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-    encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 `
   },
 
@@ -2852,11 +2848,7 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
         <li>2.clique em igual que a operação será feita; </li>
         <li>3.Na secção resultados aparecerá o resultado da operação feita.</li>
         </ul>
-        <h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
-        
- <iframe width="560" height="315" src="https://www.youtube.com/embed/HY5LY9dWQoI?si=LUfoki0ehpifNgJ7&amp;start=2"
- title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
- encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      
         `
   },
 
@@ -2896,12 +2888,7 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 
         </ul>
 
-          <h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
-        
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZjnzeWbSFZk?si=GFKFIHEhcBKTBRIw&amp;start=2" 
-        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-        encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        
+         
          `
   },
   calculo_do_custo_do_material: {
@@ -2934,10 +2921,7 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
         </ul>
         </ul>
   
-          <h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/S3P_j7ASnJ8?si=YWAEkGTVgGchNAgu&amp;start=1"
-  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
-  picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         
     `
   },
   calculo_da_mão_de_obra: {
@@ -2980,11 +2964,6 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 
         </ul>
 
-             <h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/XZcvqavoPzo?si=AM6Ree2CP6WA4u04&amp;start=1" 
-          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
-          picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    
     `
   },
   calculo_do_preço_composto: {
@@ -3002,11 +2981,6 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
     correspondente,cada vez que forem calculados.
     Logo,só basta clicar em igual que a operação será feita</p>
 
-        <h3>Confira o tutorial prático e veja como efetuar o cálculo passo a passo</h3>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/PyKm7G2ODUg?si=zQe6saLfNQK11EX-" 
-      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
-      picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      
       `
   },
   planilha_orçamental: {
@@ -4567,6 +4541,7 @@ function cal21() {
   
 
 }
+
 
 
 
