@@ -1,3 +1,96 @@
+<script>
+  // Pega a URL atual
+  const url = new URL(window.location.href);
+  const params = url.searchParams;
+  const formula = params.get("f");
+
+  if (formula) {
+    // --- Canonical ---
+    const canonical = document.createElement("link");
+    canonical.setAttribute("rel", "canonical");
+    canonical.setAttribute("href", `https://www.orca.it.ao/Calculadora.html?f=${formula}`);
+    document.head.appendChild(canonical);
+
+    // --- SEO dinâmico ---
+    let title = "Calculadora de Obras - Orça";
+    let description = "Use a calculadora de obras Orça para estimar materiais e custos da construção.";
+
+    switch (formula) {
+      case "calculo_da_area_da_alvenaria":
+        title = "Cálculo da Área da Alvenaria - Orça";
+        description = "Calcule facilmente a área de paredes em alvenaria e use como base para estimar materiais e custos da sua obra.";
+        break;
+
+      case "calculo_da_mão_de_obra":
+        title = "Cálculo da Mão de Obra - Orça";
+        description = "Descubra o custo da mão de obra para sua construção ou reforma de forma prática e rápida.";
+        break;
+
+      case "calculo_da_area_dos_vaos":
+        title = "Cálculo da Área dos Vãos (Portas e Janelas) - Orça";
+        description = "Calcule a área total de vãos como portas e janelas para descontar dos cálculos de paredes.";
+        break;
+
+      case "calculo_do_preço_composto":
+        title = "Cálculo do Preço Composto - Orça";
+        description = "Monte o preço composto da sua obra incluindo materiais, mão de obra e encargos.";
+        break;
+
+      case "calculo_da_quantidade_de_cimento":
+        title = "Cálculo da Quantidade de Cimento - Orça";
+        description = "Saiba quantos sacos de cimento serão necessários para sua obra, evitando desperdícios.";
+        break;
+
+      case "calculo_da_area_e_quantidade_para_o_piso":
+        title = "Cálculo da Área e Quantidade de Piso - Orça";
+        description = "Calcule a área total de piso e descubra a quantidade de revestimento necessária para sua construção.";
+        break;
+
+      case "calculo_do_volume_para_o_reboco":
+        title = "Cálculo do Volume para Reboco - Orça";
+        description = "Estime o volume de argamassa para reboco das paredes com rapidez e precisão.";
+        break;
+
+      case "calculo_da_quantidade_para_a_cobertura":
+        title = "Cálculo da Quantidade para Cobertura - Orça";
+        description = "Descubra a quantidade de telhas ou material de cobertura necessária para seu telhado.";
+        break;
+
+      case "calculo_do_custo_do_material":
+        title = "Cálculo do Custo dos Materiais - Orça";
+        description = "Calcule os custos de cimento, areia, brita e outros materiais essenciais da sua obra.";
+        break;
+
+      case "quantidade_de_blocos":
+        title = "Cálculo da Quantidade de Blocos por Metro Quadrado - Orça";
+        description = "Descubra quantos blocos são necessários por metro quadrado de parede, facilitando o orçamento.";
+        break;
+
+      case "calculo_de_tinta_por_metro":
+        title = "Cálculo da Quantidade de Tinta por Metro Quadrado - Orça";
+        description = "Calcule a quantidade de tinta necessária por metro quadrado para evitar desperdícios na pintura.";
+        break;
+
+      case "calculo_de_piso_por_metro":
+        title = "Cálculo da Quantidade de Piso por Metro Quadrado - Orça";
+        description = "Descubra a quantidade de revestimento necessária por metro quadrado de piso para sua obra.";
+        break;
+    }
+
+    // Aplica Title
+    document.title = title;
+
+    // Aplica ou cria a meta description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement("meta");
+      metaDesc.setAttribute("name", "description");
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.setAttribute("content", description);
+  }
+</script>
+
 
 
 
@@ -4571,6 +4664,7 @@ function cal21() {
   
 
 }
+
 
 
 
