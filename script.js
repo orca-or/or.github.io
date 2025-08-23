@@ -1,4 +1,4 @@
-<script>
+
   // Pega a URL atual
   const url = new URL(window.location.href);
   const params = url.searchParams;
@@ -89,11 +89,11 @@
     }
     metaDesc.setAttribute("content", description);
   }
-</script>
 
 
 
-<script>
+
+
 document.addEventListener("DOMContentLoaded", function () {
   // Função para ler parâmetros da URL
   function getParam(name) {
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-</script>
+
 
 function bloquearSite() {
   // Cria o overlay
@@ -4706,6 +4706,7 @@ function cal21() {
   
 
 }
+
 
 
 
