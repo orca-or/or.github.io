@@ -77,6 +77,21 @@
         break;
     }
 
+    // Aplica Title
+    document.title = title;
+
+    // Aplica ou cria a meta description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement("meta");
+      metaDesc.setAttribute("name", "description");
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.setAttribute("content", description);
+  }
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const artigos = document.querySelectorAll("article");
@@ -4673,6 +4688,7 @@ function cal21() {
   
 
 }
+
 
 
 
