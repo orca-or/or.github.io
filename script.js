@@ -91,7 +91,7 @@
   }
 
 
-<script>
+
 document.addEventListener("DOMContentLoaded", function () {
   // Função para ler parâmetros da URL
   function getParam(name) {
@@ -133,17 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-</script>
 
-<style>
-/* Destacar artigo aberto */
-.destaque-artigo {
-  background-color: #ffffcc;
-  transition: background-color 2s;
-  padding: 10px;
-  border-radius: 5px;
-}
-</style>
 
 
 
@@ -4717,6 +4707,7 @@ function cal21() {
   
 
 }
+
 
 
 
