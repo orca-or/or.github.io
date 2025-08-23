@@ -5,7 +5,15 @@
     
     
     }
-    
+    <style>
+/* Destacar artigo aberto */
+.destaque-artigo {
+  background-color: #ffffcc;
+  transition: background-color 2s;
+  padding: 10px;
+  border-radius: 5px;
+}
+</style>
 
     body {
   font-size: 16px;
@@ -1178,6 +1186,7 @@ a{
 
        
     } 
+
 
 
 
