@@ -92,20 +92,40 @@
 
 
 
-
 document.addEventListener("DOMContentLoaded", function () {
-  const artigos = document.querySelectorAll("article");
+  // Função para ler parâmetros da URL
+  function getParam(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
 
+  const artigoId = getParam("artigo"); // pega o ?artigo=ID
+  if (artigoId) {
+    const artigo = document.getElementById(artigoId);
+    if (artigo) {
+      // Rola a página até o artigo
+      artigo.scrollIntoView({ behavior: "smooth" });
+
+      // Torna o conteúdo visível automaticamente
+      const conteudos = artigo.querySelectorAll(".conteudo"); // ajusta conforme seu HTML
+      conteudos.forEach(c => c.style.display = "block");
+
+      // Adiciona destaque visual opcional
+      artigo.classList.add("destaque-artigo");
+    }
+  }
+
+  // Código para criar botões de compartilhamento
+  const artigos = document.querySelectorAll("article");
   artigos.forEach(artigo => {
     const id = artigo.id || "sem-id";
     const titulo = artigo.querySelector("h1, h2")?.innerText || "Artigo";
-
-    // funciona em file:// e em https://
-    const baseUrl = window.location.href.split("?")[0];
+    
+    // Base URL pública do seu site
+    const baseUrl = "https://www.orca.it.ao/Dicas.html";
     const url = baseUrl + "?artigo=" + id;
 
     const container = artigo.querySelector(".share-buttons");
-
     if (container) {
       container.innerHTML = `
         <p>📢 Compartilhar:</p>
@@ -116,6 +136,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
 
 
 
@@ -4688,6 +4710,7 @@ function cal21() {
   
 
 }
+
 
 
 
