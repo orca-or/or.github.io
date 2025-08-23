@@ -137,21 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-<style>
-/* Destacar artigo aberto */
-.destaque-artigo {
-  background-color: #ffffcc;
-  transition: background-color 2s;
-  padding: 10px;
-  border-radius: 5px;
-}
-</style>
-
-
-
-
-
-
 function bloquearSite() {
   // Cria o overlay
   let overlay = document.createElement('div');
@@ -4721,6 +4706,7 @@ function cal21() {
   
 
 }
+
 
 
 
