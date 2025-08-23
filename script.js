@@ -91,51 +91,34 @@
   }
 
 
-
 document.addEventListener("DOMContentLoaded", function () {
-  // Função para ler parâmetros da URL
   function getParam(name) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
   }
 
-  const artigoId = getParam("artigo"); // pega o ?artigo=ID
+  const artigoId = getParam("artigo");
   if (artigoId) {
     const artigo = document.getElementById(artigoId);
     if (artigo) {
-      // Rola a página até o artigo
+      // Rola até o artigo
       artigo.scrollIntoView({ behavior: "smooth" });
 
-      // Torna o conteúdo visível automaticamente
-      const conteudos = artigo.querySelectorAll(".conteudo"); // ajusta conforme seu HTML
-      conteudos.forEach(c => c.style.display = "block");
+      // Abre automaticamente todo o conteúdo do artigo
+      // Seleciona todos os filhos diretos do article que estão escondidos
+      const filhos = artigo.querySelectorAll("*");
+      filhos.forEach(f => {
+        const estilo = window.getComputedStyle(f);
+        if (estilo.display === "none") {
+          f.style.display = "block"; // torna visível
+        }
+      });
 
-      // Adiciona destaque visual opcional
+      // Adiciona destaque visual
       artigo.classList.add("destaque-artigo");
     }
   }
-
-  // Código para criar botões de compartilhamento
-  const artigos = document.querySelectorAll("article");
-  artigos.forEach(artigo => {
-    const id = artigo.id || "sem-id";
-    const titulo = artigo.querySelector("h1, h2")?.innerText || "Artigo";
-    const baseUrl = window.location.href.split("?")[0];
-    const url = baseUrl + "?artigo=" + id;
-    const container = artigo.querySelector(".share-buttons");
-    if (container) {
-      container.innerHTML = `
-        <p>📢 Compartilhar:</p>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}" target="_blank">Facebook</a> |
-        <a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(titulo)}" target="_blank">Twitter</a> |
-        <a href="https://wa.me/?text=${encodeURIComponent(titulo + " " + url)}" target="_blank">WhatsApp</a>
-      `;
-    }
-  });
 });
-
-
-
 
 
 function bloquearSite() {
@@ -4707,6 +4690,7 @@ function cal21() {
   
 
 }
+
 
 
 
