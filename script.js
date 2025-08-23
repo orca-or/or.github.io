@@ -93,7 +93,7 @@
 
 
 
-<script>
+
   document.addEventListener("DOMContentLoaded", function () {
     const artigos = document.querySelectorAll("article.artigo");
 
@@ -123,7 +123,7 @@
       }
     }
   });
-</script>
+
 
 
 
@@ -155,9 +155,10 @@ document.addEventListener("DOMContentLoaded", function () {
   artigos.forEach(artigo => {
     const id = artigo.id || "sem-id";
     const titulo = artigo.querySelector("h1, h2")?.innerText || "Artigo";
-    const baseUrl =https://www.orca.it.ao/Dicas.html ;
+    const baseUrl =https://www.orca.it.ao/Dicas.html?artigo=${id}` ;
     const url = baseUrl + "?artigo=" + id;
     const container = artigo.querySelector(".share-buttons");
+    
     if (container) {
       container.innerHTML = `
         <p>📢 Compartilhar:</p>
@@ -4739,6 +4740,7 @@ function cal21() {
   
 
 }
+
 
 
 
