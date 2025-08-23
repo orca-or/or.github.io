@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
   artigos.forEach(artigo => {
     const id = artigo.id || "sem-id";
     const titulo = artigo.querySelector("h1, h2")?.innerText || "Artigo";
-    const baseUrl = window.location.href.split("?")[0];
+    const baseUrl =https://www.orca.it.ao/Dicas.html ;
     const url = baseUrl + "?artigo=" + id;
     const container = artigo.querySelector(".share-buttons");
     if (container) {
@@ -4706,6 +4706,7 @@ function cal21() {
   
 
 }
+
 
 
 
