@@ -90,43 +90,6 @@
     metaDesc.setAttribute("content", description);
   }
 
-
-
-
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const artigos = document.querySelectorAll("article.artigo");
-
-    artigos.forEach(artigo => {
-      const id = artigo.id;
-      const titulo = artigo.querySelector("h1, h2")?.innerText || "Artigo";
-      const url = `https://www.orca.it.ao/Dicas.html?artigo=${id}`;
-      const container = artigo.querySelector(".share-buttons");
-
-      if (container) {
-        container.innerHTML = `
-          <p style="margin:8px 0;">📢 Compartilhar:</p>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}" target="_blank">Facebook</a> |
-          <a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(titulo)}" target="_blank">Twitter</a> |
-          <a href="https://wa.me/?text=${encodeURIComponent(titulo + " " + url)}" target="_blank">WhatsApp</a>
-        `;
-      }
-    });
-
-    // 👉 Se abrir com parâmetro ?artigo=...
-    const url = new URL(window.location.href);
-    const artigo = url.searchParams.get("artigo");
-    if (artigo) {
-      const alvo = document.getElementById(artigo);
-      if (alvo) {
-        alvo.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  });
-
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
   // Função para ler parâmetros da URL
   function getParam(name) {
@@ -4740,6 +4703,7 @@ function cal21() {
   
 
 }
+
 
 
 
