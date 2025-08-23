@@ -91,7 +91,7 @@
   }
 
 
-
+<script>
 document.addEventListener("DOMContentLoaded", function () {
   // Função para ler parâmetros da URL
   function getParam(name) {
@@ -120,11 +120,8 @@ document.addEventListener("DOMContentLoaded", function () {
   artigos.forEach(artigo => {
     const id = artigo.id || "sem-id";
     const titulo = artigo.querySelector("h1, h2")?.innerText || "Artigo";
-    
-    // Base URL pública do seu site
-    const baseUrl = "https://www.orca.it.ao/Dicas.html";
+    const baseUrl = window.location.href.split("?")[0];
     const url = baseUrl + "?artigo=" + id;
-
     const container = artigo.querySelector(".share-buttons");
     if (container) {
       container.innerHTML = `
@@ -136,6 +133,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+</script>
+
+<style>
+/* Destacar artigo aberto */
+.destaque-artigo {
+  background-color: #ffffcc;
+  transition: background-color 2s;
+  padding: 10px;
+  border-radius: 5px;
+}
+</style>
 
 
 
@@ -4709,6 +4717,7 @@ function cal21() {
   
 
 }
+
 
 
 
