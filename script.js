@@ -77,18 +77,7 @@
         break;
     }
 
-    // Aplica Title
-    document.title = title;
 
-    // Aplica ou cria a meta description
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (!metaDesc) {
-      metaDesc = document.createElement("meta");
-      metaDesc.setAttribute("name", "description");
-      document.head.appendChild(metaDesc);
-    }
-    metaDesc.setAttribute("content", description);
-  }
 
 document.addEventListener("DOMContentLoaded", function () {
   // Função para ler parâmetros da URL
@@ -118,10 +107,12 @@ document.addEventListener("DOMContentLoaded", function () {
   artigos.forEach(artigo => {
     const id = artigo.id || "sem-id";
     const titulo = artigo.querySelector("h1, h2")?.innerText || "Artigo";
-    const baseUrl =`https://www.orca.it.ao/Dicas.html?artigo=${id}` ;
-    const url = baseUrl + "?artigo=" + id;
-    const container = artigo.querySelector(".share-buttons");
     
+    // Base URL pública do seu site
+    const baseUrl = "https://www.orca.it.ao/Dicas.html";
+    const url = baseUrl + "?artigo=" + id;
+
+    const container = artigo.querySelector(".share-buttons");
     if (container) {
       container.innerHTML = `
         <p>📢 Compartilhar:</p>
@@ -132,6 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
 
 
 function bloquearSite() {
@@ -4703,6 +4695,7 @@ function cal21() {
   
 
 }
+
 
 
 
