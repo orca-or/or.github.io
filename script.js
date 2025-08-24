@@ -61,17 +61,17 @@
         description = "Calcule os custos de cimento, areia, brita e outros materiais essenciais da sua obra.";
         break;
 
-      case "quantidade_de_blocos":
+      case "calculo_da_quantidade_de_blocos":
         title = "Cálculo da Quantidade de Blocos por Metro Quadrado - Orça";
         description = "Descubra quantos blocos são necessários por metro quadrado de parede, facilitando o orçamento.";
         break;
 
-      case "calculo_de_tinta_por_metro":
+      case "calculo_da_quantidade_de_tinta":
         title = "Cálculo da Quantidade de Tinta por Metro Quadrado - Orça";
         description = "Calcule a quantidade de tinta necessária por metro quadrado para evitar desperdícios na pintura.";
         break;
 
-      case "calculo_de_piso_por_metro":
+      case "Calculo_da_area_e_quantidade_para_o_piso":
         title = "Cálculo da Quantidade de Piso por Metro Quadrado - Orça";
         description = "Descubra a quantidade de revestimento necessária por metro quadrado de piso para sua obra.";
         break;
@@ -4707,6 +4707,7 @@ function cal21() {
   
 
 }
+
 
 
 
