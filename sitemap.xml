@@ -7,11 +7,13 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.orca.it.ao/Calculadora.html</loc>
+    <loc>https://www.orca.it.ao/Calculadora.html</loc> 
+    <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://www.orca.it.ao/Dicas.html</loc>
+      <priority>1.0</priority>
   </url>
   <url>
     <loc>
@@ -177,5 +179,6 @@ https://www.orca.it.ao/Calculadora.html?f=calculo_do_custo_do_material
 
   
 </urlset>
+
 
 
