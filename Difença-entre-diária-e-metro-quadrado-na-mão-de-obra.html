@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="author" content="Karlos Kiala" />
+  <meta name="keywords" content="Diferença entre diária e metro quadrado na mão de obra, orçamento de obra, construção civil" />
+  <meta name="description" content="Entenda a diferença entre cobrar por diária ou por metro quadrado na mão de obra da construção civil. Saiba qual modelo é mais vantajoso para clientes e profissionais." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="estilo.css" />
+  <link rel="stylesheet" href="responsivo.css" />
+
+  <!-- Font Awesome (corrigido, sem quebra de linha) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pIVpGZ6t7m9b0G8l2c9m9yRzQp8pQ0d2bQzH3bHq6iC8b3k2Q4pJ7oXo0k0c9U1nqN3bFhJpQz3VbX5nq2QF3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Favicon (ajuste o caminho se preciso) -->
+  <link rel="icon" type="image/png" href="img/orça.png" />
+
+  <title>Orça</title>
+
+  <!-- Carrega seu JS DEPOIS do DOM (evita addEventListener em null) -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <nav class="menu-pai">
+    <ul class="menu-root">
+      <li class="dropdown" id="dro">
+        <a class="dropbtn" href="#" style="padding:0" onclick="toggleMenu(event)" title="menu">
+          <img src="img/menu.png" alt="abrir menu" />
+        </a>
+
+        <div class="dropdown-content" id="filho" style="height:auto;">
+          <a href="index.html" class="content">Início</a>
+          <a href="Calculadora.html?f=calculo_da_area_da_alvenaria" class="content">Calculadora</a>
+          <a href="Dicas.html" class="content">Dicas de orçamento</a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="menu-t">
+      <h1 style="padding:1px;margin-top:15px;">
+        <img src="img/orça-calculadora-online-1.png" alt="calculadora de obras online" />
+      </h1>
+    </div>
+
+    <div class="menu-i">
+      <a href="index.html" class="ele-2">Início</a>
+      <a href="Calculadora.html?f=calculo_da_area_da_alvenaria" class="ele-2">Calculadora</a>
+      <a href="Dicas.html" class="ele-2">Dicas de orçamento</a>
+    </div>
+  </nav>
+
+  <section class="seccao-1">
+    <div class="pub2">
+      <h2 style="text-align:center;width:100%;padding:60px 10px;">Publicidade</h2>
+      <!-- seu bloco de anúncio pode ficar aqui -->
+    </div>
+  </section>
+
+  <header>
+    <div class="Pub-3"></div>
+
+    <div class="ecy">
+      <article>
+        <div id="Cali" class="artigo">
+          <p class="date">
+            Publicado em: <time datetime="2025-08-24">24 de Agosto de 2025</time>
+          </p>
+
+          <h1 id="caisa" class="artigo-h1">
+            Diferença entre diária e metro quadrado na mão de obra
+          </h1>
+
+          <img src="img/como-calcular-metro-quadrado-planta-casa-metro-.jpg" width="100%" alt="Trabalhador avaliando custos por diária e por metro quadrado na construção civil" />
+
+          <p>Quando você vai contratar um pedreiro, pintor ou outro profissional, surge uma dúvida comum:</p>
+
+          <blockquote>É melhor pagar por <strong>diária</strong> ou por <strong>metro quadrado (m²)</strong>?</blockquote>
+
+          <p>
+            A escolha depende do tipo de serviço, do seu controle sobre a obra e do nível de definição do serviço a ser executado.
+            Abaixo está um guia prático para você comparar as duas modalidades, com exemplos numéricos e ilustrações.
+          </p>
+
+          <h2>Visão rápida (resumo)</h2>
+          <!-- Ajustei a largura da segunda barra para não ultrapassar o viewBox -->
+          <svg width="670" height="160" viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Comparação visual diária vs metro quadrado">
+            <style>text{font-family:Arial, sans-serif;font-size:12px}</style>
+            <text x="10" y="18" font-weight="bold">Quando usar cada modalidade</text>
+
+            <!-- barra diária -->
+            <rect x="40" y="40" width="380" height="40" fill="#60a5fa" rx="6" />
+            <text x="50" y="65" fill="#fff">Diária — mais flexível, ideal para pequenos serviços</text>
+
+            <!-- barra m2 (antes estava maior que o viewBox) -->
+            <rect x="40" y="90" width="420" height="40" fill="#34d399" rx="6" />
+            <text x="50" y="115" fill="#fff">m² — melhor para serviços repetitivos e mensuráveis (pintura, pisos)</text>
+          </svg>
+
+          <h2>1. O que é pagamento por diária?</h2>
+          <p>
+            Você paga um valor fixo por dia trabalhado (ex.: <strong>7.000 Kz/dia</strong>). O pagamento cobre o tempo do profissional,
+            independente da produtividade daquele dia.
+          </p>
+
+          <h3>Vantagens</h3>
+          <ul>
+            <li>Fácil de negociar e rápido de acertar.</li>
+            <li>Bom para trabalhos pequenos, consertos ou tarefas com escopo indefinido.</li>
+            <li>Útil quando há muitas interrupções (compra de material, decisões do cliente).</li>
+          </ul>
+
+          <h3>Desvantagens</h3>
+          <ul>
+            <li>Dificuldade para prever o custo total sem um bom acompanhamento.</li>
+            <li>Risco de menor produtividade se não houver supervisão.</li>
+          </ul>
+
+          <h2>2. O que é pagamento por metro quadrado (m²)?</h2>
+          <p>
+            Você paga um valor por unidade de obra executada (ex.: <strong>2.500 Kz/m²</strong> para alvenaria ou <strong>1.200 Kz/m²</strong> para pintura).
+            O total é o preço por m² multiplicado pela área executada.
+          </p>
+
+          <h3>Vantagens</h3>
+          <ul>
+            <li>Facilita estimar o custo total antes de começar a obra.</li>
+            <li>Pagamento associado ao resultado (o que foi entregue).</li>
+            <li>Bom para trabalhos repetitivos e homogêneos (piso, pintura, azulejo).</li>
+          </ul>
+
+          <h3>Desvantagens</h3>
+          <ul>
+            <li>É preciso medir com precisão e concordar sobre o que entra no m² (acabamento, vergas, arremates).</li>
+            <li>Podem surgir discussões sobre qualidade e limites das medições.</li>
+          </ul>
+
+          <h2>3. Exemplo prático — comparar custos</h2>
+          <p>Suponha um serviço de alvenaria de <strong>50 m²</strong>.</p>
+
+          <svg width="520" height="200" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Exemplo numérico diária vs metro quadrado">
+            <style>text{font-family:Arial, sans-serif;font-size:12px}</style>
+            <text x="10" y="18" font-weight="bold">Parâmetros</text>
+            <text x="10" y="36">Área: 50 m²</text>
+            <text x="10" y="52">Diária: 7.000 Kz / dia (produção média: 6 m²/dia)</text>
+            <text x="10" y="68">Preço por m²: 2.500 Kz / m²</text>
+
+            <!-- cálculo diária -->
+            <rect x="10" y="84" width="280" height="90" fill="#f1f5f9" stroke="#cbd5e1" rx="6"/>
+            <text x="20" y="104" font-weight="bold">Cálculo por diária</text>
+            <text x="20" y="124">Produção média: 6 m²/dia → 50 ÷ 6 ≈ 8,33 dias</text>
+            <text x="20" y="144">Arredonda para 9 dias</text>
+            <text x="20" y="164">Custo: 9 × 7.000 = 63.000 Kz</text>
+
+            <!-- cálculo m² -->
+            <rect x="300" y="84" width="210" height="90" fill="#f0fdf4" stroke="#bbf7d0" rx="6"/>
+            <text x="310" y="104" font-weight="bold">Cálculo por m²</text>
+            <text x="310" y="124">Preço m²: 2.500 Kz</text>
+            <text x="310" y="144">Custo: 50 × 2.500 = 125.000 Kz</text>
+          </svg>
+
+          <p style="margin-top:8px;">
+            <strong>Interpretação:</strong> neste exemplo o pagamento por diária saiu mais barato,
+            mas pode refletir menor velocidade ou menor qualidade — ou só significar que a produtividade
+            esperada foi alta. Sempre cheque a produtividade média local antes de decidir.
+          </p>
+
+          <h2>4. Tabela comparativa (quando escolher cada um)</h2>
+          <div style="overflow-x:auto">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#f3f4f6">
+                  <th style="text-align:left;padding:8px;border:1px solid #e5e7eb;">Situação</th>
+                  <th style="text-align:left;padding:8px;border:1px solid #e5e7eb;">Recomendação</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding:8px;border:1px solid #e5e7eb;">Pequenos reparos, instalações ou serviços pontuais</td>
+                  <td style="padding:8px;border:1px solid #e5e7eb;">Diária — negocie por escopo diário</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;border:1px solid #e5e7eb;">Pintura, assentamento de piso, alvenaria em larga escala</td>
+                  <td style="padding:8px;border:1px solid #e5e7eb;">m² — facilita orçamento e controle do serviço</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;border:1px solid #e5e7eb;">Obra com muitos imprevistos/detalhes</td>
+                  <td style="padding:8px;border:1px solid #e5e7eb;">Diária, com acompanhamento</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;border:1px solid #e5e7eb;">Produtividade conhecida (equipe experiente)</td>
+                  <td style="padding:8px;border:1px solid #e5e7eb;">m² — mais previsível</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>5. Checklist antes de fechar o acordo</h2>
+          <ul>
+            <li>Defina claramente o que está incluído no preço (materiais? limpeza? acabamento?).</li>
+            <li>Registre a produtividade esperada (m²/dia) se negociar por diária.</li>
+            <li>Combine tolerâncias e como medir (pontos de início/fim das medições).</li>
+            <li>Marque um valor para retrabalho em caso de defeito ou baixa qualidade.</li>
+            <li>Exija recibos e anote dias trabalhados e medições finais.</li>
+          </ul>
+
+          <div style="background:#f8fafc;border-left:4px solid #2563eb;padding:12px;border-radius:6px;margin:12px 0;">
+            <strong>Modelo rápido (texto para registrar):</strong>
+            <p style="margin:6px 0; font-size:13px;">
+              "Contratante: __________. Profissional: __________. Serviço: __________. Modalidade: (   ) Diária — Kz _____/dia
+              (   ) m² — Kz _____/m². Início: _____ / Previsão: _____ / Observações: ________. Assinaturas: _______"
+            </p>
+            <p style="font-size:12px;color:#6b7280;margin:0;">Salvar por escrito reduz discussões futuras.</p>
+          </div>
+
+          <h2>Dica final</h2>
+          <p>
+            Se estiver em dúvida, peça ambas as propostas (diária e m²) e compare:
+            além do preço, verifique prazo, garantia e referências do profissional. Assim você escolhe a opção com melhor custo-benefício e menos risco.
+          </p>
+
+          <div class="artigo-pub">
+            <a href="https://s.click.aliexpress.com/e/_omEKGr3?bz=725*90" target="_parent" rel="nofollow sponsored">
+              <img src="https://ae-pic-a1.aliexpress-media.com/kf/S63b7e0e32cf248c09154d5a89056a0121.jpg" alt="Banner promocional" />
+            </a>
+          </div>
+
+          <p style="font-size:12px;color:#6b7280;margin-top:8px;">
+            <em>Observação:</em> valores usados nos exemplos são apenas ilustrativos. Ajuste para os preços locais da sua região antes de decidir.
+          </p>
+        </div>
+      </article>
+
+      <!-- Botões de partilha (IDs mantidos para o seu JS encontrar) -->
+      <div class="share-buttons">
+        <a class="facebook" id="share-facebook" target="_blank" rel="noopener">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a class="twitter" id="share-twitter" target="_blank" rel="noopener">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a class="whatsapp" id="share-whatsapp" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cookies -->
+  <div id="cookieConsent" class="cookie-consent" role="dialog" aria-live="polite">
+    <p>Este site utiliza cookies para melhorar sua experiência. Ao continuar a navegar, você concorda com o uso de cookies.</p>
+
+    <div class="cookie-links">
+      <a href="Termos.html">Termos de Uso</a>
+      <a href="Politica.html">Política de Privacidade</a>
+    </div>
+
+    <div class="cookie-buttons">
+      <button id="acceptCookies" class="cookie-btn" type="button">Aceitar</button>
+      <button id="declineCookies" class="cookie-btn" type="button">Recusar</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="rodape-1">
+      <p class="rodape-2">
+        &copy; <span id="ano"></span> - Todos direitos reservados a
+        <a href="index.html" class="rodape-3">Orça</a>
+      </p>
+    </div>
+
+    <div class="rodape-4">
+      <a href="Termos.html" class="rodape-5">Termos de uso</a>
+      <a href="Politica.html" class="rodape-6">Política de privacidade</a>
+    </div>
+  </footer>
+
+  <!-- Ano automático sem document.write (mais seguro) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const anoSpan = document.getElementById('ano');
+      if (anoSpan) anoSpan.textContent = new Date().getFullYear();
+    });
+  </script>
+
+</body>
+</html>
