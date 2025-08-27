@@ -4318,122 +4318,6 @@ else if (selecao === "toneladas") {
   }
 
 
-// ======== ISABEL =========
-function isabel() {
-  document.getElementById("isabel").style.display = "block";
-  document.getElementById("btf").style.display = "none";
-  localStorage.setItem("isabelAberto", "true");
-}
-function pindi() {
-  document.getElementById("isabel").style.display = "none";
-  document.getElementById("btf").style.display = "block";
-  localStorage.removeItem("isabelAberto");
- 
-}
-
-// ======== ELIAS =========
-function getride() {
-  document.getElementById("elias").style.display = "block";
-  localStorage.setItem("eliasAberto", "true");
-}
-function elias() {
-  document.getElementById("elias").style.display = "none";
-  document.getElementById("getride").style.display = "block";
-  localStorage.removeItem("eliasAberto");
-}
-
-// ======== KALI =========
-function kali() {
-  document.getElementById("Kali").style.display = "block";
-  localStorage.setItem("KaliAberto", "true");
-}
-function Kali() {
-  document.getElementById("Kali").style.display = "none";
-  localStorage.removeItem("KaliAberto");
-}
-
-// ======== CALI =========
-function cali() {
-  document.getElementById("Cali").style.display = "block";
-  localStorage.setItem("CaliAberto", "true");
-}
-function Cali() {
-  document.getElementById("Cali").style.display = "none";
-  localStorage.removeItem("CaliAberto");
-}
-
-// ======== CAISA =========
-function caisa() {
-  document.getElementById("Caisa").style.display = "block";
-  localStorage.setItem("CaisaAberto", "true");
-  localStorage.setItem("Caisa");
-}
-function Caisa() {
-  document.getElementById("Caisa").style.display = "none";
-  localStorage.removeItem("CaisaAberto");
-}
-
-// ======== KAISA =========
-function kaisa() {
-  document.getElementById("Kaisa").style.display = "block";
-  localStorage.setItem("KaisaAberto", "true");
-}
-function Kaisa() {
-  document.getElementById("Kaisa").style.display = "none";
-  localStorage.removeItem("KaisaAberto");
-}
-
-// ======== RESTAURA ESTADOS AO CARREGAR ========
-window.addEventListener("load", function () {
-  // Isabel
-  if (localStorage.getItem("isabelAberto") === "true") {
-    document.getElementById("isabel").style.display = "block";
-    document.getElementById("btf").style.display = "none";
-  } else {
-    document.getElementById("isabel").style.display = "none";
-    document.getElementById("btf").style.display = "block";
-  }
-
-  // Elias
-  if (localStorage.getItem("eliasAberto") === "true") {
-    document.getElementById("elias").style.display = "block";
-  } else {
-    document.getElementById("elias").style.display = "none";
-    // se você tiver um botão getride, pode deixá-lo visível
-    const btn = document.getElementById("getride");
-    if (btn) btn.style.display = "block";
-  }
-
-  // Kali
-  if (localStorage.getItem("KaliAberto") === "true") {
-    document.getElementById("Kali").style.display = "block";
-  } else {
-    document.getElementById("Kali").style.display = "none";
-  }
-
-  // Cali
-  if (localStorage.getItem("CaliAberto") === "true") {
-    document.getElementById("Cali").style.display = "block";
-  } else {
-    document.getElementById("Cali").style.display = "none";
-  }
-
-  // Caisa
-  if (localStorage.getItem("CaisaAberto") === "true") {
-    document.getElementById("Caisa").style.display = "block";
-  } else {
-    document.getElementById("Caisa").style.display = "none";
-  }
-
-  // Kaisa
-  if (localStorage.getItem("KaisaAberto") === "true") {
-    document.getElementById("Kaisa").style.display = "block";
-  } else {
-    document.getElementById("Kaisa").style.display = "none";
-  }
-});
-
-
 function cal() {
 
    window.location.href = "Calculadora.html?f=calculo_da_area_da_alvenaria"
@@ -4570,6 +4454,7 @@ function cal21() {
   
 
 }
+
 
 
 
