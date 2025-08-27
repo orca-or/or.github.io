@@ -1197,7 +1197,7 @@ a{
 .Ecy{
     float: left;
         flex:50%;
-        margin-left: 10%;
+        margin-left: 15%;
         margin-right: 10%;
         height: 100%;
         display: flex;
@@ -1280,6 +1280,7 @@ color: red;
   color: #666;
   margin-bottom: 8px;
 }
+
 
 
 
