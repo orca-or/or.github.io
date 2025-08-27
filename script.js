@@ -1,18 +1,4 @@
 
-  // Pega a URL atual
-  const pageUrl = encodeURIComponent(window.location.href);
-  const pageTitle = encodeURIComponent(document.title);
-
-  // Define os links de partilha
-  document.getElementById("share-facebook").href =
-    `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
-
-  document.getElementById("share-twitter").href =
-    `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
-
-  document.getElementById("share-whatsapp").href =
-    `https://api.whatsapp.com/send?text=${pageTitle}%20${pageUrl}`;
-
 
  
 
@@ -4471,6 +4457,19 @@ function cal21() {
 }
 
 
+  // Pega a URL atual
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
+
+  // Define os links de partilha
+  document.getElementById("share-facebook").href =
+    `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+
+  document.getElementById("share-twitter").href =
+    `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+
+  document.getElementById("share-whatsapp").href =
+    `https://api.whatsapp.com/send?text=${pageTitle}%20${pageUrl}`;
 
 
 
