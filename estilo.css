@@ -1182,22 +1182,10 @@ a{
     } 
 
 
-
-  
-/* Destacar artigo aberto */
-.destaque-artigo {
-  background-color: #ffffcc;
-  transition: background-color 2s;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-
-
 .Ecy{
     float: left;
         flex:50%;
-        margin-left: 15%;
+        margin-left: 20%;
         margin-right: 10%;
         height: 100%;
         display: flex;
@@ -1280,6 +1268,7 @@ color: red;
   color: #666;
   margin-bottom: 8px;
 }
+
 
 
 
