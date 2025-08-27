@@ -472,7 +472,7 @@ table{
     
     position: relative;
      max-width: 100%;
-
+ display:flex;
 
 }
 .Ecy{ 
@@ -912,6 +912,7 @@ position: relative;
 
 
   }
+
 
 
 
