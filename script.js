@@ -1,21 +1,6 @@
 
 
 
-  // Pega a URL atual
-  const pageUrl = encodeURIComponent(window.location.href);
-  const pageTitle = encodeURIComponent(document.title);
-
-  // Define os links de partilha
-  document.getElementById("share-facebook").href =
-    `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
-
-  document.getElementById("share-twitter").href =
-    `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
-
-  document.getElementById("share-whatsapp").href =
-    `https://api.whatsapp.com/send?text=${pageTitle}%20${pageUrl}`;
-
-
 
   // Pega a URL atual
   const url = new URL(window.location.href);
@@ -109,51 +94,20 @@
   }
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Função para ler parâmetros da URL
-  function getParam(name) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(name);
-  }
 
-  const artigoId = getParam("artigo"); // pega o ?artigo=ID
-  if (artigoId) {
-    const artigo = document.getElementById(artigoId);
-    if (artigo) {
-      // Rola a página até o artigo
-      artigo.scrollIntoView({ behavior: "smooth" });
+  // Pega a URL atual
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
 
-      // Torna o conteúdo visível automaticamente
-      const conteudos = artigo.querySelectorAll(".conteudo"); // ajusta conforme seu HTML
-      conteudos.forEach(c => c.style.display = "block");
+  // Define os links de partilha
+  document.getElementById("share-facebook").href =
+    `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
 
-      // Adiciona destaque visual opcional
-      artigo.classList.add("destaque-artigo");
-    }
-  }
+  document.getElementById("share-twitter").href =
+    `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
 
-  // Código para criar botões de compartilhamento
-  const artigos = document.querySelectorAll("article");
-  artigos.forEach(artigo => {
-    const id = artigo.id || "sem-id";
-    const titulo = artigo.querySelector("h1, h2")?.innerText || "Artigo";
-    
-    // Base URL pública do seu site
-    const baseUrl = "https://www.orca.it.ao/Dicas.html";
-    const url = baseUrl + "?artigo=" + id;
-
-    const container = artigo.querySelector(".share-buttons");
-    if (container) {
-      container.innerHTML = `
-        <p>📢 Compartilhar:</p>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}" target="_blank">Facebook</a> |
-        <a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(titulo)}" target="_blank">Twitter</a> |
-        <a href="https://wa.me/?text=${encodeURIComponent(titulo + " " + url)}" target="_blank">WhatsApp</a>
-      `;
-    }
-  });
-});
-
+  document.getElementById("share-whatsapp").href =
+    `https://api.whatsapp.com/send?text=${pageTitle}%20${pageUrl}`;
 
 
 function bloquearSite() {
@@ -4725,6 +4679,7 @@ function cal21() {
   
 
 }
+
 
 
 
