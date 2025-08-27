@@ -64,7 +64,7 @@ h3 { font-size: 18px; }
     .ecy{
         float: left;
         flex:50%;
-        margin-left: 30%;
+        margin-left: 25%;
         margin-right: 20%;
         height: 100%;
         margin-bottom: 100px;
@@ -1267,6 +1267,7 @@ color: red;
   color: #666;
   margin-bottom: 8px;
 }
+
 
 
 
