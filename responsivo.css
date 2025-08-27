@@ -10,7 +10,13 @@
 
 
 
+    .Ecy{ 
     
+    flex: 50%;
+    margin-left: 5%;
+    margin-right: 5%;      
+
+}   
 
     
 
@@ -161,6 +167,11 @@ table{
       
       }
 
+    
+.Ecy{ 
+    position: relative;
+    flex: 50%;
+   
     .dados{ 
 
         flex: 15%;
@@ -272,6 +283,27 @@ table{
             
     display:block;
   }
+
+   .Ecy{ 
+    
+    flex: 50%;
+    margin-left: 5%;
+    margin-right: 5%;  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* mantém alinhado à esquerda */
+  
+}
+    
+
+     
+  .dicas { 
+    position:relative ;
+    flex:0 0 40%;
+    float: left;
+  margin-right: 2%;
+   margin-left: 2%;}  
+}  
   
  input{ 
  
@@ -418,6 +450,26 @@ table{
 
 @media only  screen   and   (max-width:651px) { 
 
+
+.Ecy{ 
+  position: relative;
+    flex: 50%;
+    margin-left: 1%;
+    margin-right: 1%;      
+ 
+}   
+
+.dicas { 
+    position:relative ;
+    
+    float: left;
+   flex: 60%;
+   
+
+  margin-right: 2%;
+   margin-left: 2%;} 
+  
+   
  svg{ 
 
     max-width:100%;
@@ -666,6 +718,14 @@ input{
 
 @media only  screen   and   (min-width:652px) and   (max-width:1279px) { 
 
+
+   .Ecy{ 
+    
+    flex: 50%;
+    margin-left: 1%;
+    margin-right: 1%;      
+
+}       
 .secção-3{ 
   position: relative;
   height:auto;
@@ -821,6 +881,7 @@ position: relative;
 
 
   }
+
 
 
 
