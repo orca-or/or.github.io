@@ -1194,6 +1194,94 @@ a{
 
 
 
+.Ecy{
+    float: left;
+        flex:50%;
+        margin-left: 10%;
+        margin-right: 10%;
+        height: 100%;
+        display: flex;
+        margin-bottom: 100px;
+        height: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start; 
+    
+   
+  
+        
+        }
+
+  .dicas { 
+
+    flex:0 0 40%;
+margin-left: 2%;
+margin-right: 2%;
+   cursor: pointer;
+}
+
+
+
+
+.dicas a { 
+
+color:black;
+text-decoration: none;
+width: auto;
+}
+
+
+
+
+.dicas a:hover { 
+
+color: red;
+ 
+
+ 
+}
+
+.img-hover {
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.img-hover:hover {
+  transform: scale(1.1); /* aumenta 10% */
+}
+
+.share-buttons {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.share-buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.share-buttons a:hover {
+  transform: scale(1.1);
+}
+
+.facebook { background: #1877f2; }
+.twitter  { background: #1da1f2; }
+.whatsapp { background: #25d366; }
+
+.date {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+
 
 
 
