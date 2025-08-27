@@ -1068,10 +1068,10 @@ display: inline-block;
   }
 
 
-  .Artigo {
+  .artigo {
 margin-left: 40px;
 margin-right: 40px;
-display: none;
+
 text-align: justify; 
 }
 
@@ -1268,6 +1268,7 @@ color: red;
   color: #666;
   margin-bottom: 8px;
 }
+
 
 
 
