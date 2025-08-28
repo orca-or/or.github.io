@@ -170,8 +170,6 @@ table{
             
         display:none;
          
-           
-      
       
       }
 
@@ -206,10 +204,6 @@ table{
            
         .centro{ 
         
-           
-          
-         
-         
           margin-right: 1%;
           flex:45%;
           position: relative;  
@@ -909,9 +903,14 @@ position: relative;
       
         }
        
+.pub{ 
+            
+           display: none;
 
+        }
 
   }
+
 
 
 
