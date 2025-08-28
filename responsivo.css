@@ -47,8 +47,6 @@ table{
    position: relative;
 }
 
-
-
 .centro{ 
           margin-right: 1%;
           flex:40%;
@@ -64,9 +62,7 @@ table{
           justify-content: center;
           text-align: center;
 
-
         } 
-
 
 .Pub-3{ 
     
@@ -117,11 +113,8 @@ table{
   .dropdown{ 
             
         display:none;
-         
-      
-      }
-
-    
+         }
+   
 .Ecy{ 
     position: relative;
     flex: 50%;
@@ -134,9 +127,7 @@ table{
         
         position: relative;
          
-        }
-        
-            
+        }  
     .lista{ 
         position: relative;
     flex: 23%;
@@ -162,13 +153,9 @@ table{
           max-width:100%;
           position: relative; 
            max-height: 100%;
-        
         }
         .pub{ 
-             
-           
            display: none;
-        
         }
 
         .Pub{ 
@@ -177,17 +164,12 @@ table{
          left: 1%;
             max-width: 100%;
            
-        
         }
-
-
           
 table{ 
 
     max-width:100%;
  
-      
-
 }
 
  
@@ -242,9 +224,8 @@ table{
     flex:0 0 40%;
     float: left;
   margin-right: 2%;
-   margin-left: 2%;}  
-}  
-  
+   margin-left: 2%;
+  }  
  input{ 
  
     max-width:100%;
@@ -810,6 +791,7 @@ position: relative;
       
 
   }
+
 
 
 
