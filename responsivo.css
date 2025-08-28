@@ -2,31 +2,21 @@
 
    
     body{ 
-
        max-width:100%;
-      
-    
     }
 
-
 .artigo-pub{ 
-    
     
     position: relative;
      max-width: 100%;
 
-
 }
-
     .Ecy{ 
     
     flex: 50%;
     margin-left: 5%;
     margin-right: 5%;      
-
 }   
-
-    
 
 .dados{ 
 
@@ -36,55 +26,30 @@ margin-left: 1%;
 
 position: relative;
  
- 
 }
 
    
 form{ 
 
     max-width:100%;
-      
-
-}
    
+}
 
-  
 table{ 
 
     max-width:100%;
-    
-      
-
 }  
-  
- 
- 
-
-
 .kentro{ 
-
- 
-  
       margin: 0px; 
   max-width:100%;
   margin-left: 20%;
   margin-right: 25%;
    position: relative;
-   
-  
- 
- 
-
 }
 
 
 
 .centro{ 
-        
-           
-          
-         
-         
           margin-right: 1%;
           flex:40%;
           position: relative;  
@@ -106,34 +71,23 @@ table{
 .Pub-3{ 
     
       display: none;
-    
-     
-
-
 }
 
 
 .menu-i{ 
             
     display: none;
-     
-       
-  
-  
+   
   }
 
 
   .menu-t{ 
     
     text-align: center;
-     
-       
-  
-  
   }
     
     .lista{ 
-        position: relative;
+     position: relative;
      flex: 25%;
      margin-left: 1%;
      overflow-x: hidden;
@@ -148,9 +102,6 @@ table{
             
     display:none;
      
-       
-  
-  
   }
 
   
@@ -158,9 +109,6 @@ table{
               
         display: none;
         }
-
-
-   
 
 }
 @media only  screen   and  (min-width:1572px) and (max-width:1885px) { 
@@ -177,7 +125,8 @@ table{
 .Ecy{ 
     position: relative;
     flex: 50%;
-   
+     }
+
     .dados{ 
 
         flex: 15%;
@@ -196,10 +145,7 @@ table{
         }
            
         form{ 
-        
             max-width:100%;
-              
-        
         }
            
         .centro{ 
@@ -208,32 +154,16 @@ table{
           flex:45%;
           position: relative;  
           max-height: 100%;
-         
-         
-        
         }
         
-
-
         .kentro{ 
         
-           
-          
-         
           margin: 0px; 
           max-width:100%;
           position: relative; 
            max-height: 100%;
-         
-         
         
         }
-
-        
-
-        
-        
-        
         .pub{ 
              
            
@@ -372,14 +302,7 @@ table{
           align-items: center;
           justify-content: center;
           text-align: center;
-
-
         }
-
-        
- 
-    
-        
         .pub{ 
          display: none;
         }
@@ -462,8 +385,6 @@ table{
 
 
 .artigo-pub{ 
-    
-    
     position: relative;
      max-width: 100%;
  display:flex;
@@ -482,10 +403,9 @@ table{
     
     float: left;
    flex: 60%;
-   
-
   margin-right: 2%;
-   margin-left: 2%;} 
+   margin-left: 2%;
+} 
   
    
  svg{ 
@@ -524,8 +444,6 @@ right: 40px;
  
         }
 
-
-   
 .calculos{ 
 
     flex:100%;
@@ -553,9 +471,6 @@ input{
    position: relative;
   
  }
-
-     
-
     .dados{ 
        display: none;
       
@@ -620,10 +535,6 @@ input{
          align-items: center;
          justify-content: center;
          text-align: center;
-        
-         
-         
-        
         }
         
         
@@ -728,9 +639,6 @@ input{
           overflow-x: hidden;
 
         }
-
-
-
 }
 
 
@@ -738,12 +646,14 @@ input{
 
 
 .artigo-pub{ 
-    
-    
+   
     position: relative;
     max-width: 100%;
 margin-left: 1%;
 margin-right: 1%;
+
+   } 
+   
    .Ecy{ 
     
     flex: 50%;
@@ -871,9 +781,7 @@ position: relative;
       flex: 10%;
       
        position: relative;
-      
-      
-       
+
         }
 
         
@@ -888,9 +796,6 @@ position: relative;
      display: none;
       
         }
-       
-        
-
 }
 
 
@@ -902,14 +807,10 @@ position: relative;
      display: none;
       
         }
-       
-.pub{ 
-            
-           display: none;
-
-        }
+      
 
   }
+
 
 
 
