@@ -390,13 +390,13 @@ table{
   
    
  svg{ 
-
+position:relative;
     max-width:100%;
 
  }
  
 figure{ 
-
+   position:relative;
     max-width:100%;
 
  }
@@ -791,6 +791,7 @@ position: relative;
       
 
   }
+
 
 
 
