@@ -6,6 +6,10 @@
     
     }
 
+.adsbygoogle {
+  max-width: 100% !important;
+  height: auto !important;
+}
 
 
     body {
@@ -1263,6 +1267,7 @@ color: red;
   color: #666;
   margin-bottom: 8px;
 }
+
 
 
 
