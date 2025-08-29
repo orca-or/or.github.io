@@ -249,6 +249,54 @@ content=" Aprenda a calcular
 
    
   
+    <h3> O que você precisa</h3>
+    <ul>
+      <li>Fita métrica ou trena</li>
+      <li>Papel e caneta</li>
+      <li>Calculadora ou celular</li>
+    </ul>
+
+    <h3> Passo a passo</h3>
+    <ul>
+      <li>1. Meça a largura e comprimento do cômodo</li>
+      <li>2. Multiplique para saber a área (ex: 3m x 4m = 12 m²)</li>
+      <li>3. Meça a altura se precisar calcular paredes (pintura, revestimento ou blocos)</li>
+      <li>4. Subtraia as áreas de portas e janelas, se necessário</li>
+    </ul>
+
+    <h3> Planta baixa ilustrativa</h3>
+    
+<!-- PLANTA BAIXA COM COTAS -->
+    <figure style="text-align: center;">
+      <svg width="520" height="320" viewBox="0 0 520 320" xmlns="http://www.w3.org/2000/svg" role="img" >
+        <style>
+          text{font-family:Arial, sans-serif;font-size:12px}
+        </style>
+        <!-- cômodo -->
+        <rect x="60" y="40" width="360" height="180" fill="none" stroke="black" stroke-width="2"/>
+        <!-- porta (abertura) -->
+        <line x1="60" y1="140" x2="90" y2="140" stroke="#1f77b4" stroke-width="4"/>
+        <text x="60" y="135">Porta 0,80 × 2,10 m</text>
+        <!-- janela (abertura) -->
+        <line x1="260" y1="40" x2="340" y2="40" stroke="#2ca02c" stroke-width="4"/>
+        <text x="260" y="30">Janela 1,20 × 1,00 m</text>
+
+        <!-- cotas horizontais -->
+        <defs>
+          <marker id="arr" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L6,3 z" />
+          </marker>
+        </defs>
+        <line x1="60" y1="240" x2="420" y2="240" stroke="black" marker-start="url(#arr)" marker-end="url(#arr)"/>
+        <text x="220" y="260">Comprimento: 5,00 m</text>
+
+        <!-- cotas verticais -->
+        <line x1="440" y1="40" x2="440" y2="220" stroke="black" marker-start="url(#arr)" marker-end="url(#arr)"/>
+        <text x="450" y="135">Largura: 3,00 m</text>
+      </svg>
+    </figure>
+
+    <h3>Exemplos de paredes com medidas</h3>
 
 </article>
 
@@ -315,6 +363,7 @@ content=" Aprenda a calcular
 
 
 </html>
+
 
 
 
