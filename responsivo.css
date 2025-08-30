@@ -633,6 +633,14 @@ input{
 @media only  screen   and   (min-width:652px) and   (max-width:1279px) { 
 
 
+.artigo{ 
+    
+      
+    position: relative;
+    max-width: 100%;
+
+    
+}
 .artigo-pub{ 
    
     position: relative;
@@ -798,6 +806,7 @@ position: relative;
       
 
   }
+
 
 
 
