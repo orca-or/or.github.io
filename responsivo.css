@@ -368,8 +368,9 @@ table{
     
       
     position: relative;
-    max-width: 100%;
- 
+    max-width: 80%;
+    margin-left:10%;
+   margin-rigth:10%;
 
 }
 .artigo-pub{ 
@@ -798,6 +799,7 @@ position: relative;
       
 
   }
+
 
 
 
