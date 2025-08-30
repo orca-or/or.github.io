@@ -364,7 +364,14 @@ table{
 
 @media only  screen   and   (max-width:651px) { 
 
+.artigo{ 
+    
+      
+    position: relative;
+    max-width: 100%;
+ 
 
+}
 .artigo-pub{ 
     position: relative;
      max-width: 100%;
@@ -791,6 +798,7 @@ position: relative;
       
 
   }
+
 
 
 
