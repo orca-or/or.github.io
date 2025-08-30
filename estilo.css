@@ -870,6 +870,7 @@ margin-bottom: 30px;
   margin: 50px auto;        /* centraliza e dá espaçamento */
   min-height: 90px;         /* altura mínima para banners pequenos */
   height: auto;  
+          display: flex;
 
 }
 
@@ -1265,6 +1266,7 @@ color: red;
   color: #666;
   margin-bottom: 8px;
 }
+
 
 
 
