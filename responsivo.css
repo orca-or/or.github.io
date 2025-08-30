@@ -368,7 +368,8 @@ table{
     
       
     position: relative;
-    max-width: 80%;
+    flex: 80%;
+   display:flex;
     margin-left:10%;
    margin-rigth:10%;
 
@@ -799,6 +800,7 @@ position: relative;
       
 
   }
+
 
 
 
