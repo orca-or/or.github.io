@@ -1071,36 +1071,30 @@ display: inline-block;
   }
 
 
-  .artigo {
-margin-left: 10%;
-margin-right: 10%;
-width:80%;
-text-align: justify; 
+.artigo {
+  margin-left: 40px;
+  margin-right: 40px;
+  text-align: justify; 
 }
 
-.artigo-h1  {
-
-    margin-left: 40px;   
+.artigo-h1 {
+  margin-left: 40px;   
 }
-
 
 .artigo-a {
-
-    color: red;
-    text-decoration: none;
-
+  color: red;
+  text-decoration: none;
 }
+
 .artigo-pub {
-   width: 100%;
-   text-align: center;
-   margin-bottom: 50px;
-   margin-top:50px ;
-   height: 150px;
- 
-align-items: center;
-align-content: center;
-justify-content: center;
+  width: 100%;              /* ocupa todo o espaço disponível */
+  max-width: 100%;          /* nunca passa da largura da tela */
+  text-align: center;
+  margin: 50px auto;        /* centraliza e dá espaçamento */
+  min-height: 90px;         /* altura mínima para banners pequenos */
+  height: auto;             /* deixa o Google controlar a altura */
 }
+
 
 .artigo-pub img {
   width: 100%;  /* ocupa toda a largura da div */
@@ -1267,6 +1261,7 @@ color: red;
   color: #666;
   margin-bottom: 8px;
 }
+
 
 
 
