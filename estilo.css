@@ -1074,7 +1074,7 @@ display: inline-block;
   .artigo {
 margin-left: 40px;
 margin-right: 40px;
-
+width:100%;
 text-align: justify; 
 }
 
@@ -1267,6 +1267,7 @@ color: red;
   color: #666;
   margin-bottom: 8px;
 }
+
 
 
 
