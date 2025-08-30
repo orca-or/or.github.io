@@ -368,11 +368,9 @@ table{
     
       
     position: relative;
-    flex: 80%;
-   display:flex;
-    margin-left:10%;
-   margin-rigth:10%;
+    max-width: 100%;
 
+    
 }
 .artigo-pub{ 
     position: relative;
@@ -800,6 +798,7 @@ position: relative;
       
 
   }
+
 
 
 
