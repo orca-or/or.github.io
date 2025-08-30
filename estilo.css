@@ -864,15 +864,6 @@ margin-bottom: 30px;
 
 
 .pub2{
-
-        width: 100%; 
-    
-        margin: 1px;
-        justify-content: center;
-        display: flex;
-        border-bottom: 5px solid red; 
-
-
         width: 100%;              /* ocupa todo o espaço disponível */
   max-width: 100%;          /* nunca passa da largura da tela */
   text-align: center;
@@ -880,7 +871,6 @@ margin-bottom: 30px;
   min-height: 90px;         /* altura mínima para banners pequenos */
   height: auto;  
 
-        
 }
 
 .começo {
@@ -1088,8 +1078,7 @@ display: inline-block;
         display: flex;
 
 flex-flow:row wrap;
-justify-content: center;
-justify-items: center;
+
 }
 
 .artigo-h1 {
@@ -1276,6 +1265,7 @@ color: red;
   color: #666;
   margin-bottom: 8px;
 }
+
 
 
 
