@@ -1192,7 +1192,7 @@ a{
         }
 
   .dicas { 
-
+   display:none;
     flex:0 0 40%;
 margin-left: 2%;
 margin-right: 2%;
@@ -1299,6 +1299,7 @@ text-decoration: none;
 
 
   }
+
 
 
 
