@@ -4548,6 +4548,34 @@ function cal21() {
 
 }
 
+
+ 
+document.addEventListener("DOMContentLoaded", () => {
+      const posts = document.querySelectorAll(".dicas");
+
+      posts.forEach(dicas => {
+        // --- Caso 1: data/hora específica ---
+        const showAt = dicas.getAttribute("data-show-at");
+        if (showAt) {
+          // Converte para formato aceito pelo Date
+          const alvo = new Date(showAt.replace(" ", "T")); 
+          const agora = new Date();
+          const diff = alvo.getTime() - agora.getTime();
+
+          if (diff > 0) {
+            console.log(`🕒 Post será exibido em ${Math.round(diff/1000)}s (${alvo})`);
+            setTimeout(() => {
+              dicas.style.display = "block";
+              console.log("✅ Post exibido (data/hora).");
+            }, diff);
+          } else {
+            console.log("⚠️ A data/hora já passou, exibindo imediatamente.");
+            dicas.style.display = "block";
+          }
+        }
+      });
+    });
+
 document.addEventListener("DOMContentLoaded", function () {
   // Pega a URL atual
   const pageUrl = encodeURIComponent(window.location.href);
@@ -4565,6 +4593,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
  
+
 
 
 
