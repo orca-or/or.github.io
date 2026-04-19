@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    margin:0;
+    background: rgba(0,0,0,0.8);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial;
+}
+
+.box {
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    z-index:9999;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h3>A processar download...</h3>
+</div>
+
+<script>
+const url = new URL(window.location.href);
+const ok = url.searchParams.get("ok");
+
+if(ok !== "1"){
+    alert("Acesso não autorizado");
+    window.location.href = "/";
+}
+
+window.onload = function(){
+
+    // iniciar download
+    window.location.href = "Planilha-Orcamental.pdf";
+
+    // feedback visual
+    document.body.innerHTML = "<h2>📄 Download iniciado...</h2>";
+
+    // fechar
+    setTimeout(()=>{
+        window.close();
+    }, 4000);
+}
+</script>
+
+</body>
+</html>
