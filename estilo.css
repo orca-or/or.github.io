@@ -1,4 +1,110 @@
-        
+
+   
+.secção-leve {
+      
+align-items: stretch;
+width: 80%; 
+margin-top: 20px;
+position: relative;
+height: 10%;
+float: left;
+display: flex;
+
+margin-left: 10%;
+margin-right: 10%;
+
+   }     
+ 
+.levantamento{
+      
+align-items: stretch;
+width: 80%; 
+margin-top: 5px;
+position: relative;
+height: 10%;
+float: left;
+display: flex;
+margin-left: 10%;
+margin-right: 10%;
+
+
+
+   }     
+
+
+.icone {
+    margin-top: 10px;
+    width: 70px;
+    display: block;
+    margin: 0 auto; /* 🔥 centraliza */
+   
+}
+
+.le {
+    margin-top: 60px;
+    width: 100%;
+    display: block;
+    margin: 0 auto; /* 🔥 centraliza */
+     text-align: center;
+     font-size: 50px;
+     font-weight: bold;
+}
+
+
+
+
+     .Centrur {
+    min-height: 150px; 
+    flex:40%;
+    float: left;
+    margin-right: 3%;
+    margin-left: 3%;
+    text-align: justify;
+    position: relative;
+    align-items: stretch;
+    margin-bottom: 50px;
+     margin-top: 50px;
+ border-radius: 10px;
+
+
+   }     
+    .Centrul {
+    min-height: 300px; 
+    flex:50%;
+    float: left;
+  
+  
+    text-align: justify;
+    position: relative;
+    align-items: stretch;
+
+
+
+   }     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 *{
     box-sizing:border-box ;
     
