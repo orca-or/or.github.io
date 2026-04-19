@@ -1,5 +1,11 @@
 
 
+function pagarPDF(){
+    window.location.href = "https://www.paypal.com/ncp/payment/GFWV4BP3ZA5B2?return=https://www.orca.it.ao/download.html?ok=1"
+}
+
+
+
   // Pega a URL atual
   const url = new URL(window.location.href);
   const params = url.searchParams;
