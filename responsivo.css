@@ -1,3 +1,5 @@
+
+
 @media only  screen   and  (min-width:1275px) and (max-width:1572px) { 
 
    
@@ -363,7 +365,10 @@ table{
 
 
 @media only  screen   and   (max-width:651px) { 
-
+  .levantamento {
+    flex-direction: column; 
+    align-items: stretch;
+  }
 
   .ver {
     flex-direction: column; 
