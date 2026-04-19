@@ -3320,12 +3320,9 @@ margin-top: 1px;height: 5%;float: left;font-size: 20px;"  id="tama">
 
 </table>
 
-
-        <button type="button" id="pdf" onclick="gerarPDF()"
-        style="padding: 20px;margin: 8px;background-color:
-         black;color:white  ;height: 40px;padding: 1px;width: 100px;position: relative;
-         box-shadow:0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-         ;">Baixar </button>
+<button onclick="pagarPDF()" style="background:black;color:white;padding:12px;border:none;border-radius:8px;">
+ Gerar PDF por - 2€
+</button>
     `;
       break;
 
