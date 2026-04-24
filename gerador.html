@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>ORÇA PRO</title>
+
+<style>
+body{font-family:Arial;background:#0f172a;color:#fff}
+.lista ul{list-style:none;padding:0}
+.lista li{margin:8px 0}
+a{color:#fff;text-decoration:none}
+.premium a{color:#ffcc00}
+input,button{padding:10px;margin:5px}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+INPUT LICENÇA
+========================= -->
+<div style="margin-bottom:15px;">
+  <input type="text" id="licencaInput" placeholder="Digite sua licença">
+  <button onclick="validarLicenca()">Ativar Licença</button>
+</div>
+
+<!-- =========================
+PAYPAL
+========================= -->
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <input type="hidden" name="cmd" value="_xclick">
+  <input type="hidden" name="business" value="SEU_EMAIL_PAYPAL">
+  <input type="hidden" name="item_name" value="Plano Premium ORCA">
+  <input type="hidden" name="amount" value="10.00">
+  <input type="hidden" name="currency_code" value="USD">
+  <input type="hidden" name="return" value="https://teusite.com/ativar.html">
+
+  <button type="submit" style="background:#ffc439;color:#000;">
+    💳 Comprar Plano Premium
+  </button>
+</form>
+
+<!-- =========================
+LISTA
+========================= -->
+<div class="lista">
+<h2>Fórmulas</h2>
+
+<ul>
+<li><a href="Calculadora.html?f=calculo_da_area_da_alvenaria">Área da Alvenaria</a></li>
+
+<li class="premium">
+<a href="#" onclick="verificarAcesso(event,'calculo_da_quantidade_de_blocos')">
+Quantidade de blocos 🔒
+</a></li>
+
+<li><a href="Calculadora.html?f=calculo_do_volume_de_assentamento">Volume de argamassa</a></li>
+
+<li class="premium">
+<a href="#" onclick="verificarAcesso(event,'calculo_da_area_do_chapisco_e_reboco')">
+Área chapisco e reboco 🔒
+</a></li>
+
+<li id="1" class="premium">
+<a href="#" onclick="verificarAcesso(event,'calculo_do_volume_para_o_chapisco')">
+Volume chapisco 🔒
+</a></li>
+
+<li class="premium">
+<a href="#" onclick="verificarAcesso(event,'calculo_do_volume_para_o_reboco')">
+Volume reboco 🔒
+</a></li>
+
+<li><a href="Calculadora.html?f=planilha_orçamental">Planilha Orçamental</a></li>
+</ul>
+</div>
+
+<!-- =========================
+FIREBASE + SCRIPT
+========================= -->
+<script type="module">
+
+
+
+
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  updateDoc
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+// CONFIG
+const firebaseConfig = {
+  apiKey: "AIzaSyDv6dvo3c5m2g6qOODDn2HfroxAdXVhcCo",
+  authDomain: "kl0408.firebaseapp.com",
+  projectId: "kl0408",
+  storageBucket: "kl0408.firebasestorage.app",
+  messagingSenderId: "789172987080",
+  appId: "1:789172987080:web:587d00c449366fbda5b1fd"
+};
+
+// iniciar
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// teste
+console.log("Firebase ligado com sucesso");
+
+
+
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// =========================
+// DEVICE ID
+// =========================
+function getDeviceId(){
+  let id = localStorage.getItem("device_id");
+
+  if(!id){
+    id = "dev_" + Math.random().toString(36).substr(2, 10);
+    localStorage.setItem("device_id", id);
+  }
+
+  return id;
+}
+async function validarLicenca(){
+
+  let codigo = document.getElementById("licencaInput").value;
+
+  const ref = doc(db, "licencas", codigo);
+  const snap = await getDoc(ref);
+
+  if(!snap.exists()){
+    alert("Licença inválida");
+    return;
+  }
+
+  const licenca = snap.data();
+
+  let agora = Date.now();
+
+  if(agora > licenca.fim){
+    alert("Licença expirada");
+    return;
+  }
+
+  let deviceId = getDeviceId();
+
+  if(!licenca.dispositivos.includes(deviceId)){
+
+    if(licenca.dispositivos.length >= licenca.limiteDispositivos){
+      alert("Limite de dispositivos atingido");
+      return;
+    }
+
+    licenca.dispositivos.push(deviceId);
+
+    await updateDoc(ref, {
+      dispositivos: licenca.dispositivos
+    });
+  }
+
+  localStorage.setItem("licenca", JSON.stringify(licenca));
+
+  alert("Licença ativada com sucesso!");
+}
+// =========================
+// VERIFICAR ACESSO
+// =========================
+window.verificarAcesso = function(e, formula){
+
+  e.preventDefault();
+
+  let licenca = JSON.parse(localStorage.getItem("licenca"));
+
+  if(!licenca){
+    alert("🔒 Compre o plano");
+    return;
+  }
+
+  let agora = Date.now();
+
+  if(agora > licenca.fim){
+    alert("❌ Licença expirada");
+    localStorage.removeItem("licenca");
+    return;
+  }
+
+  let deviceId = getDeviceId();
+
+  if(!licenca.dispositivos.includes(deviceId)){
+
+    if(licenca.dispositivos.length >= licenca.limiteDispositivos){
+      alert("Limite de dispositivos atingido");
+      return;
+    }
+
+    licenca.dispositivos.push(deviceId);
+    localStorage.setItem("licenca", JSON.stringify(licenca));
+  }
+
+  window.location.href = "Calculadora.html?f=" + formula;
+};
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
