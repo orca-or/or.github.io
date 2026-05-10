@@ -3328,10 +3328,7 @@ margin-top: 1px;height: 5%;float: left;font-size: 20px;"  id="tama">
 
  break;
     case 'gerar_planilha_orçamental':
-      conteudo = `
-        
-
-              
+      conteudo = `      
 <h2>Gerar planilha orçamental </h2>
  <p>Gere o seu orçamento de forma profissional com a nossa planilha em pdf.</p>
 
@@ -3343,7 +3340,7 @@ margin-top: 1px;height: 5%;float: left;font-size: 20px;"  id="tama">
 <li>✔ Dá mais credibilidade ao seu trabalho</li>
 </ul>
 <button onclick="pagarPDF()" style="background:black;color:white;padding:12px;border:none;border-radius:8px;">
- Gerar PDF por - 2 usd
+ Gerar PDF por - 2 usd 
 </button>
       `;
 
