@@ -2009,7 +2009,7 @@ function somapc() {
    
 
           localStorage.setItem("kl", pct);
-          window.location.href = "Calculadora.html?f=planilha_orçamental";
+         
 } 
 
 
@@ -3321,7 +3321,7 @@ margin-top: 1px;height: 5%;float: left;font-size: 20px;"  id="tama">
 </table>
 
 <button onclick="pagarPDF()" style="background:black;color:white;padding:12px;border:none;border-radius:8px;">
- Gerar PDF por - 2€
+ Gerar PDF por - 2 usd
 </button>
     `;
       break;
