@@ -3347,7 +3347,7 @@ margin-top: 1px;height: 5%;float: left;font-size: 20px;"  id="tama">
 </button>
       `;
 
-          
+       break;    
     case 'calculo_da_mão_de_obra':
       conteudo = `  
 <h2 style="text-align: center;">Cálculo da Mão de Obra</h2> 
