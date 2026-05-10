@@ -2009,7 +2009,7 @@ function somapc() {
    
 
           localStorage.setItem("kl", pct);
-         
+         window.location.href = "Calculadora.html?f=gerar_planilha_orçamental";
 } 
 
 
@@ -3324,8 +3324,30 @@ margin-top: 1px;height: 5%;float: left;font-size: 20px;"  id="tama">
  Gerar PDF por - 2 usd
 </button>
     `;
-      break;
+     
 
+ break;
+    case 'gerar_planilha_orçamental':
+      conteudo = `
+        
+
+              
+<h2>Gerar planilha orçamental </h2>
+ <p>Gere o seu orçamento de forma profissional com a nossa planilha em pdf.</p>
+
+ <p><strong> Benefícios: </strong>  </p> 
+<ul>
+<li>✔ Documento organizado e pronto para cliente</li>
+<li>✔ Inclui materiais, custos e totais</li>
+
+<li>✔ Dá mais credibilidade ao seu trabalho</li>
+</ul>
+<button onclick="pagarPDF()" style="background:black;color:white;padding:12px;border:none;border-radius:8px;">
+ Gerar PDF por - 2 usd
+</button>
+      `;
+
+          
     case 'calculo_da_mão_de_obra':
       conteudo = `  
 <h2 style="text-align: center;">Cálculo da Mão de Obra</h2> 
