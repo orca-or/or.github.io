@@ -1,21 +1,1951 @@
 
-
-
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Planilha</title>
+    <meta charset="UTF-8">
+    <meta name="author"   content="Karlos kiala ">
+    <meta name="google-adsense-account" content="ca-pub-3493043807965757">
+    <meta name="keywords" content="  Como fazer um orçamento de obra sem ser um profissional,
+    Como tirar medidas de uma planta para fazer o orçamento, Como tirar medidas de uma planta
+     para fazer o orçamento,
+    ">
+ <meta name="description" content="Aprenda como tirar medidas, calcular materiais, estimar custos e entender sua obra com as dicas práticas da Orça.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H1RH3BG6S0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H1RH3BG6S0');
+</script>
+    <link rel="stylesheet"   href="estilo.css">
+    <link rel="stylesheet" href="responsivo.css">
+    <link rel="icon" type="image/png" href="img/Orça.png">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+
+    <title>Gestão de obra</title>
+</head>
+
+<body>
+
+    <nav  class="menu-pai">
+        
 
 
+        <li class="dropdown" id="dro">
+            <a class="dropbtn" href="#"  style="padding: 0px;" onclick="toggleMenu(event)" title="menu"><img src="img/menu.png" alt="abrir menu"></a>
+    
+            <div class="dropdown-content" id="filho" style="height: auto;">
+                <a href="index.html" class="content">Início</a>
+                <a href="Calculadora.html?f=calculo_da_area_da_alvenaria" class="content" >Calculadora</a>   
+                 <a href="planilha.html" class="content" >Planilhas de gestão</a> 
+             <a href="Dicas.html" class="content" >Dicas de orçamento</a>
+           
+            </div>
+        </li>
+
+
+    <div  class="menu-t"> 
+       
+    <h1  style="padding: 1px;margin-top: 15px;"><img src="img/orça-calculadora-online-1.png" 
+      alt="calculadora de obras-online"></h1> 
+         
+    </div>
+
+         <div   class="menu-i"> 
+        <a href="index.html" class="ele-2">Início</a>
+        
+        <a href="Calculadora.html?f=calculo_da_area_da_alvenaria" class="ele-2">Calculadora</a>
+     <a href="planilha.html" class="ele-2" >Planilhas de gestão</a> 
+        <a href="Dicas.html" class="ele-2">Dicas de orçamento</a>
+        
+        
+   
+        
+
+
+
+    </div>
+       
+    </nav>
+
+    <section class="secção-1">
+
+<div class="pub2">
+   <div class="artigo-pub">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3493043807965757"
+     crossorigin="anonymous"></script>
+<!-- kiala -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3493043807965757"
+     data-ad-slot="2256419595"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+        </div>
+        
+
+    </section>
+
+
+
+
+<section id="secao-descricao" class="secção-leve"  >
+
+  
+ <div    class="Centrul">
+    <h1 style="margin-right: 20px;margin-right:50px ;font-size: 50px;font-weight: bold;margin-top: 0 ;position: relative;top: 0 auto;">
+        Crie planilhas de gestão  e controle sua obra</h1>
+   
+
+    <p style="
+    font-size:22px;
+   
+    margin:auto;
+    ">
+        Gere orçamentos, controle materiais, acompanhe funcionários,
+        medições, cronogramas e custos da obra numa única ferramenta.
+    </p>
+
+  </div>
+
+
+    
+ 
+
+  
+  
+
+</section>
+<style>
+
+body{
+    font-family:Arial;
+    margin:0;
+    background:white;
+    color:black;
+}
+
+header{
+    background:black;
+    padding:15px;
+    text-align:center;
+}
+
+.menu{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    padding:15px;
+    background:black;
+}
+
+.menu button{
+    padding:10px 15px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:black;
+    color:white;
+}
+
+.aba{
+    display:none;
+    padding:20px;
+}
+
+.ativa{
+    display:block;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th,td{
+    border:1px solid black;
+    padding:8px;
+    color: white;
+    background-color: black;
+}
+
+th{
+    background:black;
+}
+
+input{
+    width:95%;
+    padding:6px;
+}
+
+.acoes{
+    margin-top:15px;
+}
+
+.acoes button{
+    padding:10px;
+    margin-right:10px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.add{
+    background:black;
+    color:white;
+}
+
+.rem{
+    background:black;
+    color:white;
+}
+
+.pdf{
+    background:#f59e0b;
+    color:white;
+}
+
+</style>
 </head>
 <body>
 
-<img src="img/planilha.jpg" alt=""  style="left: 20%;position: relative;right: 20%;">
+
+<div class="menu">
+
+<button onclick="abrirAba('orcamento')">
+ Orçamento
+</button>
+
+<button onclick="abrirAba('cronograma')">
+ Cronograma
+</button>
+
+<button onclick="abrirAba('financeiro')">
+ Financeiro
+</button>
+
+<button onclick="abrirAba('materiais')">
+ Controle de material
+</button>
+
+<button onclick="abrirAba('funcionarios')">
+ controle de pessoal
+</button>
+
+<button onclick="abrirAba('medicoes')">
+Medições de Produção
+</button>
+
+
+</div>
+
+
+<!-- ORÇAMENTO -->
+
+<div id="orcamento" class="aba ativa">
+
+<h2>Orçamento da Obra</h2>
+
+<table id="tblOrcamento">
+
+<tr>
+<th>Item</th>
+<th>Quantidade</th>
+<th>Preço Unitário</th>
+<th>Total</th>
+</tr>
+
+<tr>
+<td><input></td>
+<td><input type="number" onchange="calcularOrcamento()"></td>
+<td><input type="number" onchange="calcularOrcamento()"></td>
+<td class="totalLinha">0</td>
+</tr>
+
+</table>
+
+<div class="acoes">
+
+<button class="add"
+onclick="addLinhaOrcamento()">
+➕ Adicionar Linha
+</button>
+
+<button class="rem"
+onclick="remLinha('tblOrcamento')">
+➖ Remover Linha
+</button>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin-top: 10px;">
+
+<input type="hidden" name="cmd" value="_xclick">
+
+<input type="hidden" name="business" value="cvk868@gmail.com">
+
+<input type="hidden" name="item_name" value="ORÇA PRO Premium">
+
+<input type="hidden" name="amount" value="1.00">
+
+<input type="hidden" name="currency_code" value="USD">
+
+<!-- 🔥 volta para ativar premium -->
+
+<input type="hidden" name="return" value="download.html?file=Orcamento.pdf">
+
+
+<button type="submit" class="rem">
+Baixe pdf por 1 Usd
+</button>
+</form>
+</div>
+
+<h3>
+Total Geral:
+<span id="totalOrcamento">0 Kz</span>
+</h3>
+
+</div>
+
+
+<!-- CRONOGRAMA -->
+
+<div id="cronograma" class="aba">
+
+<h2> Cronograma da Obra</h2>
+
+<table id="tblCronograma">
+
+<tr>
+<th>Atividade</th>
+<th>Data Início</th>
+<th>Data Fim</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td><input></td>
+<td><input type="date"></td>
+<td><input type="date"></td>
+
+<td>
+<select>
+<option>Pendente</option>
+<option>Em andamento</option>
+<option>Concluído</option>
+</select>
+</td>
+
+</tr>
+
+</table>
+
+<div class="acoes">
+
+<button class="add"
+onclick="addLinhaCronograma()">
+➕ Adicionar Linha
+</button>
+
+<button class="rem"
+onclick="remLinha('tblCronograma')">
+➖ Remover Linha
+</button>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post"  style="margin-top: 10px;">
+
+<input type="hidden" name="cmd" value="_xclick">
+
+<input type="hidden" name="business" value="cvk868@gmail.com">
+
+<input type="hidden" name="item_name" value="ORÇA PRO Premium">
+
+<input type="hidden" name="amount" value="1.00">
+
+<input type="hidden" name="currency_code" value="USD">
+
+<!-- 🔥 volta para ativar premium -->
+
+<input type="hidden" name="return" value="download.html?file=Cronograma.pdf">
+<input type="hidden" name="cancel_return" value="https://www.orca.it.ao/loja.html">
+
+<button type="submit"  class="rem">
+Baixe pdf por 1 Usd
+</button>
+</form>
+</div>
+
+</div>
+
+<!-- FINANCEIRO -->
+
+<div id="financeiro" class="aba">
+
+<h2> Controle Financeiro</h2>
+
+<table id="tblFinanceiro">
+
+<tr>
+<th>Data</th>
+<th>Descrição</th>
+<th>Entrada</th>
+<th>Saída</th>
+</tr>
+
+<tr>
+
+<td>
+<input type="date">
+</td>
+
+<td>
+<input>
+</td>
+
+<td>
+<input
+type="number"
+onchange="calcularFinanceiro()">
+</td>
+
+<td>
+<input
+type="number"
+onchange="calcularFinanceiro()">
+</td>
+
+</tr>
+
+</table>
+
+<div class="acoes">
+
+<button class="add"
+onclick="addLinhaFinanceiro()">
+➕ Adicionar Linha
+</button>
+
+<button class="rem"
+onclick="remLinha('tblFinanceiro')">
+➖ Remover Linha
+</button>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin-top: 10px;">
+
+<input type="hidden" name="cmd" value="_xclick">
+
+<input type="hidden" name="business" value="cvk868@gmail.com">
+
+<input type="hidden" name="item_name" value="ORÇA PRO Premium">
+
+<input type="hidden" name="amount" value="1.00">
+
+<input type="hidden" name="currency_code" value="USD">
+
+<!-- 🔥 volta para ativar premium -->
+
+<input type="hidden" name="return" value="download.html?file=Financeiro.pdf">
+<input type="hidden" name="cancel_return" value="https://www.orca.it.ao/loja.html">
+
+<button type="submit" class="rem">
+Baixe pdf por 1 Usd
+</button>
+</form>
+</div>
+
+<h3>
+Entradas:
+<span id="totalEntradas">0 Kz</span>
+</h3>
+
+<h3>
+Saídas:
+<span id="totalSaidas">0 Kz</span>
+</h3>
+
+<h3>
+Saldo:
+<span id="saldoFinal">0 Kz</span>
+</h3>
+
+</div>
+
+<!-- =========================
+MATERIAIS
+========================= -->
+
+<div id="materiais" class="aba">
+
+<h2> Controle de Materiais</h2>
+
+<table id="tblMateriais">
+
+<tr>
+<th>Data</th>
+<th>Material</th>
+<th>Entrada</th>
+<th>Saída</th>
+<th>Saldo</th>
+<th>Unidade</th>
+<th>Observação</th>
+</tr>
+
+
+<tr>
+
+<td>
+<input type="date">
+</td>
+
+<td>
+<input placeholder="Material">
+</td>
+
+<td>
+<input
+type="number"
+onchange="calcularMateriais()">
+</td>
+
+<td>
+<input
+type="number"
+onchange="calcularMateriais()">
+</td>
+
+<td class="saldoMaterial">
+0
+</td>
+
+<td>
+<input value="un">
+</td>
+
+<td>
+<input placeholder="Observação">
+</td>
+
+</tr>
+</table>
+
+<div class="acoes">
+
+<button class="add"
+onclick="addLinhaMateriais()">
+➕ Adicionar Linha
+</button>
+
+<button class="rem"
+onclick="remLinha('tblMateriais')">
+➖ Remover Linha
+</button>
+
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post"  style="margin-top: 10px;">
+
+<input type="hidden" name="cmd" value="_xclick">
+
+<input type="hidden" name="business" value="cvk868@gmail.com">
+
+<input type="hidden" name="item_name" value="ORÇA PRO Premium">
+
+<input type="hidden" name="amount" value="1.00">
+
+<input type="hidden" name="currency_code" value="USD">
+
+<!-- 🔥 volta para ativar premium -->
+
+<input type="hidden" name="return" value="download.html?file=Materiais.pdf">
+<input type="hidden" name="cancel_return" value="https://www.orca.it.ao/loja.html">
+
+<button type="submit" class="rem">
+Baixe pdf por 1 Usd
+</button>
+
+</form>
+</div>
+
+<h3>
+Total em estoque:
+<span id="totalMateriais">0</span>
+</h3>
+
+</div>
+
+<!-- =========================
+FUNCIONÁRIOS
+========================= -->
+
+<div id="funcionarios" class="aba">
+
+<h2> Controle de Funcionários</h2>
+
+<table id="tblFuncionarios">
+
+<tr>
+<th>Nome</th>
+<th>Função</th>
+<th>Dias</th>
+<th>Valor/Dia</th>
+<th>Total</th>
+</tr>
+
+<tr>
+
+<td><input></td>
+
+<td><input></td>
+
+<td>
+<input
+type="number"
+onchange="calcularFuncionarios()">
+</td>
+
+<td>
+<input
+type="number"
+onchange="calcularFuncionarios()">
+</td>
+
+<td class="totalFuncionario">
+0
+</td>
+
+</tr>
+
+</table>
+
+<div class="acoes">
+
+<button class="add"
+onclick="addLinhaFuncionarios()">
+➕ Adicionar Linha
+</button>
+
+<button class="rem"
+onclick="remLinha('tblFuncionarios')">
+➖ Remover Linha
+</button>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin-top: 10px;">
+
+<input type="hidden" name="cmd" value="_xclick">
+
+<input type="hidden" name="business" value="cvk868@gmail.com">
+
+<input type="hidden" name="item_name" value="ORÇA PRO Premium">
+
+<input type="hidden" name="amount" value="1.00">
+
+<input type="hidden" name="currency_code" value="USD">
+
+<!-- 🔥 volta para ativar premium -->
+
+<input type="hidden" name="return" value="download.html?file=Funcionarios.pdf">
+<input type="hidden" name="cancel_return" value="https://www.orca.it.ao/loja.html">
+
+<button type="submit" class="rem">
+Baixe pdf por 1 Usd
+</button>
+</form>
+</div>
+
+<h3>
+Folha Salarial:
+<span id="totalFuncionarios">
+0 Kz
+</span>
+</h3>
+
+</div>
 
 
 
+<!-- MEDIÇÕES -->
+
+<div id="medicoes" class="aba">
+
+<h2>Medições</h2>
+
+<table id="tblMedicoes">
+<tr>
+<th>Data</th>
+<th>Serviço</th>
+<th>Quantidade</th>
+<th>Unidade</th>
+<th>Valor Unitário</th>
+<th>Total</th>
+</tr>
+
+
+
+<td>
+<input
+type="date"
+value=""
+>
+</td>
+
+<td>
+<input
+placeholder="Serviço">
+</td>
+
+<td>
+<input
+type="number"
+onchange="calcularMedicoes()">
+</td>
+
+<td>
+<input
+value="m²">
+</td>
+
+<td>
+<input
+type="number"
+onchange="calcularMedicoes()">
+</td>
+
+<td class="totalMedicao">
+0
+</td>
+
+</tr>
+
+</table>
+
+<div class="acoes">
+
+<button class="add"
+onclick="addLinhaMedicoes()">
+➕ Adicionar Linha
+</button>
+
+<button class="rem"
+onclick="remLinha('tblMedicoes')">
+➖ Remover Linha
+</button>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin-top: 10px;">
+
+<!-- 🔥 volta para ativar premium -->
+
+<input type="hidden" name="return" value="download.html?file=Medicoes.pdf">
+<input type="hidden" name="cancel_return" value="https://www.orca.it.ao/loja.html">
+
+
+<input type="hidden" name="cmd" value="_xclick">
+
+<input type="hidden" name="business" value="cvk868@gmail.com">
+
+<input type="hidden" name="item_name" value="ORÇA PRO Premium">
+
+<input type="hidden" name="amount" value="1.00">
+
+<input type="hidden" name="currency_code" value="USD">
+
+<!-- 🔥 volta para ativar premium -->
+
+<input type="hidden" name="return" value="download.html?file=Medicoes.pdf">
+<input type="hidden" name="cancel_return" value="https://www.orca.it.ao/loja.html">
+
+<button type="submit" class="rem">
+Baixe pdf por 1 Usd
+</button>
+</form>
+</div>
+
+<h3>
+Total Medições:
+<span id="totalMedicoes">
+0 Kz
+</span>
+</h3>
+
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+
+function abrirAba(id){
+
+document
+.querySelectorAll(".aba")
+.forEach(a=>a.classList.remove("ativa"));
+
+document
+.getElementById(id)
+.classList.add("ativa");
+
+}
+
+function addLinhaOrcamento(){
+
+let tabela =
+document.getElementById("tblOrcamento");
+
+let linha =
+tabela.insertRow();
+
+linha.innerHTML=`
+
+<td>
+<input>
+</td>
+
+<td>
+<input type="number"
+onchange="calcularOrcamento()">
+</td>
+
+<td>
+<input type="number"
+onchange="calcularOrcamento()">
+</td>
+
+<td class="totalLinha">
+0
+</td>
+
+`;
+
+}
+
+function remLinha(id){
+
+let tabela =
+document.getElementById(id);
+
+if(tabela.rows.length>2){
+
+tabela.deleteRow(
+tabela.rows.length-1
+);
+
+}
+
+}
+
+function calcularOrcamento(){
+
+let tabela =
+document.getElementById("tblOrcamento");
+
+let total=0;
+
+for(let i=1;i<tabela.rows.length;i++){
+
+let qtd =
+Number(
+tabela.rows[i]
+.cells[1]
+.querySelector("input").value
+)||0;
+
+let preco =
+Number(
+tabela.rows[i]
+.cells[2]
+.querySelector("input").value
+)||0;
+
+let soma=qtd*preco;
+
+tabela.rows[i]
+.cells[3]
+.innerText=soma.toFixed(2);
+
+total+=soma;
+
+}
+
+document.getElementById(
+"totalOrcamento"
+).innerText=
+total.toLocaleString()+" Kz";
+
+document.getElementById(
+"dashOrcamento"
+).innerText=
+total.toLocaleString()+" Kz";
+
+}
+function comprarPDF(){
+
+if(!premiumAtivo()){
+
+document.getElementById(
+"premiumBox"
+).style.display="block";
+
+return;
+
+}
+
+gerarPDF();
+
+}
+function adicionarItem(nome, quantidade){
+
+  const tabela =
+  document.getElementById("tblOrcamento");
+
+  const linha =
+  tabela.insertRow();
+
+  linha.innerHTML = `
+
+  <td>
+    <input value="${nome}">
+  </td>
+
+  <td>
+    <input type="number"
+    value="${quantidade}">
+  </td>
+
+  <td>
+    <input type="number">
+  </td>
+
+  <td class="totalLinha">
+    0
+  </td>
+
+  `;
+
+}
+
+/* =========================
+CRONOGRAMA
+========================= */
+
+function addLinhaCronograma(){
+
+let tabela =
+document.getElementById(
+"tblCronograma"
+);
+
+let linha =
+tabela.insertRow();
+
+linha.innerHTML = `
+
+<td>
+<input>
+</td>
+
+<td>
+<input type="date">
+</td>
+
+<td>
+<input type="date">
+</td>
+
+<td>
+
+<select>
+
+<option>
+Pendente
+</option>
+
+<option>
+Em andamento
+</option>
+
+<option>
+Concluído
+</option>
+
+</select>
+
+</td>
+
+`;
+
+}
+
+/* =========================
+FINANCEIRO
+========================= */
+
+function addLinhaFinanceiro(){
+
+let tabela =
+document.getElementById(
+"tblFinanceiro"
+);
+
+let linha =
+tabela.insertRow();
+
+linha.innerHTML = `
+
+<td>
+<input type="date">
+</td>
+
+<td>
+<input>
+</td>
+
+<td>
+<input
+type="number"
+onchange="calcularFinanceiro()">
+</td>
+
+<td>
+<input
+type="number"
+onchange="calcularFinanceiro()">
+</td>
+
+`;
+
+}
+
+function calcularFinanceiro(){
+
+let tabela =
+document.getElementById(
+"tblFinanceiro"
+);
+
+let entradas = 0;
+let saidas = 0;
+
+for(
+let i = 1;
+i < tabela.rows.length;
+i++
+){
+
+let entrada = Number(
+
+tabela.rows[i]
+.cells[2]
+.querySelector("input")
+.value
+
+)||0;
+
+let saida = Number(
+
+tabela.rows[i]
+.cells[3]
+.querySelector("input")
+.value
+
+)||0;
+
+entradas += entrada;
+saidas += saida;
+
+}
+
+let saldo =
+entradas - saidas;
+
+document.getElementById(
+"totalEntradas"
+).innerText =
+entradas.toLocaleString()
++ " Kz";
+
+document.getElementById(
+"totalSaidas"
+).innerText =
+saidas.toLocaleString()
++ " Kz";
+
+document.getElementById(
+"saldoFinal"
+).innerText =
+saldo.toLocaleString()
++ " Kz";
+
+/* DASHBOARD */
+
+document.getElementById(
+"dashEntradas"
+).innerText =
+entradas.toLocaleString()
++ " Kz";
+
+document.getElementById(
+"dashSaidas"
+).innerText =
+saidas.toLocaleString()
++ " Kz";
+
+}
+
+/* =========================
+MATERIAIS
+========================= */
+function addLinhaMateriais(){
+
+let tabela =
+document.getElementById(
+"tblMateriais"
+);
+
+let linha =
+tabela.insertRow();
+
+linha.innerHTML = `
+
+<td>
+<input type="date">
+</td>
+
+<td>
+<input placeholder="Material">
+</td>
+
+<td>
+<input
+type="number"
+onchange="calcularMateriais()">
+</td>
+
+<td>
+<input
+type="number"
+onchange="calcularMateriais()">
+</td>
+
+<td class="saldoMaterial">
+0
+</td>
+
+<td>
+<input value="un">
+</td>
+
+<td>
+<input placeholder="Observação">
+</td>
+
+`;
+
+}
+function calcularMateriais(){
+
+let tabela =
+document.getElementById(
+"tblMateriais"
+);
+
+let estoqueTotal = 0;
+
+for(
+let i=1;
+i<tabela.rows.length;
+i++
+){
+
+let entrada = Number(
+
+tabela.rows[i]
+.cells[2]
+.querySelector("input")
+.value
+
+)||0;
+
+let saida = Number(
+
+tabela.rows[i]
+.cells[3]
+.querySelector("input")
+.value
+
+)||0;
+
+let saldo =
+entrada - saida;
+
+tabela.rows[i]
+.cells[4]
+.innerText =
+saldo;
+
+estoqueTotal += saldo;
+
+}
+
+document.getElementById(
+"totalMateriais"
+).innerText =
+estoqueTotal;
+
+document.getElementById(
+"dashMateriais"
+).innerText =
+estoqueTotal;
+
+}
+
+/* =========================
+FUNCIONÁRIOS
+========================= */
+
+function addLinhaFuncionarios(){
+
+let tabela =
+document.getElementById(
+"tblFuncionarios"
+);
+
+let linha =
+tabela.insertRow();
+
+linha.innerHTML = `
+
+<td>
+<input>
+</td>
+
+<td>
+<input>
+</td>
+
+<td>
+<input
+type="number"
+onchange="calcularFuncionarios()">
+</td>
+
+<td>
+<input
+type="number"
+onchange="calcularFuncionarios()">
+</td>
+
+<td class="totalFuncionario">
+0
+</td>
+
+`;
+
+}
+
+function calcularFuncionarios(){
+
+let tabela =
+document.getElementById(
+"tblFuncionarios"
+);
+
+let total = 0;
+
+for(
+let i=1;
+i<tabela.rows.length;
+i++
+){
+
+let dias = Number(
+
+tabela.rows[i]
+.cells[2]
+.querySelector("input")
+.value
+
+)||0;
+
+let valor = Number(
+
+tabela.rows[i]
+.cells[3]
+.querySelector("input")
+.value
+
+)||0;
+
+let salario =
+dias * valor;
+
+tabela.rows[i]
+.cells[4]
+.innerText =
+salario.toFixed(2);
+
+total += salario;
+
+}
+
+document.getElementById(
+"totalFuncionarios"
+).innerText =
+total.toLocaleString()
++ " Kz";
+
+}
+
+
+/* =========================
+MEDIÇÕES
+========================= */
+
+function calcularMedicoes(){
+
+let tabela =
+document.getElementById(
+"tblMedicoes"
+);
+
+let total = 0;
+
+for(
+let i=1;
+i<tabela.rows.length;
+i++
+){
+
+let qtd = Number(
+
+tabela.rows[i]
+.cells[2]
+.querySelector("input")
+.value
+
+)||0;
+
+let valor = Number(
+
+tabela.rows[i]
+.cells[4]
+.querySelector("input")
+.value
+
+)||0;
+
+let soma =
+qtd * valor;
+
+tabela.rows[i]
+.cells[5]
+.innerText =
+soma.toFixed(2);
+
+total += soma;
+
+}
+
+document.getElementById(
+"totalMedicoes"
+).innerText =
+total.toLocaleString()
++ " Kz";
+
+document.getElementById(
+"dashMedicoes"
+).innerText =
+total.toLocaleString()
++ " Kz";
+
+}
+function addLinhaMedicoes(){
+
+let tabela =
+document.getElementById(
+"tblMedicoes"
+);
+
+let linha =
+tabela.insertRow();
+
+linha.innerHTML = `
+
+<td>
+<input type="date">
+</td>
+
+<td>
+<input placeholder="Serviço">
+</td>
+
+<td>
+<input
+type="number"
+onchange="calcularMedicoes()">
+</td>
+
+<td>
+<input value="m²">
+</td>
+
+<td>
+<input
+type="number"
+onchange="calcularMedicoes()">
+</td>
+
+<td class="totalMedicao">
+0
+</td>
+
+`;
+
+}
+/* =========================
+GUARDAR PROJETO
+========================= */
+
+function guardarProjeto(){
+
+const dados = {
+
+orcamento:
+document.getElementById(
+"tblOrcamento"
+).outerHTML,
+
+cronograma:
+document.getElementById(
+"tblCronograma"
+).outerHTML,
+
+financeiro:
+document.getElementById(
+"tblFinanceiro"
+).outerHTML,
+
+materiais:
+document.getElementById(
+"tblMateriais"
+).outerHTML,
+
+funcionarios:
+document.getElementById(
+"tblFuncionarios"
+).outerHTML,
+
+medicoes:
+document.getElementById(
+"tblMedicoes"
+).outerHTML
+
+};
+
+const blob = new Blob(
+[
+JSON.stringify(
+dados,
+null,
+2
+)
+],
+{
+type:"application/json"
+}
+);
+
+const a =
+document.createElement("a");
+
+a.href =
+URL.createObjectURL(blob);
+
+a.download =
+"Projeto_ORCA.json";
+
+a.click();
+
+}
+
+/* =========================
+ABRIR PROJETO
+========================= */
+
+document
+.getElementById(
+"abrirProjeto"
+)
+.addEventListener(
+"change",
+function(e){
+
+const arquivo =
+e.target.files[0];
+
+if(!arquivo) return;
+
+const leitor =
+new FileReader();
+
+leitor.onload =
+function(){
+
+const dados =
+JSON.parse(
+leitor.result
+);
+
+tblOrcamento.outerHTML =
+dados.orcamento;
+
+tblCronograma.outerHTML =
+dados.cronograma;
+
+tblFinanceiro.outerHTML =
+dados.financeiro;
+
+tblMateriais.outerHTML =
+dados.materiais;
+
+tblFuncionarios.outerHTML =
+dados.funcionarios;
+
+tblMedicoes.outerHTML =
+dados.medicoes;
+
+alert(
+"Projeto carregado!"
+);
+
+};
+
+leitor.readAsText(
+arquivo
+);
+
+});
+
+
+function premiumAtivo(){
+
+return localStorage.getItem(
+"premium_orca"
+) === "sim";
+
+}
+
+localStorage.setItem(
+"premium_orca",
+"sim"
+);
+
+
+
+function gerarExcel(){
+
+if(!premiumAtivo()){
+
+document.getElementById(
+"premiumBox"
+).style.display="block";
+
+return;
+
+}
+
+const wb =
+XLSX.utils.book_new();
+
+const ws =
+XLSX.utils.table_to_sheet(
+document.getElementById(
+"tblOrcamento"
+)
+);
+
+XLSX.utils.book_append_sheet(
+wb,
+ws,
+"Orcamento"
+);
+
+XLSX.writeFile(
+wb,
+"Orca.xlsx"
+);
+
+}
+function gerarPDF(){
+
+const { jsPDF } = window.jspdf;
+
+const pdf = new jsPDF();
+
+pdf.setFontSize(20);
+pdf.text("ORÇA PRO", 80, 15);
+
+pdf.setFontSize(12);
+pdf.text(
+"PLANILHA DE ORÇAMENTO",
+65,
+25
+);
+
+const tabela =
+document.getElementById(
+"tblOrcamento"
+);
+
+let dados = [];
+
+for(
+let i=1;
+i<tabela.rows.length;
+i++
+){
+
+dados.push([
+
+i,
+
+tabela.rows[i]
+.cells[0]
+.querySelector("input")
+?.value || "",
+
+tabela.rows[i]
+.cells[1]
+.querySelector("input")
+?.value || "",
+
+tabela.rows[i]
+.cells[2]
+.querySelector("input")
+?.value || "",
+
+tabela.rows[i]
+.cells[3]
+.innerText || "0"
+
+]);
+
+}
+
+pdf.autoTable({
+
+startY:35,
+
+head:[[
+"Nº",
+"Descrição",
+"Quantidade",
+"Preço Unitário",
+"Total"
+]],
+
+body:dados,
+
+theme:"grid",
+
+headStyles:{
+fillColor:[41,128,185]
+},
+
+styles:{
+fontSize:10
+}
+
+});
+
+let total = 0;
+
+dados.forEach(linha=>{
+
+total +=
+Number(
+linha[4]
+.replace(/[^0-9.-]/g,"")
+)||0;
+
+});
+
+pdf.text(
+"TOTAL GERAL: "
++ total.toLocaleString()
++ " Kz",
+
+140,
+
+pdf.lastAutoTable.finalY + 15
+
+);
+
+pdf.save(
+"Orcamento_Obra.pdf"
+);
+
+}
+
+
+function exportarTabelaPDF(
+ idTabela,
+ titulo,
+ nomeArquivo
+){
+
+ const { jsPDF } = window.jspdf;
+
+ const pdf = new jsPDF();
+
+ pdf.setFontSize(18);
+ pdf.text("ORÇA PRO",80,15);
+
+ pdf.setFontSize(12);
+ pdf.text(titulo,14,30);
+
+ const tabela =
+ document.getElementById(idTabela);
+
+ if(!tabela){
+   alert("Tabela não encontrada: " + idTabela);
+   return;
+ }
+
+ let cabecalho = [];
+ let corpo = [];
+
+ for(let i=0;i<tabela.rows[0].cells.length;i++){
+
+   cabecalho.push(
+    tabela.rows[0]
+    .cells[i]
+    .innerText
+   );
+
+ }
+
+ for(let i=1;i<tabela.rows.length;i++){
+
+   let linha = [];
+
+   for(let j=0;j<tabela.rows[i].cells.length;j++){
+
+     const celula =
+     tabela.rows[i].cells[j];
+
+     const input =
+     celula.querySelector(
+      "input,select,textarea"
+     );
+
+     linha.push(
+      input
+      ? input.value
+      : celula.innerText
+     );
+
+   }
+
+   corpo.push(linha);
+
+ }
+
+ pdf.autoTable({
+
+   startY:40,
+
+   head:[cabecalho],
+
+   body:corpo,
+
+   theme:"grid",
+
+   styles:{
+     fontSize:9
+   }
+
+ });
+
+ pdf.save(nomeArquivo);
+
+}
+
+
+
+function pdfOrcamento(){
+
+ exportarTabelaPDF(
+  "tblOrcamento",
+  "PLANILHA DE ORÇAMENTO",
+  "Orcamento.pdf"
+ );
+
+}
+function pdfCronograma(){
+
+ exportarTabelaPDF(
+  "tblCronograma",
+  "CRONOGRAMA DA OBRA",
+  "Cronograma.pdf"
+ );
+
+}
+function pdfFinanceiro(){
+
+ exportarTabelaPDF(
+  "tblFinanceiro",
+  "CONTROLE FINANCEIRO",
+  "Financeiro.pdf"
+ );
+
+}
+function pdfMateriais(){
+
+ exportarTabelaPDF(
+  "tblMateriais",
+  "CONTROLE DE MATERIAIS",
+  "Materiais.pdf"
+ );
+
+}
+function pdfFuncionarios(){
+
+ exportarTabelaPDF(
+  "tblFuncionarios",
+  "FOLHA SALARIAL",
+  "Funcionarios.pdf"
+ );
+
+}
+function pdfMedicoes(){
+
+ exportarTabelaPDF(
+  "tblMedicoes",
+  "MEDIÇÕES DA OBRA",
+  "Medicoes.pdf"
+ );
+
+}
+
+
+
+
+
+
+/* =========================
+PAYPAL + PREMIUM GLOBAL
+========================= */
+
+// verificar pagamento vindo do PayPal
+window.onload = function () {
+    const url = new URLSearchParams(window.location.search);
+
+    if (url.get("pagamento") === "ok") {
+        localStorage.setItem("premium_orca", "sim");
+
+        alert("🎉 Pagamento confirmado! Acesso liberado.");
+
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+};
+
+function premiumAtivo() {
+    return localStorage.getItem("premium_orca") === "sim";
+}
+
+function pdfOrcamento(){
+if(!verificarPremium()) return;
+exportarTabelaPDF("tblOrcamento","PLANILHA DE ORÇAMENTO","Orcamento.pdf");
+}
+
+
+
+function pdfCronograma(){
+if(!verificarPremium()) return;
+exportarTabelaPDF("tblCronograma","CRONOGRAMA DA OBRA","Cronograma.pdf");
+}
+ 
+function pdfFinanceiro(){
+if(!verificarPremium()) return;
+exportarTabelaPDF("tblFinanceiro","CONTROLE FINANCEIRO","Financeiro.pdf");
+}
+
+function pdfMateriais(){
+if(!verificarPremium()) return;
+exportarTabelaPDF("tblMateriais","CONTROLE DE MATERIAIS","Materiais.pdf");
+}
+
+function pdfFuncionarios(){
+if(!verificarPremium()) return;
+exportarTabelaPDF("tblFuncionarios","FOLHA SALARIAL","Funcionarios.pdf");
+}
+
+function pdfMedicoes(){
+if(!verificarPremium()) return;
+exportarTabelaPDF("tblMedicoes","MEDIÇÕES DA OBRA","Medicoes.pdf");
+}
+
+
+
+
+
+</script>
+<div id="premiumBox" style="display:none">
+
+<h2>🔒 Download Premium</h2>
+
+<p>
+Para baixar PDF ou Excel efetue o pagamento.
+</p>
+
+<form
+action="https://www.paypal.com/cgi-bin/webscr"
+method="post"
+target="_blank">
+
+<input type="hidden" name="cmd" value="_xclick">
+
+<input type="hidden"
+name="business"
+value="SEU_EMAIL_PAYPAL">
+
+<input type="hidden"
+name="item_name"
+value="Download ORÇA PRO">
+
+<input type="hidden"
+name="amount"
+value="5.00">
+
+<input type="hidden"
+name="currency_code"
+value="USD">
+
+<button type="submit">
+💳 Pagar com PayPal
+</button>
+
+</form>
+
+</div>
 </body>
 </html>
-
