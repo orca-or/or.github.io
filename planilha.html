@@ -301,7 +301,7 @@ onclick="remLinha('tblOrcamento')">
 
 <input type="hidden" name="item_name" value="ORÇA PRO Premium">
 
-<input type="hidden" name="amount" value="1.00">
+<input type="hidden" name="amount" value="3.00">
 
 <input type="hidden" name="currency_code" value="USD">
 
@@ -311,14 +311,14 @@ onclick="remLinha('tblOrcamento')">
 
 
 <button type="submit" class="rem">
-Baixe pdf por 1 Usd
+Baixe pdf por 3 Usd
 </button>
 </form>
 </div>
 
 <h3>
 Total Geral:
-<span id="totalOrcamento">0 Kz</span>
+<span id="totalOrcamento">0 </span>
 </h3>
 
 </div>
@@ -376,7 +376,7 @@ onclick="remLinha('tblCronograma')">
 
 <input type="hidden" name="item_name" value="ORÇA PRO Premium">
 
-<input type="hidden" name="amount" value="1.00">
+<input type="hidden" name="amount" value="3.00">
 
 <input type="hidden" name="currency_code" value="USD">
 
@@ -386,7 +386,7 @@ onclick="remLinha('tblCronograma')">
 <input type="hidden" name="cancel_return" value="https://www.orca.it.ao/loja.html">
 
 <button type="submit"  class="rem">
-Baixe pdf por 1 Usd
+Baixe pdf por 3 Usd
 </button>
 </form>
 </div>
@@ -454,7 +454,7 @@ onclick="remLinha('tblFinanceiro')">
 
 <input type="hidden" name="item_name" value="ORÇA PRO Premium">
 
-<input type="hidden" name="amount" value="1.00">
+<input type="hidden" name="amount" value="3.00">
 
 <input type="hidden" name="currency_code" value="USD">
 
@@ -464,24 +464,24 @@ onclick="remLinha('tblFinanceiro')">
 <input type="hidden" name="cancel_return" value="https://www.orca.it.ao/loja.html">
 
 <button type="submit" class="rem">
-Baixe pdf por 1 Usd
+Baixe pdf por 3 Usd
 </button>
 </form>
 </div>
 
 <h3>
 Entradas:
-<span id="totalEntradas">0 Kz</span>
+<span id="totalEntradas">0 </span>
 </h3>
 
 <h3>
 Saídas:
-<span id="totalSaidas">0 Kz</span>
+<span id="totalSaidas">0 </span>
 </h3>
 
 <h3>
 Saldo:
-<span id="saldoFinal">0 Kz</span>
+<span id="saldoFinal">0 </span>
 </h3>
 
 </div>
@@ -565,7 +565,7 @@ onclick="remLinha('tblMateriais')">
 
 <input type="hidden" name="item_name" value="ORÇA PRO Premium">
 
-<input type="hidden" name="amount" value="1.00">
+<input type="hidden" name="amount" value="3.00">
 
 <input type="hidden" name="currency_code" value="USD">
 
@@ -575,7 +575,7 @@ onclick="remLinha('tblMateriais')">
 <input type="hidden" name="cancel_return" value="https://www.orca.it.ao/loja.html">
 
 <button type="submit" class="rem">
-Baixe pdf por 1 Usd
+Baixe pdf por 3 Usd
 </button>
 
 </form>
@@ -652,7 +652,7 @@ onclick="remLinha('tblFuncionarios')">
 
 <input type="hidden" name="item_name" value="ORÇA PRO Premium">
 
-<input type="hidden" name="amount" value="1.00">
+<input type="hidden" name="amount" value="3.00">
 
 <input type="hidden" name="currency_code" value="USD">
 
@@ -662,7 +662,7 @@ onclick="remLinha('tblFuncionarios')">
 <input type="hidden" name="cancel_return" value="https://www.orca.it.ao/loja.html">
 
 <button type="submit" class="rem">
-Baixe pdf por 1 Usd
+Baixe pdf por 3 Usd
 </button>
 </form>
 </div>
@@ -759,7 +759,7 @@ onclick="remLinha('tblMedicoes')">
 
 <input type="hidden" name="item_name" value="ORÇA PRO Premium">
 
-<input type="hidden" name="amount" value="1.00">
+<input type="hidden" name="amount" value="3.00">
 
 <input type="hidden" name="currency_code" value="USD">
 
@@ -769,7 +769,7 @@ onclick="remLinha('tblMedicoes')">
 <input type="hidden" name="cancel_return" value="https://www.orca.it.ao/loja.html">
 
 <button type="submit" class="rem">
-Baixe pdf por 1 Usd
+Baixe pdf por 3 Usd
 </button>
 </form>
 </div>
@@ -888,12 +888,12 @@ total+=soma;
 document.getElementById(
 "totalOrcamento"
 ).innerText=
-total.toLocaleString()+" Kz";
+total.toLocaleString()+" ";
 
 document.getElementById(
 "dashOrcamento"
 ).innerText=
-total.toLocaleString()+" Kz";
+total.toLocaleString()+" ";
 
 }
 function comprarPDF(){
@@ -1080,7 +1080,7 @@ document.getElementById(
 "totalEntradas"
 ).innerText =
 entradas.toLocaleString()
-+ " Kz";
++ " ";
 
 document.getElementById(
 "totalSaidas"
@@ -1100,13 +1100,13 @@ document.getElementById(
 "dashEntradas"
 ).innerText =
 entradas.toLocaleString()
-+ " Kz";
++ " ";
 
 document.getElementById(
 "dashSaidas"
 ).innerText =
 saidas.toLocaleString()
-+ " Kz";
++ " ";
 
 }
 
@@ -1310,7 +1310,7 @@ document.getElementById(
 "totalFuncionarios"
 ).innerText =
 total.toLocaleString()
-+ " Kz";
++ " ";
 
 }
 
@@ -1374,7 +1374,7 @@ document.getElementById(
 "dashMedicoes"
 ).innerText =
 total.toLocaleString()
-+ " Kz";
++ " ";
 
 }
 function addLinhaMedicoes(){
@@ -1691,7 +1691,7 @@ linha[4]
 pdf.text(
 "TOTAL GERAL: "
 + total.toLocaleString()
-+ " Kz",
++ " ",
 
 140,
 
