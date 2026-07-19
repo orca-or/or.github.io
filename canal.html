@@ -1,55 +1,241 @@
 <!DOCTYPE html>
-<html lang="pt"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TALA - Canal</title>
+
 <style>
-body{margin:0;background:#000;font-family:Arial;overflow:hidden}
-video{width:100%;height:100vh;object-fit:fill}
-.menu-pai{display:flex;height:80px;align-items:center;justify-content:space-between;padding:0 20px;background:#000}
-.program-title{color:red;font-size:26px}
-</style></head><body>
-<nav class="menu-pai"><div><img src="img/talalogotipo.png"></div><div id="program-title" class="program-title"></div></nav>
-<video id="tv" autoplay muted disablePictureInPicture></video>
-<script>
-const playlist=[{
-src:"https://vkqvwwqgotqveywbuzzl.supabase.co/storage/v1/object/public/videos/Ferre_Gola_-_Marathon__Official_Music_Video_(720p).mp4",
-duracao:308,
-titulo:"Marathon - Ferre Gola",
- 
-src:"https://vkqvwwqgotqveywbuzzl.supabase.co/storage/v1/object/public/videos/Diamond_Platnumz_-_Nani__Official_Music_Video_(720p).mp4",
-duracao:199,
-titulo:"Platnumz- Nani"
+body { margin:0; background:black; overflow:hidden; font-family:Arial; }
 
-
-}];
-const inicioCanal=new Date("2026-04-05T06:00:00").getTime();
-const player=document.getElementById("tv");
-const title=document.getElementById("program-title");
-let atual=-1;
-function syncTV(){
- if(!playlist.length)return;
- const total=playlist.reduce((s,v)=>s+v.duracao,0);
- let t=Math.floor((Date.now()-inicioCanal)/1000)%total;
- if(t<0)t+=total;
- let acc=0;
- for(let i=0;i<playlist.length;i++){
-   const item=playlist[i];
-   if(t<acc+item.duracao){
-      const dentro=t-acc;
-      title.textContent=item.titulo;
-      if(atual!==i){
-        atual=i;
-        player.src=item.src.trim();
-        player.onloadedmetadata=()=>{
-          player.currentTime=Number.isFinite(dentro)?Math.min(dentro,player.duration||dentro):0;
-          player.play().catch(()=>{});
-        }
-      }
-      break;
-   }
-   acc+=item.duracao;
- }
+video {
+    width:100%;
+    height:100vh;
+    object-fit:fill;
 }
+
+.menu-pai {
+    display:flex;
+    height:100px;
+    background:black;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 20px;
+}
+
+.titulo { cursor:pointer; }
+
+.program-title {
+    color:red;
+    font-size:26px;
+    cursor:pointer;
+    opacity:1;
+    transition:opacity 0.6s ease;
+}
+
+.fade-out { opacity:0; }
+.fade-in { opacity:1; }
+
+.program-description {
+    display:none;
+    position:fixed;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    width:60%;
+    background:rgba(0,0,0,0.9);
+    padding:20px;
+    border-radius:10px;
+    color:white;
+    z-index:1000;
+}
+
+.program-list {
+    display:none;
+    position:absolute;
+    top:110px;
+    right:20px;
+    width:260px;
+    background:rgba(0,0,0,0.85);
+    padding:15px;
+    color:white;
+    z-index:999;
+}
+
+.program-list li {
+    cursor:pointer;
+    margin:8px 0;
+}
+</style>
+</head>
+
+<body>
+
+<nav class="menu-pai">
+    <div class="titulo" id="logo">
+        <img src="img/talalogotipo.png">
+    </div>
+
+    <div id="program-title" class="program-title"></div>
+</nav>
+
+<video id="tv" autoplay muted    disablePictureInPicture></video>
+
+<div id="program-description" class="program-description"></div>
+
+<div id="program-list" class="program-list">
+    <h3>Programação</h3>
+    <ul id="program-ul"></ul>
+</div>
+
+<script>
+const playlist = [
+         
+{src:"https://vkqvwwqgotqveywbuzzl.supabase.co/storage/v1/object/public/videos/Ferre_Gola_-_Marathon__Official_Music_Video_(720p).mp4",
+duracao:308,descricao: "Informação indisponível", horario: "06:01",
+titulo:"Marathon - Ferre Gola"}, 
+
+         
+{src:"https://vkqvwwqgotqveywbuzzl.supabase.co/storage/v1/object/public/videos/Diamond_Platnumz_-_Nani__Official_Music_Video_(720p).mp4",
+duracao:199,descricao: "Informação indisponível", horario: "06:01",
+titulo:"Platnumz- Nani"}, 
+ 
+];
+
+const inicioCanal=new Date("2026-04-05T06:00:00").getTime();
+
+const player = document.getElementById("tv");
+const programTitle = document.getElementById("program-title");
+const programDesc = document.getElementById("program-description");
+const programList = document.getElementById("program-list");
+const programUl = document.getElementById("program-ul");
+
+let atualIndex = 0;
+let textoAtual = "";
+let proximoMostrado = false;
+let inicioAviso = 0;
+
+// 🔥 Renderizar lista mostrando só programas futuros
+function renderList(){
+    const agora = Date.now();
+    programUl.innerHTML="";
+    let algumFuturo = false;
+
+    playlist.forEach((item,i)=>{
+        const fimItem = inicioCanal + playlist.slice(0,i+1).reduce((a,b)=>a+b.duracao*1000,0);
+        if(fimItem < agora) return; // já passou
+        algumFuturo = true;
+
+        const li = document.createElement("li");
+        li.textContent = `${item.horario} - ${item.titulo}`;
+        li.onclick = (e)=>{
+            e.stopPropagation();
+            programDesc.style.display="block";
+            programDesc.innerHTML = `<h2>${item.titulo}</h2><p>${item.descricao}</p><small>${item.horario}</small>`;
+        };
+        programUl.appendChild(li);
+    });
+
+    // Se todos os programas passaram, reinicia removidos
+    if(!algumFuturo){
+        localStorage.removeItem("removidos"); // limpa o histórico
+        renderList(); // renderiza novamente desde o início
+    }
+}
+
+// 🎬 fade título
+function setTitulo(novoTexto){
+    if(textoAtual === novoTexto) return;
+    programTitle.classList.add("fade-out");
+    setTimeout(()=>{
+        programTitle.textContent = novoTexto;
+        programTitle.classList.remove("fade-out");
+        programTitle.classList.add("fade-in");
+        textoAtual = novoTexto;
+    },300);
+}
+
+// ⏱️ TV
+function syncTV(){
+    const agora = Date.now();
+    const tempo = Math.floor((agora - inicioCanal)/1000);
+    const total = playlist.reduce((a,b)=>a+b.duracao,0);
+    const t = tempo % total;
+
+    let acc=0;
+    let inicioAtual=0;
+    for(let i=0;i<playlist.length;i++){
+        if(t < acc + playlist[i].duracao){
+            atualIndex = i;
+            inicioAtual = acc;
+            break;
+        }
+        acc += playlist[i].duracao;
+    }
+
+    const atual = playlist[atualIndex];
+    const proximo = playlist[(atualIndex+1)%playlist.length];
+    const tempoDentro = t - inicioAtual;
+    const restante = atual.duracao - tempoDentro;
+
+    // vídeo
+    if(!player.src.includes(atual.src)){
+        player.src = atual.src;
+        player.onloadedmetadata = ()=>{
+            player.currentTime = tempoDentro;
+            player.play();
+        }
+    }
+
+    // Próximo programa aparece 5 min antes, 30s
+    if(restante <= 300 && !proximoMostrado){
+        inicioAviso = Date.now();
+        proximoMostrado = true;
+        setTitulo("A seguir: " + proximo.titulo);
+    } 
+    else if(proximoMostrado){
+        if(Date.now() - inicioAviso < 30000){
+            setTitulo("A seguir: " + proximo.titulo);
+        } else {
+            setTitulo(atual.titulo);
+        }
+    } else {
+        setTitulo(atual.titulo);
+    }
+
+    if(restante > 300){
+        proximoMostrado = false;
+    }
+
+    renderList();
+}
+
+// 🖱️ logo
+document.getElementById("logo").onclick = (e)=>{
+    e.stopPropagation();
+    programList.style.display="block";
+};
+
+// 🖱️ título → descrição
+programTitle.onclick = (e)=>{
+    e.stopPropagation();
+    const atual = playlist[atualIndex];
+    programDesc.style.display="block";
+    programDesc.innerHTML = `<h2>${atual.titulo}</h2><p>${atual.descricao}</p><small>${atual.horario}</small>`;
+};
+
+// 🔊 som
+player.onclick = ()=> player.muted=false;
+
+// fechar lista e descrição clicando fora
+document.addEventListener("click", ()=>{
+    programList.style.display="none";
+    programDesc.style.display="none";
+});
+
 setInterval(syncTV,1000);
 syncTV();
-player.onclick=()=>player.muted=false;
-</script></body></html>
+renderList();
+</script>
+
+</body>
+</html>
